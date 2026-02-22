@@ -21,8 +21,8 @@ Get help to apply math with physical units correct, precise, and as quick and ea
 5. **Formulas** such as SI::formula::wavelength() in [<formulas.h>](SI/formulas.h)
 6. **Datasets** such as chemical elements, planets, moons, exoplanets in 📂[datasets](datasets/)
 
-🔎 Example Code
-----------------
+🔎 Example Usage
+-----------------
 ```cpp
 #include <SI/all.h>
 using namespace SI;
