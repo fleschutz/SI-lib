@@ -53,7 +53,7 @@ See the full [examples.cpp](examples.cpp) with a total of 43 examples. Executing
 * **What are typical use-cases for libSI?** Applied math, e.g. in simulations, simulators, astronomy/physics calculations, games, etc.
 * **What are numbers like 1.2e23?** It's the scientific notation in C/C++ for 1.2 x 10²³, the letter 'e' or 'E' represents the 'times 10 to the power of' part.
 * **How to import/export values?** Given is: "double x = 42;", import with: "length dist = meters(x);" and export with: "double y = dist / 1_m;".
-* **Where are the list of references?** All references are listed at the end of each source code file.
+* **Where are the list of references?** References are always listed at the end of each source code file.
 * **Where are libSI's files and folders?** Here is the project structure:
 ```
 ├📄CMakeLists.txt 
