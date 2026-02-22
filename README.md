@@ -41,10 +41,7 @@ See the full [examples.cpp](examples.cpp) with a total of 43 examples. Executing
  1. What's the potential energy of just 1g mass? 89.88TJ
  2. What was the average speed of Kelvin Kiptum's world record in Marathon? 21.00km/h
  3. What's the free fall time from the Burj Khalifa tower in Dubai? 12.99s
- 4. What's the fuel efficiency of a car driving 400 miles and consuming 15 US gallons? 10.59l per 100km
- 5. What's the kinetic energy of a mid-size SUV at 30MPH? 566.55kJ
- 6. What's the local gravity at Mount Everest's peak? 9.76m/s²
-...
+... (40 more lines)
 ```
 
 💡 FAQ
