@@ -3,7 +3,7 @@
 using namespace SI;
 
 int main() {
-    print(" 1. What's the potential energy of just 1g mass? ");
+    print("What's the potential energy of just 1g mass? ");
     mass m = 1_g;
     velocity c = constant::speed_of_light;
     energy E = m * c*c;
