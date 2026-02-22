@@ -1,6 +1,6 @@
 Datasets
 ========
-This folder contains datasets for basic calculations on chemical elements, physics particles, planets, moons, etc.
+This folder contains datasets for basic calculations on chemical elements, physics particles, planets, moons, etc. Most of them have been converted from .CSV file format to a C++ header file by csv2hpp utility.
 
 References
 ----------
@@ -10,4 +10,4 @@ References
 4. natural_satellites.h converted from natural_satellites.csv by csv2hpp which has been downloaded from https://github.com/devstronomy/nasa-data-scraper (MIT license). See also https://en.wikipedia.org/wiki/List_of_natural_satellites.
 5. sunspots.h converted from sunspots.csv by csv2hpp which has been downloaded from https://www.kaggle.com/datasets/robervalt/sunspots (CC0 Public Domain license).
 6. musical_notes.h converted from musical_notes.csv by csv2hpp which has been extracted from https://www.liutaiomottola.com/formulae/freqtab.htm.
-7. csv2hpp utility is available at: https://github.com/fleschutz/csv2hpp (CC0-1.0 license)
+7. csv2hpp utility is available for free at: https://github.com/fleschutz/csv2hpp (CC0-1.0 license)
