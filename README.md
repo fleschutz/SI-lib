@@ -50,9 +50,10 @@ See the full [examples.cpp](examples.cpp) with a total of 43 examples. Executing
 ❔ FAQ
 -------
 * **What is SI?** It's the [International System of Units](https://en.wikipedia.org/wiki/International_System_of_Units).
-* **What are typical use-cases for libSI?** Math and physics calculations, e.g. in simulations, simulators, games, etc.
-* **Where are the list of references?** References are listed at the end of each source code file.
-* **What are numbers like 1.2e23?** It's the scientific notation in C/C++ for: 1.2 x 10²³ (the letter 'e' or 'E' represents the 'times 10 to the power of' part). 
+* **What are typical use-cases for libSI?** Applied math, e.g. in simulations, simulators, games, calculations for astronomy and physics, etc.
+* **Where are the list of references?** All references are listed at the end of each source code file.
+* **What are numbers like 1.2e23?** It's the scientific notation in C/C++ for: 1.2 x 10²³ (the letter 'e' or 'E' represents the 'times 10 to the power of' part).
+* **How to import/export dimensionless values?** Given is: "double x;", import with: "length l = meters(x);" and export with: "x = l / 1_m;".
 * **Where are libSI's files and folders?** Here is the project structure:
 ```
 ├📄CMakeLists.txt 
