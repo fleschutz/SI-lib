@@ -28,20 +28,19 @@ Get help to apply math with physical units correct, precise, and as quick and ea
 using namespace SI;
 
 int main() {	
-	print("What's the potential energy of just 1g mass? ");
+	print("1. What's the potential energy of just 1g mass? ");
 	mass m = 1_g;
 	velocity c = constant::speed_of_light;
 	energy E = m * c*c;
 	print(E);
 ...
 ```
-See the full [examples.cpp](examples.cpp) with a total of 43 examples. Executing: `cmake . && make && ./examples` generates this:
-
+Executing: `cmake . && make && ./examples` writes the following output:
 ```
  1. What's the potential energy of just 1g mass? 89.88TJ
  2. What was the average speed of Kelvin Kiptum's world record in Marathon? 21.00km/h
  3. What's the free fall time from the Burj Khalifa tower in Dubai? 12.99s
-... (40 more lines)
+... (40 more lines, see the full [examples.cpp](examples.cpp) with a total of 43 examples)
 ```
 
 💡 FAQ
