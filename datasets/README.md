@@ -1,6 +1,9 @@
-Dataset References
-==================
+Datasets
+========
+This folder contains datasets for basic calculations on chemical elements, physics particles, planets, moons, etc.
 
+References
+----------
 1. chemical_elements.h converted from chemical_elements.csv by csv2hpp which has been downloaded from https://www.kaggle.com/datasets/berkayalan/chemical-periodic-table-elements (Other license).
 2. exoplanets.h converted from exoplanets.csv by csv2hpp which has been produced by the NASA Exoplanet Archive: http://exoplanetarchive.ipac.caltech.edu on Mon Jan 12 06:51:06 2026.
 3. planets.h converted from planets.csv by csv2hpp.
