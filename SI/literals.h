@@ -359,6 +359,7 @@ LITERAL(_Mach,                         330, meters_per_second); // 1_Mach
 LITERAL(_Da,        1.660'539'068'9252e-27, kilograms);// 1_Da   (dalton, or unified atomic mass unit)
 LITERAL(_eV,             1.602'176'634e-19, joules);   // 1_eV   (electronvolt, as of 2019 SI)
 LITERAL(_hp,            745.69987158227022, watts);    // 1_hp   (horsepower)
+LITERAL(_shp,           745.69987158227022, watts);    // 1_shp  (shaft horsepower)
 LITERAL(_PS,                     735.49875, watts);    // 1_PS   ('Pferdestärke', german horsepower)
 LITERAL(_Ang,                        1e-10, meters);   // 1_Ang  (angstrom)
 LITERAL(_smoot,                     1.7018, meters);   // 1_smoot (one Oliver R. Smoot height, fun unit)
