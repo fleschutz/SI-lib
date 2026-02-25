@@ -150,13 +150,14 @@ int main() {
     print("\n23. What's the attractive force between Sun and Earth? ");
     auto Sun_mass = 1.988416E30_kg;
     auto Earth_mass = 5.9722E24_kg;
-    print(formula::gravitational_attractive_force(Sun_mass, Earth_mass, constant::AU));
+    auto distance_from_Earth_to_Sun = 149'597'870'691_m;
+    print(formula::gravitational_attractive_force(Sun_mass, Earth_mass, distance_from_Earth_to_Sun));
 
 
     print("\n24. What's the attractive force between Earth and Moon? ");
     auto Moon_mass = 7.346E22_kg;
-    auto Earth_Moon_distance = 384'399_km;
-    print(formula::gravitational_attractive_force(Earth_mass, Moon_mass, Earth_Moon_distance));
+    auto distance_from_Earth_to_Moon = 384'399_km;
+    print(formula::gravitational_attractive_force(Earth_mass, Moon_mass, distance_from_Earth_to_Moon));
 
 
     print("\n25. What's the filament length of a 750g PLA roll with 2.85mm diameter? ");
