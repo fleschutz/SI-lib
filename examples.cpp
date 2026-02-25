@@ -181,32 +181,39 @@ int main() {
     auto ball_volume = formula::volume_of_sphere(ball_radius);
     print(ball_area, ball_volume);
 
+
+    print("\n28. What's the travel time of sun light to Earth? ");
+    print(distance_from_Earth_to_Sun / constant::speed_of_light);
+
+
+    print("\n29. What's the lift force of an A380 wing at sea level with 284km/h rotation speed? ");
+    auto wing_surface = 845_m²;
+    dimensionless lift_coefficient = 1.3939;
+    auto air_density = 1.2250_kg_per_m³; // at sea level at 15°C (59°F)
+    auto air_speed = 284_km_per_h;
+    print(formula::lift_force_of_wing(lift_coefficient, wing_surface, air_density, air_speed));
+
+
 {
-	print("\n28. What's the average speed here? ");
+	print("\n30. What's the average speed here? ");
 	auto average = (278_m_per_s + 1000_km_per_h + 540_kn + 621_mph + 0.85_Mach) / 5.0;
 	print(average);
 } {
-	print("\n29. What's a radar's geometrical horizon (the distance it can see)? ");
+	print("\n31. What's a radar's geometrical horizon (the distance it can see)? ");
 	auto Earth_radius = 6371.009_km;
 	auto Radar_station_height = 30_ft;
 	auto distance = sqrt((Earth_radius + Radar_station_height) * (Earth_radius + Radar_station_height) - Earth_radius * Earth_radius);
 	print(distance);
 } {
-	print("\n30. What's the travel time of sun light to Earth? ");
-	auto distance = constant::AU;
-	auto speed = constant::speed_of_light;
-	auto time = distance / speed;
-	print(time);
-} {
-	print("\n31. What's the sum of 1 byte + 1kB + 1GB...(and so on)? ");
+	print("\n32. What's the sum of 1 byte + 1kB + 1GB...(and so on)? ");
 	auto sum = 1_byte + 1_kB + 1_MB + 1_GB + 1_TB + 1_PB + 1_EB + 1_ZB + 1_YB + 1_RB + 1_QB;
 	print(sum);
 } {
-	print("\n32. What's the sum of 1m + 1nmi + 1ft? ");
+	print("\n33. What's the sum of 1m + 1nmi + 1ft? ");
 	auto sum = 1_m + 1_nmi + 1_ft;
 	print(sum);
 } {
-	print("\n33. What's the distance the Earth has travelled so far? ");
+	print("\n34. What's the distance the Earth has travelled so far? ");
 	auto distance_Earth_to_Sun = constant::AU;
 	auto distance_per_year = formula::circumference_of_circle(distance_Earth_to_Sun);
 	auto Earth_year = 365.25_days;
@@ -214,7 +221,7 @@ int main() {
 	auto distance_total = distance_per_year * (Earth_age / Earth_year);
 	print(distance_total);
 } {
-	print("\n34. What are the details of a 10m x 1m oak timber log? ");
+	print("\n35. What are the details of a 10m x 1m oak timber log? ");
 	auto log_length = 10_m;
 	auto log_diameter = 1_m;
 	auto dry_oak_weight = 710_kg_per_m³; 
@@ -225,21 +232,13 @@ int main() {
 	auto power = weight * dry_oak_power;
 	print(area, volume, weight, power);
 } {
-	print("\n35. What's the min cable wire size for 100m copper, 230V, 30A max? ");
+	print("\n36. What's the min cable wire size for 100m copper, 230V, 30A max? ");
 	auto conductor_resistivity = 1.7241e-8_Ohm_m; // for copper
 	auto cable_length = 100_m;
 	auto max_current = 30_A;
 	auto allowable_voltage_drop = 10_V; 
 	auto A = (2.0 * conductor_resistivity * cable_length * max_current) / allowable_voltage_drop;
 	print(A);
-} {
-	print("\n36. What's the lift force of an A380 wing at sea level with 284km/h rotation speed? ");
-	auto wing_surface = 845_m²;
-	dimensionless lift_coefficient = 1.3939;
-	auto air_density = 1.2250_kg_per_m³; // at sea level at 15°C (59°F)
-	auto air_speed = 284_km_per_h;
-	auto force = formula::lift_force_of_wing(lift_coefficient, wing_surface, air_density, air_speed);
-	print(force);
 } {
 	print("\n37. What's the impact energy of a 50m asteroid at 50,000km/h? ");
 	auto diameter = 50_m;
