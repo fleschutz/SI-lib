@@ -194,26 +194,56 @@ int main() {
     print(formula::lift_force_of_wing(lift_coefficient, wing_surface, air_density, air_speed));
 
 
+    print("\n30. What's the impact energy of a 50m asteroid at 50,000km/h? ");
+    auto asteroid_diameter = 50_m;
+    auto asteroid_density = 2500_kg_per_m³; // mostly estimated only 
+    auto asteroid_speed = 50'000_km_per_h; // range is usually 50,000..100.000km/h
+    auto calculated_volume = formula::volume_of_sphere(asteroid_diameter / 2.0);
+    auto calculated_mass = calculated_volume * asteroid_density;
+    auto impact_energy = formula::kinetic_energy(calculated_mass, asteroid_speed);
+    print(impact_energy);
+    print_equivalent(impact_energy);
+
+
+    print("\n31. What's the sound intensity of a 1W loudspeaker at 1m distance? ");
+    auto speaker_power = 1_W;
+    auto distance_to_speaker = 1_m;
+    auto intensity = formula::sound_intensity(speaker_power, distance_to_speaker);
+    print(intensity);
+    print_equivalent(intensity);
+
+
+    print("\n32. What's the max diving time in 10m salt water using a 10l bottle? ");
+    auto average_breathing = 20_l_per_min;
+    auto bottle_volume = 10_l;
+    auto bottle_pressure = 150_bar;
+    auto dive_depth = 10_m;
+    auto salt_water_density = 1033.23_kg_per_m³;
+    auto air_pressure = 1013.25_hPa;
+    auto water_pressure = salt_water_density * constant::g_n * dive_depth + air_pressure;
+    auto max_time = (bottle_volume * bottle_pressure) / (average_breathing * water_pressure);
+    print(max_time);
+
 {
-	print("\n30. What's the average speed here? ");
+	print("\n33. What's the average speed here? ");
 	auto average = (278_m_per_s + 1000_km_per_h + 540_kn + 621_mph + 0.85_Mach) / 5.0;
 	print(average);
 } {
-	print("\n31. What's a radar's geometrical horizon (the distance it can see)? ");
+	print("\n34. What's a radar's geometrical horizon (the distance it can see)? ");
 	auto Earth_radius = 6371.009_km;
 	auto Radar_station_height = 30_ft;
 	auto distance = sqrt((Earth_radius + Radar_station_height) * (Earth_radius + Radar_station_height) - Earth_radius * Earth_radius);
 	print(distance);
 } {
-	print("\n32. What's the sum of 1 byte + 1kB + 1GB...(and so on)? ");
+	print("\n35. What's the sum of 1 byte + 1kB + 1GB...(and so on)? ");
 	auto sum = 1_byte + 1_kB + 1_MB + 1_GB + 1_TB + 1_PB + 1_EB + 1_ZB + 1_YB + 1_RB + 1_QB;
 	print(sum);
 } {
-	print("\n33. What's the sum of 1m + 1nmi + 1ft? ");
+	print("\n36. What's the sum of 1m + 1nmi + 1ft? ");
 	auto sum = 1_m + 1_nmi + 1_ft;
 	print(sum);
 } {
-	print("\n34. What's the distance the Earth has travelled so far? ");
+	print("\n37. What's the distance the Earth has travelled so far? ");
 	auto distance_Earth_to_Sun = constant::AU;
 	auto distance_per_year = formula::circumference_of_circle(distance_Earth_to_Sun);
 	auto Earth_year = 365.25_days;
@@ -221,7 +251,7 @@ int main() {
 	auto distance_total = distance_per_year * (Earth_age / Earth_year);
 	print(distance_total);
 } {
-	print("\n35. What are the details of a 10m x 1m oak timber log? ");
+	print("\n38. What are the details of a 10m x 1m oak timber log? ");
 	auto log_length = 10_m;
 	auto log_diameter = 1_m;
 	auto dry_oak_weight = 710_kg_per_m³; 
@@ -232,7 +262,7 @@ int main() {
 	auto power = weight * dry_oak_power;
 	print(area, volume, weight, power);
 } {
-	print("\n36. What's the min cable wire size for 100m copper, 230V, 30A max? ");
+	print("\n39. What's the min cable wire size for 100m copper, 230V, 30A max? ");
 	auto conductor_resistivity = 1.7241e-8_Ohm_m; // for copper
 	auto cable_length = 100_m;
 	auto max_current = 30_A;
@@ -240,41 +270,13 @@ int main() {
 	auto A = (2.0 * conductor_resistivity * cable_length * max_current) / allowable_voltage_drop;
 	print(A);
 } {
-	print("\n37. What's the impact energy of a 50m asteroid at 50,000km/h? ");
-	auto diameter = 50_m;
-	auto density = 2500_kg_per_m³; // mostly estimated only 
-	auto speed = 50'000_km_per_h; // range is usually 50,000..100.000km/h
-	auto volume = formula::volume_of_sphere(diameter / 2.0);
-	auto mass = volume * density;
-	auto energy = formula::kinetic_energy(mass, speed);
-	print(energy);
-	print_equivalent(energy);
-} {
-	print("\n38. What's the sound intensity of a 1W loudspeaker at 1m distance? ");
-	auto power = 1_W;
-	auto distance = 1_m;
-	auto intensity = formula::sound_intensity(power, distance);
-	print(intensity);
-	print_equivalent(intensity);
-} {
-	print("\n39. What's the voltage of a capacitor (5V, 0.47µF, 4.7KOhm) after 10ms? ");
+	print("\n40. What's the voltage of a capacitor (5V, 0.47µF, 4.7KOhm) after 10ms? ");
 	auto CC = 0.47_uF;
 	auto V0 = 5_V;
 	auto RR = 4.7_kOhm;
 	auto time = 10_ms;
 	auto V1 = V0 * exp(-time / (RR * CC));
 	print(V1);
-} {
-	print("\n40. What's the max diving time in 10m salt water using a 10l bottle? ");
-	auto average_breathing = 20_l_per_min;
-	auto bottle_volume = 10_l;
-	auto bottle_pressure = 150_bar;
-	auto dive_depth = 10_m;
-	auto salt_water_density = 1033.23_kg_per_m³;
-	auto air_pressure = 1013.25_hPa;
-	auto water_pressure = salt_water_density * constant::g_n * dive_depth + air_pressure;
-	auto max_time = (bottle_volume * bottle_pressure) / (average_breathing * water_pressure);
-	print(max_time);
 } {
 	print("\n41. What's the ballistic max height/range/flight time of a bullet fired 45° on Moon's surface? ");
 	auto muzzle_velocity = 1000_m_per_s;
