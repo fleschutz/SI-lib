@@ -68,11 +68,8 @@ Read 42 more examples in: [examples.cpp](examples.cpp)
 |  ├📄units.h
 ├📂datasets
    ├📄all.h
-   ├📄chemical_elements.h 
-   ├📄exoplanets.h
-   ├📄ISO_standards.h 
-   ├📄planets.h
-   ├📄satellites.h
+   ├📄chemical_elements.csv 
+   ├📄chemical_elements.h
    ...
    (59 files, 3 folders, 19MB total)
 ```
