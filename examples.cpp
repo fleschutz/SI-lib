@@ -300,6 +300,6 @@ int main() {
 	dimensionless y = t / 1_s; // <- y again contains a dimensionless number (no unit)
 	// NOTE: this does not work for celsius and fahrenheit due to the offset!
 }
-	print("\nNOTE: Use a modern Unicode terminal in case of gibberish characters!");
+	print("\nHINT: In case of gibberish characters use a modern terminal with Unicode support!");
 	return 0;
 }
