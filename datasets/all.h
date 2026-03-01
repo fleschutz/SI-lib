@@ -1,4 +1,4 @@
-// <datasets/all.h> - includes all datasets. NOTE: convenient but compilation is slow
+// <datasets/all.h> - includes all dataset header files (convenient but compilation times are slow)
 #pragma once
 
 // Basic datasets:
