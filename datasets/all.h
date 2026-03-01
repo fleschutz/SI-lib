@@ -4,7 +4,7 @@
 // Basic datasets:
 #include "chemical_elements.h"
 #include "physics_particles.h"
-#include "materials.h"
+#include "material_properties.h"
 #include "ISO_standards.h"
 
 // Astronomy datasets:

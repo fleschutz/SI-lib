@@ -144,9 +144,11 @@ LITERAL(_uSv,   1e-6, sieverts);            // 1_uSv (microsievert)
 // mass per area in...
 LITERAL(_t_per_m², 1e3, kilograms_per_meter2);// 1_t_per_m²
 LITERAL(_kg_per_m²,  1, kilograms_per_meter2);// 1_kg_per_m²
-// mass per volume in...
+// density in...
 LITERAL(_t_per_m³, 1e3, kilograms_per_meter3);// 1_t_per_m³
 LITERAL(_kg_per_m³,  1, kilograms_per_meter3);// 1_kg_per_m³
+LITERAL(_g_per_m³,1e-3, kilograms_per_meter3);// 1_g_per_m³
+LITERAL(_mg_per_m³,1e-9, kilograms_per_meter3);// 1_mg_per_m³
 LITERAL(_kg_per_cm³,1e-6, kilograms_per_meter3);// 1_kg_per_cm³
 LITERAL(_g_per_cm³,1e3, kilograms_per_meter3);// 1_g_per_cm³
 // electric potential (U) in...
@@ -239,6 +241,7 @@ LITERAL(_W_per_m², 1, watts_per_meter2);    // 1_W_per_m² (watt per square met
 LITERAL(_mW_per_m²,1e-3, watts_per_meter2); // 1_mW_per_m² (milliwatt per square metre)
 LITERAL(_uW_per_m²,1e-6, watts_per_meter2); // 1_uW_per_m² (milliwatt per square metre)
 // pressure (p) in...
+LITERAL(_GPa,    1e9, pascals);             // 1_GPa (gigapascal) 
 LITERAL(_MPa,    1e6, pascals);             // 1_MPa (megapascal) 
 LITERAL(_kPa,    1e3, pascals);             // 1_kPa (kilopascal) 
 LITERAL(_hPa,    100, pascals);             // 1_hPa (hectopascal) 
