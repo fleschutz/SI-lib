@@ -19,7 +19,7 @@ Units library to apply math with physical units correct, convenient and with hig
 3. **Literals** such as 100_m or 60_s in [<literals.h>](SI/literals.h)
 4. **Constants** such as SI::constant::speed_of_light in [<constants.h>](SI/constants.h)
 5. **Formulas** such as SI::formula::wavelength() in [<formulas.h>](SI/formulas.h)
-6. **Datasets** such as chemical elements, planets, moons, exoplanets in 📂[datasets](datasets/)
+6. **Datasets** such as chemical elements or planets in 📂[datasets](datasets/)
 
 🔎 Example Usage
 -----------------
