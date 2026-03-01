@@ -39,7 +39,7 @@ Executing: `cmake . && make && ./examples` writes the following output:
 ```
 What's the potential energy of just 1g mass? 89.88TJ
 ```
-Nice code, right? Please find 42 more examples in: [examples.cpp](examples.cpp)
+Read 42 more examples in: [examples.cpp](examples.cpp)
 
 💡 FAQ
 -------
