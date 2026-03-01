@@ -1,0 +1,34 @@
+MATERIAL,Type, Cost ($/kg) ,"Density (r,Mg/m3)","Young's Modulus (E, GPa)","Shear Modulus (G, GPa)",Poisson's Ratio (n),"Yield Stress (sY, MPa)","UTS (sf,MPa)","Breaking strain (ef,%)","Fracture Toughness (Kc,MN m-3/2)","Thermal Expansion (a,10-6/C)",
+Alumina (Al2O3),ceramic, 1.90 ,3.9,390,125,0.26,4800,35,0.0,4.4,8.1,
+Aluminum alloy (7075-T6),metal, 1.80 ,2.7,70,28,0.34,500,570,12,28,33,
+Beryllium alloy,metal, 315.00 ,2.9,245,110,0.12,360,500,6.0,5.0,14,
+Bone (compact),natural, 1.90 ,2.0,14,3.5,0.43,100,100,9.0,5.0,20,
+"Brass (70Cu30Zn, annealed)",metal, 2.20 ,8.4,130,39,0.33,75,325,70.0,80,20,
+Cermets (Co/WC),composite, 78.60 ,11.5,470,200,0.30,650,1200,2.5,13,5.8,
+CFRP Laminate (graphite),composite, 110.00 ,1.5,1.5,53,0.28,200,550,2.0,38,12,
+Concrete,ceramic, 0.05 ,2.5,48,20,0.20,25,3.0,0.0,0.75,11,
+Copper alloys,metal, 2.25 ,8.3,135,50,0.35,510,720,0.3,94,18,
+Cork,natural, 9.95 ,0.18,0.032,0.005,0.25,1.4,1.5,80,0.074,180,
+Epoxy thermoset,polymer, 5.50 ,1.2,3.5,1.4,0.25,45,45,4.0,0.50,60,
+GFRP Laminate (glass),composite, 3.90 ,1.8,26,10,0.28,125,530,2.0,40,19,
+Glass (soda),ceramic, 1.35 ,2.5,65,26,0.23,3500,35,0.0,0.71,8.8,
+Granite,ceramic, 3.15 ,2.6,66,26,0.25,2500,60,0.1,1.5,6.5,
+Ice (H2O),ceramic, 0.23 ,0.92,9.1,3.6,0.28,85,6.5,0.0,0.11,55,
+Lead alloys,metal, 1.20 ,11.1,16,5.5,0.45,33,42,60,40,29
+Nickel alloys,metal, 6.10 ,8.5,180,70,0.31,900,1200,30,93,13
+Polyamide (nylon),polymer, 4.30 ,1.1,3.0,0.76,0.42,40,55,5.0,3.0,103
+Polybutadiene elastomer,polymer, 1.20 ,0.91,0.0016,0.0005,0.50,2.1,2.1,500,0.087,140
+Polycarbonate,polymer, 4.90 ,1.2,2.7,0.97,0.42,70,77,60,2.6,70
+Polyester thermoset,polymer, 3.00 ,1.3,3.5,1.4,0.25,50,0.7,2.0,0.70,150
+Polyethylene (HDPE),polymer, 1.00 ,0.95,0.7,0.31,0.42,25,33,90,3.5,225
+Polypropylene,polymer, 1.10 ,0.89,0.9,0.42,0.42,35,45,90,3.0,85
+Polyurethane elastomer,polymer, 4.00 ,1.2,0.025,0.0086,0.50,30,30,500,0.30,125
+Polyvinyl chloride (rigid PVC),polymer, 1.50 ,1.4,1.5,0.6,0.42,53,60,50,0.54,75
+Silicon,ceramic, 2.35 ,2.3,110,44,0.24,3200,35,0.0,1.5,6
+Silicon Carbide (SiC),ceramic, 36.00 ,2.8,450,190,0.15,9800,35,0.0,4.2,4.2
+Spruce (parallel to grain),natural, 1.00 ,0.60,9,0.8,0.30,48,50,10,2.5,4
+"Steel, high strength 4340",metal, 0.25 ,7.8,210,76,0.29,1240,1550,2.5,100,14
+"Steel, mild 1020",metal, 0.50 ,7.8,210,76,0.29,200,380,25,140,14
+"Steel, stainless austenitic 304",metal, 2.70 ,7.8,210,76,0.28,240,590,60,50,17
+Titanium alloy (6Al4V),metal, 16.25 ,4.5,100,39,0.36,910,950,15,85,9.4
+Tungsten Carbide (WC),ceramic, 50.00 ,15.5,550,270,0.21,6800,35,0.0,3.7,5.8
