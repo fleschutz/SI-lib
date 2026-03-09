@@ -212,7 +212,7 @@ int main() {
     print(intensity, to_equivalent(intensity));
 
 
-    print("\n32. What's the max diving time in 10m salt water using a 10l bottle? ");
+    print("\n32. What's the max diving time in salt water in 10m depth using a 10l bottle? ");
     auto average_breathing = 20_l_per_min;
     auto bottle_volume = 10_l;
     auto bottle_pressure = 150_bar;
