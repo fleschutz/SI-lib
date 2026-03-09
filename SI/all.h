@@ -8,5 +8,6 @@
 #include "formulas.h"     // <-- Formulas such as SI::formula::wavelength()
 #include "IO.h"           // <-- I/O functions such as SI::print()
 #include "conversion.h"   // <-- Conversion functions such as SI::to_string()
-#include "to_equivalent.h"// <-- Conversion functions such as SI::to_equivalent()
+#include "to_string.h"    // <-- Convert to string functions, e.g to_string()
+#include "to_equivalent.h"// <-- Convert to equivalent functions, e.g. to_equivalent()
 #include "tests.h"        // <-- Unit tests at compile-time to verify everything
