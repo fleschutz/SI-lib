@@ -22,14 +22,14 @@ namespace SI
 	template <typename T1, typename T2>
 	void print(T1 val1, T2 val2)
 	{
-		_print(to_string(val1)); _print(", "); _print(to_string(val2));
+		_print(to_string(val1) + ", " + to_string(val2));
 	}
 
 	// print three SI datatypes
 	template <typename T1, typename T2, typename T3>
 	void print(T1 val1, T2 val2, T3 val3)
 	{
-		_print(to_string(val1)); _print(", "); _print(to_string(val2)); _print(", "); _print(to_string(val3));
+		_print(to_string(val1) + ", " + to_string(val2) + ", " + to_string(val3));
 	}
 
 	// print four SI datatypes
@@ -46,7 +46,19 @@ namespace SI
 		_print(to_string(val1)); _print(", "); _print(to_string(val2)); _print(", "); _print(to_string(val3)); _print(", "); _print(to_string(val4)); _print(", "); _print(to_string(val5));
 	}
 
-	// print equivalent information
+	// return value as equivalent:
+	std::string to_equivalent(velocity V)
+	{
+		dimensionless miles_per_hour = V / 1_mph;
+		return "(" + to_string(miles_per_hour) + "MPH)";
+	}
+
+	std::string to_equivalent(power_intensity I)
+	{
+		dimensionless decibel = 10.0 * std::log10((I / 1_W_per_m²) / 1e-12);
+		return "(" + to_string(decibel) + "dB)";
+	}
+
 	void print_equivalent(energy E)
 	{
 		const auto one_kg_TNT = 4.184_MJ; // (explosion energy of 1kg Trinitrotoluol))
@@ -54,20 +66,13 @@ namespace SI
 		mass TNT = kilograms(E / one_kg_TNT);
 		dimensionless factor = E / Hiroshima_bomb;
 
-		_print(" (=");
+		_print(" (");
 		print(TNT);
 		_print(" TNT, ");
 		print(factor);
 		_print(" Hiroshima bombs)");
 	}
 
-	void print_equivalent(power_intensity I)
-	{
-		dimensionless decibel = 10.0 * std::log10((I / 1_W_per_m²) / 1e-12);
-		_print(" (=");
-		print(decibel);
-		_print("dB)");
-	}
 
 } // namespace SI
 

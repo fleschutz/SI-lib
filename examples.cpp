@@ -6,14 +6,15 @@ int main() {
     print("What's the potential energy of just 1g mass? ");
     mass m = 1_g;
     velocity c = constant::speed_of_light;
-    energy E = m * c*c;
+    energy E = m * c * c;
     print(E);
 
 
     print("\n 2. What was Kelvin Kiptum's average speed in his Marathon world record? ");
     auto Marathon_distance = 42.195_km;
     auto Kelvins_time = 2_h + 35_s;
-    print(Marathon_distance / Kelvins_time);
+    auto avg_speed = Marathon_distance / Kelvins_time;
+    print(avg_speed, to_equivalent(avg_speed));
 
 
     print("\n 3. What's the free fall time from Dubai's Burj Khalifa tower (828m)? ");
@@ -205,12 +206,11 @@ int main() {
     print_equivalent(impact_energy);
 
 
-    print("\n31. What's the sound intensity of a 1W loudspeaker at 1m distance? ");
+    print("\n31. What's the sound intensity of a 1W loudspeaker in 1m distance? ");
     auto speaker_power = 1_W;
     auto distance_to_speaker = 1_m;
     auto intensity = formula::sound_intensity(speaker_power, distance_to_speaker);
-    print(intensity);
-    print_equivalent(intensity);
+    print(intensity, to_equivalent(intensity));
 
 
     print("\n32. What's the max diving time in 10m salt water using a 10l bottle? ");
