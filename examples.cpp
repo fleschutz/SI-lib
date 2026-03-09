@@ -36,9 +36,9 @@ int main() {
 
 
     print("\n 6. What's the local gravity at Mount Everest's peak? ");
-    auto latitude = 27.986065_deg;
-    auto height_above_sea_level = 8848_m;
-    print(formula::local_gravity(latitude, height_above_sea_level));
+    auto Everest_latitude = 27.986065_deg;
+    auto Everest_height   = 8848_m;
+    print(formula::local_gravity(Everest_latitude, Everest_height));
 
 
     print("\n 7. What's a car's braking distance on dry asphalt from 100km/h? ");
@@ -104,7 +104,7 @@ int main() {
 
     print("\n17. What's the min speed required to escape from the Moon? ");
     auto escape_speed = formula::gravitational_escape_velocity(dataset::Moon.mass, dataset::Moon.mean_radius);
-    print(escape_speed);
+    print(escape_speed, to_equivalent(escape_speed));
 
 
     print("\n18. What's the windchill temperature of 5°C air temperature at 55km/h wind? ");
@@ -116,8 +116,8 @@ int main() {
     print("\n19. What's the average speed to travel around the Earth in 80 days? ");
     auto travel_distance = dataset::Earth.equatorial_circumference;
     auto travel_time = 80_days;
-    auto speed_on_average = travel_distance / travel_time;
-    print(speed_on_average);
+    auto avg_travel_speed = travel_distance / travel_time;
+    print(avg_travel_speed, to_equivalent(avg_travel_speed));
 
 
     print("\n20. What's Donald Trump's body-mass index (BMI)? ");
