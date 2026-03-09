@@ -31,7 +31,7 @@ int main() {
 	print("What's the potential energy of just 1g mass? ");
 	mass m = 1_g;
 	velocity c = constant::speed_of_light;
-	energy E = m * c*c;
+	energy E = m * c * c;
 	print(E);
 }
 ```
