@@ -46,8 +46,8 @@ Read 42 more examples in: [examples.cpp](examples.cpp)
 * **What is SI?** It's the [International System of Units](https://en.wikipedia.org/wiki/International_System_of_Units) which is made up of 7 base units that define the 22 derived units.
 * **What are use-cases for libSI?** Applied math such as simulations, simulators, astronomy/physics calculations, games, etc.
 * **What are numbers like 1.2e23?** It's the scientific notation in C/C++ for 1.2 x 10²³, the letter 'e' or 'E' represents the 'times 10 to the power of' part.
-* **How to import/export values?** Given is: "double x = 42;", import with: "length dist = x * 1_m;" and export with: "double y = dist / 1_m;".
-* **How to import/export strings?** Import with: from_string("42m", dist) and export with: "std::string str = to_string(dist);"
+* **How to import/export numbers?** Given is: "double x = 42;", import with: "length dist = x * 1_m;" and export with: "double y = dist / 1_m;".
+* **How to import/export as text?** Import with: from_string("42m", dist) and export with: "std::string str = to_string(dist);"
 * **Where are the list of references?** References are always listed at the end of each source code file.
 * **Where are libSI's files and folders?** Here is the project structure:
 ```
