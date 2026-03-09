@@ -7,7 +7,7 @@
 #include "constants.h"    // <-- Constants such as SI::constant::speed_of_light
 #include "formulas.h"     // <-- Formulas such as SI::formula::wavelength()
 #include "IO.h"           // <-- I/O functions such as SI::print()
-#include "conversion.h"   // <-- Conversion functions such as SI::to_string()
-#include "to_string.h"    // <-- Convert to string functions, e.g to_string()
-#include "to_equivalent.h"// <-- Convert to equivalent functions, e.g. to_equivalent()
+#include "from_string.h"  // <-- Convert from string functions 
+#include "to_string.h"    // <-- Convert to string functions
+#include "to_equivalent.h"// <-- Convert to equivalent functions
 #include "tests.h"        // <-- Unit tests at compile-time to verify everything

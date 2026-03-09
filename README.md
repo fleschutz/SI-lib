@@ -58,7 +58,6 @@ Read 42 more examples in: [examples.cpp](examples.cpp)
 ├📂SI
 |  ├📄all.h 
 |  ├📄constants.h
-|  ├📄conversion.h
 |  ├📄datatypes.h 
 |  ├📄formulas.h
 |  ├📄internal.h 

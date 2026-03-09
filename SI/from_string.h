@@ -1,4 +1,4 @@
-// <SI/conversion.h> - convert SI datatypes <-> string, e.g. from_string("12m", my_length); 
+// <SI/from_string.h> - convert SI types from a string, e.g. from_string("12m", my_length); 
 #pragma once
 #include <string>
 #include <SI/literals.h>
