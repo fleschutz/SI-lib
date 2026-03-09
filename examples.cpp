@@ -202,8 +202,7 @@ int main() {
     auto calculated_volume = formula::volume_of_sphere(asteroid_diameter / 2.0);
     auto calculated_mass = calculated_volume * asteroid_density;
     auto impact_energy = formula::kinetic_energy(calculated_mass, asteroid_speed);
-    print(impact_energy);
-    print_equivalent(impact_energy);
+    print(impact_energy, to_equivalent(impact_energy));
 
 
     print("\n31. What's the sound intensity of a 1W loudspeaker in 1m distance? ");

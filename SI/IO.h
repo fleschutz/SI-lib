@@ -11,68 +11,40 @@ namespace SI
 		std::cout << text;
 	}
 
-	// print a single SI datatype
+	// print a single SI value
 	template <typename T>
-	void print(T x)
+	void print(T value)
 	{
-		_print(to_string(x));
+		_print(to_string(value));
 	}
 
-	// print two SI datatypes
+	// print 2 SI values
 	template <typename T1, typename T2>
-	void print(T1 val1, T2 val2)
+	void print(T1 v1, T2 v2)
 	{
-		_print(to_string(val1) + ", " + to_string(val2));
+		_print(to_string(v1) + ", " + to_string(v2));
 	}
 
-	// print three SI datatypes
+	// print 3 SI values
 	template <typename T1, typename T2, typename T3>
-	void print(T1 val1, T2 val2, T3 val3)
+	void print(T1 v1, T2 v2, T3 v3)
 	{
-		_print(to_string(val1) + ", " + to_string(val2) + ", " + to_string(val3));
+		_print(to_string(v1) + ", " + to_string(v2) + ", " + to_string(v3));
 	}
 
-	// print four SI datatypes
+	// print 4 SI values
 	template <typename T1, typename T2, typename T3, typename T4>
-	void print(T1 val1, T2 val2, T3 val3, T4 val4)
+	void print(T1 v1, T2 v2, T3 v3, T4 v4)
 	{
-		_print(to_string(val1)); _print(", "); _print(to_string(val2)); _print(", "); _print(to_string(val3)); _print(", "); _print(to_string(val4));
+		_print(to_string(v1) + ", " + to_string(v2) + ", " + to_string(v3) + ", " + to_string(v4));
 	}
 
-	// print five SI datatypes
+	// print 5 SI values
 	template <typename T1, typename T2, typename T3, typename T4, typename T5>
-	void print(T1 val1, T2 val2, T3 val3, T4 val4, T5 val5)
+	void print(T1 v1, T2 v2, T3 v3, T4 v4, T5 v5)
 	{
-		_print(to_string(val1)); _print(", "); _print(to_string(val2)); _print(", "); _print(to_string(val3)); _print(", "); _print(to_string(val4)); _print(", "); _print(to_string(val5));
+		_print(to_string(v1) + ", " + to_string(v2) + ", " + to_string(v3) + ", " + to_string(v4) + ", " + to_string(v5));
 	}
-
-	// return value as equivalent:
-	std::string to_equivalent(velocity V)
-	{
-		dimensionless miles_per_hour = V / 1_mph;
-		return "(" + to_string(miles_per_hour) + "MPH)";
-	}
-
-	std::string to_equivalent(power_intensity I)
-	{
-		dimensionless decibel = 10.0 * std::log10((I / 1_W_per_m²) / 1e-12);
-		return "(" + to_string(decibel) + "dB)";
-	}
-
-	void print_equivalent(energy E)
-	{
-		const auto one_kg_TNT = 4.184_MJ; // (explosion energy of 1kg Trinitrotoluol))
-		const auto Hiroshima_bomb = 62_TJ; // (explosion energy of the Hiroshima bomb)
-		mass TNT = kilograms(E / one_kg_TNT);
-		dimensionless factor = E / Hiroshima_bomb;
-
-		_print(" (");
-		print(TNT);
-		_print(" TNT, ");
-		print(factor);
-		_print(" Hiroshima bombs)");
-	}
-
 
 } // namespace SI
 
