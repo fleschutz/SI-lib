@@ -10,11 +10,11 @@ int main() {
     print(E);
 
 
-    print("\n 2. What was Kelvin Kiptum's average speed in his Marathon world record? ");
+    std::cout << "\n 2. What was Kelvin Kiptum's average speed in his Marathon world record? ";
     auto Marathon_distance = 42.195_km;
     auto Kelvins_time = 2_h + 35_s;
     auto avg_speed = Marathon_distance / Kelvins_time;
-    print(avg_speed, to_equivalent(avg_speed));
+    std::cout << to_string(avg_speed) << " " << to_equivalent(avg_speed);
 
 
     print("\n 3. What's the free fall time from Dubai's Burj Khalifa tower (828m)? ");
