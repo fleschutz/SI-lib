@@ -223,24 +223,27 @@ int main() {
     auto max_time = (bottle_volume * bottle_pressure) / (average_breathing * water_pressure);
     print(max_time);
 
+
+    print("\n33. What's the sum of 1m + 1nmi + 1ft + 1in? ");
+    auto length_sum = 1_m + 1_nmi + 1_ft + 1_in;
+    print(length_sum);
+
+
+    print("\n34. What's the sum of 1 byte + 1kB + 1GB...(and so on)? ");
+    auto byte_sum = 1_byte + 1_kB + 1_MB + 1_GB + 1_TB + 1_PB + 1_EB + 1_ZB + 1_YB + 1_RB + 1_QB;
+    print(byte_sum);
+
+
+    print("\n35. What's the speed sum here? ");
+    auto speed_sum = 278_m_per_s + 1000_km_per_h + 540_kn + 621_mph + 0.85_Mach;
+    print(speed_sum);
+
 {
-	print("\n33. What's the average speed here? ");
-	auto average = (278_m_per_s + 1000_km_per_h + 540_kn + 621_mph + 0.85_Mach) / 5.0;
-	print(average);
-} {
-	print("\n34. What's a radar's geometrical horizon (the distance it can see)? ");
+	print("\n36. What's a radar's geometrical horizon (the distance it can see)? ");
 	auto Earth_radius = 6371.009_km;
 	auto Radar_station_height = 30_ft;
 	auto distance = sqrt((Earth_radius + Radar_station_height) * (Earth_radius + Radar_station_height) - Earth_radius * Earth_radius);
 	print(distance);
-} {
-	print("\n35. What's the sum of 1 byte + 1kB + 1GB...(and so on)? ");
-	auto sum = 1_byte + 1_kB + 1_MB + 1_GB + 1_TB + 1_PB + 1_EB + 1_ZB + 1_YB + 1_RB + 1_QB;
-	print(sum);
-} {
-	print("\n36. What's the sum of 1m + 1nmi + 1ft? ");
-	auto sum = 1_m + 1_nmi + 1_ft;
-	print(sum);
 } {
 	print("\n37. What's the distance the Earth has travelled so far? ");
 	auto distance_Earth_to_Sun = constant::AU;
