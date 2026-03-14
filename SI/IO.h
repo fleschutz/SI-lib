@@ -12,11 +12,25 @@ namespace SI
 		std::cout << to_string(value);
 	}
 
+	// print a single SI datatype + newline
+	template <typename T>
+	void println(T value)
+	{
+		std::cout << to_string(value) << std::endl;
+	}
+
 	// print two SI datatypes
 	template <typename T1, typename T2>
 	void print(T1 v1, T2 v2)
 	{
 		std::cout << to_string(v1) << ", " << to_string(v2);
+	}
+
+	// print two SI datatypes + newline
+	template <typename T1, typename T2>
+	void println(T1 v1, T2 v2)
+	{
+		std::cout << to_string(v1) << ", " << to_string(v2) << std::endl;
 	}
 
 	// print 3 SI datatypes
