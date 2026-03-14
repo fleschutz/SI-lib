@@ -1,4 +1,4 @@
-// <SI/IO.h> - I/O functions to print SI datatypes, equivalents, and text.
+// <SI/print.h> - Simple print to console functions for SI datatypes, equivalents, and text (similar to C++23).
 #pragma once
 #include <iostream>
 #include <SI/to_string.h>
