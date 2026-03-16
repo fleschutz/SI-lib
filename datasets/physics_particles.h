@@ -1,4 +1,8 @@
-// DO NOT EDIT! Data source is physics_particles.csv (converted by github.com/fleschutz/csv2hpp 0.4 on 2026-02-06)
+// NOTE: This C/C++ header file has been converted from 'physics_particles.csv'
+//       on March 16, 2026 by using csv2hpp 0.7 with command-line:
+//       /usr/local/bin/csv2hpp physics_particles.csv particle
+//       (more information at: https://github.com/fleschutz/csv2hpp)
+// USAGE: #include "particles.hpp" ... for (auto& particle : dataset::particles) { ...
 #pragma once
 #include <SI/literals.h>
 using namespace SI;
@@ -6,21 +10,21 @@ using namespace SI;
 namespace dataset { 
 
 struct particle_data {
-	int pdg_id;                              // column  1 (int) in CSV file
-	char pdg_name[8];                        // column  2 (char[8]) in CSV file
-	const char* name;                        // column  3 (string) in CSV file
-	double charge;                           // column  4 (double) in CSV file
-	int rank;                                // column  5 (int) in CSV file
-	const char* quarks;                      // column  6 (string) in CSV file
-	SI::mass mass;                           // column  7 (_Da) in CSV file
-	SI::mass mass_lower;                     // column  8 (_kg) in CSV file
-	SI::mass mass_upper;                     // column  9 (_kg) in CSV file
-	SI::length width;                        // column 10 (_m) in CSV file
-	SI::length width_lower;                  // column 11 (_m) in CSV file
-	SI::length width_upper;                  // column 12 (_m) in CSV file
+	int pdg_id;                        // from column  1 (int)
+	char pdg_name[8];                  // from column  2 (char[8])
+	const char* name;                  // from column  3 (string)
+	double charge;                     // from column  4 (double)
+	int rank;                          // from column  5 (int)
+	const char* quarks;                // from column  6 (string)
+	SI::mass mass;                     // from column  7 (Da)
+	SI::mass mass_lower;               // from column  8 (kg)
+	SI::mass mass_upper;               // from column  9 (kg)
+	SI::length width;                  // from column 10 (m)
+	SI::length width_lower;            // from column 11 (m)
+	SI::length width_upper;            // from column 12 (m)
 };
 
-const particle_data particles[] { // NOTE: 00=empty or unknown field
+const particle_data particles[] { // HINT: 00=empty or unknown field
 {-2212,"p","anti_proton",-1.,4,"UUD",938.27208816_Da,2.9e-07_kg,2.9e-07_kg,0._m,0._m,0._m},
 {-2112,"n","anti_neutron",0.,4,"UDD",939.5654205_Da,5e-07_kg,5e-07_kg,7.493e-25_m,4e-28_m,4e-28_m},
 {-321,"K","kaon-",-1.,0,"Us",493.677_Da,0.016_kg,0.016_kg,5.317e-14_m,9e-17_m,9e-17_m},
