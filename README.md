@@ -6,7 +6,7 @@ Type-safe SI Library in C++
 Units library to apply math with physical units correct, convenient and with high precision. This lib provides:
 
 - [x] **Strong type-safety** for datatypes, constants, formulas, and literals (can't add a mass to a length).
-- [x] **High precision** based on floating point 64-bit and **no runtime overhead** (just compiles to simple doubles).
+- [x] **High precision** based on FP64 bit, CODATA 2022 constants, and **no runtime overhead** (just compiles to simple doubles).
 - [x] **Supports** SI units, Imperial units, Astronomical units, and many more.
 - [x] **Convenient** literals (e.g. 24_h) and implicit conversion to base units.
 - [x] **Modern C++ 17 lib**: header only, no dependencies, own namespace ('SI::'), includes [unit tests](SI/tests.h).
