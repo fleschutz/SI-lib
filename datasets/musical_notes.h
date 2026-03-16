@@ -1,4 +1,8 @@
-// DO NOT EDIT! Data source is musical_notes.csv (converted by github.com/fleschutz/csv2hpp 0.4 on 2026-02-06)
+// NOTE: This C/C++ header file has been converted from 'musical_notes.csv'
+//       on March 16, 2026 by using csv2hpp 0.7 with command-line:
+//       /usr/local/bin/csv2hpp musical_notes.csv musical_note
+//       (more information at: https://github.com/fleschutz/csv2hpp)
+// USAGE: #include "musical_notes.hpp" ... for (auto& musical_note : dataset::musical_notes) { ...
 #pragma once
 #include <SI/literals.h>
 using namespace SI;
@@ -6,12 +10,12 @@ using namespace SI;
 namespace dataset { 
 
 struct musical_note_data {
-	unsigned char octave;                    // column  1 (byte) in CSV file
-	char name[4];                            // column  2 (char[4]) in CSV file
-	SI::frequency frequency;                 // column  3 (_Hz) in CSV file
+	unsigned char octave;              // from column  1 (byte)
+	char name[4];                      // from column  2 (char[4])
+	SI::frequency frequency;           // from column  3 (Hz)
 };
 
-const musical_note_data musical_notes[] { // NOTE: 00=empty or unknown field
+const musical_note_data musical_notes[] { // HINT: 00=empty or unknown field
 {0,"C",16.351_Hz},
 {0,"C#",17.324_Hz},
 {0,"D",18.354_Hz},
