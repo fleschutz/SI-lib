@@ -1,4 +1,4 @@
-Name (string),Type (string),Dollar_per_kg (float),Density (mg/m³),Youngs_Modulus (GPa),Shear_Modulus (GPa),Poissons_Ratio (double),Yield_Stress (MPa),UTS (MPa),Breaking_strain_in_percent (double),Fracture_Toughness (double),Thermal_Expansion (double),
+Name (string),Type (string),Cost ($/kg),Density (mg/m³),Youngs_Modulus (GPa),Shear_Modulus (GPa),Poissons_Ratio (double),Yield_Stress (MPa),UTS (MPa),Breaking_strain (%),Fracture_Toughness (double),Thermal_Expansion (double),
 Alumina (Al2O3),ceramic, 1.90 ,3.9,390,125,0.26,4800,35,0.0,4.4,8.1,
 Aluminum alloy (7075-T6),metal, 1.80 ,2.7,70,28,0.34,500,570,12,28,33,
 Beryllium alloy,metal, 315.00 ,2.9,245,110,0.12,360,500,6.0,5.0,14,

@@ -1,4 +1,4 @@
-// SI/data/ISO.h - dataset of International ISO standards as of 2025
+// datasets/ISO_standards.h - dataset of International ISO standards as of 2026
 #pragma once
 
 #include <SI/literals.h>
