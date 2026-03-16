@@ -99,7 +99,7 @@ CONSTANT(parsec,       30'856'775'814'913'700, meters); // one Parsec (symbol: p
 CONSTANT(lightyear,     9'460'730'777'119'564, meters); // one light-year (symbol: ly)
 
 // +++ VARIOUS CONSTANTS +++
-CONSTANT(min_temperature,                   0, kelvins); // the lowest possible temperature (absolute zero)
+CONSTANT(T0,                                0, kelvins); // absolute zero (-273.15°C, the lowest possible temperature)
 CONSTANT(Marathon_distance,            42'195, meters);
 CONSTANT(quarter_mile,                 402.34, meters);
 
