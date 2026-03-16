@@ -240,70 +240,78 @@ int main() {
     auto speed_sum = 278_m_per_s + 1000_km_per_h + 540_kn + 621_mph + 0.85_Mach;
     println(speed_sum);
 
-{
-	print("36. What's a radar's geometrical horizon (the distance it can see)? ");
-	auto Earth_radius = 6371.009_km;
-	auto Radar_station_height = 30_ft;
-	auto distance = sqrt((Earth_radius + Radar_station_height) * (Earth_radius + Radar_station_height) - Earth_radius * Earth_radius);
-	println(distance);
-} {
-	print("37. What's the distance the Earth has travelled so far? ");
-	auto distance_Earth_to_Sun = constant::AU;
-	auto distance_per_year = formula::circumference_of_circle(distance_Earth_to_Sun);
-	auto Earth_year = 365.25_days;
-	auto Earth_age = Earth_year * 4.5e12;
-	auto distance_total = distance_per_year * (Earth_age / Earth_year);
-	println(distance_total);
-} {
-	print("38. What are the details of a 10m x 1m oak timber log? ");
-	auto log_length = 10_m;
-	auto log_diameter = 1_m;
-	auto dry_oak_weight = 710_kg_per_m³; 
-	auto dry_oak_power = 4.2_kWh_per_kg;
-	auto area = formula::area_of_cylinder(log_diameter / 2, log_length);
-	auto volume = formula::volume_of_cylinder(log_diameter / 2, log_length);
-	auto weight = volume * dry_oak_weight;
-	auto power = weight * dry_oak_power;
-	print(area, volume, weight, power);
-} {
-	print("\n39. What's the min cable wire size for 100m copper, 230V, 30A max? ");
-	auto conductor_resistivity = 1.7241e-8_Ohm_m; // for copper
-	auto cable_length = 100_m;
-	auto max_current = 30_A;
-	auto allowable_voltage_drop = 10_V; 
-	auto A = (2.0 * conductor_resistivity * cable_length * max_current) / allowable_voltage_drop;
-	print(A);
-} {
-	print("\n40. What's the voltage of a capacitor (5V, 0.47µF, 4.7KOhm) after 10ms? ");
-	auto CC = 0.47_uF;
-	auto V0 = 5_V;
-	auto RR = 4.7_kOhm;
-	auto time = 10_ms;
-	auto V1 = V0 * exp(-time / (RR * CC));
-	print(V1);
-} {
-	print("\n41. What's the ballistic max height/range/flight time of a bullet fired 45° on Moon's surface? ");
-	auto muzzle_velocity = 1000_m_per_s;
-	auto altitude = 0_m;
-	auto launch_angle = 45_deg;
-	auto max_height = formula::ballistic_max_height(muzzle_velocity, altitude, launch_angle, dataset::Moon.surface_gravity);
-	auto max_range = formula::ballistic_max_range(muzzle_velocity, altitude, launch_angle, dataset::Moon.surface_gravity);
-	auto flight_time = formula::ballistic_travel_time(muzzle_velocity, altitude, launch_angle, dataset::Moon.surface_gravity);
-	print(max_height, max_range, flight_time);
-} {
-	print("\n42. What are the frequencies and wavelengths of all musical notes? ");
-	for (auto& note : dataset::musical_notes)
-	{
-		auto wavelength = formula::wavelength(constant::speed_of_sound, note.frequency);
-		printf("%s%d=%s/%s ", note.name, note.octave, to_string(note.frequency).c_str(), to_string(wavelength).c_str());
-	}
-} {
-	// Conversion example:
-	dimensionless x = 42;      // <- x contains a dimensionless number (no unit)
-	SI::time t = x * 1_s;      // <- t is now 42 seconds
-	dimensionless y = t / 1_s; // <- y again contains a dimensionless number (no unit)
-	// NOTE: this does not work for celsius and fahrenheit due to the offset!
-}
-	print("\nHINT: In case of gibberish characters use a modern terminal with Unicode support!");
-	return 0;
+
+    print("36. What's a radar's geometrical horizon (the distance it can see)? ");
+    auto Earth_radius = 6371.009_km;
+    auto Radar_station_height = 30_ft;
+    auto distance = sqrt((Earth_radius + Radar_station_height) * (Earth_radius + Radar_station_height) - Earth_radius * Earth_radius);
+    println(distance);
+
+
+    print("37. What's the distance the Earth has travelled so far? ");
+    auto distance_Earth_to_Sun = constant::AU;
+    auto distance_per_year = formula::circumference_of_circle(distance_Earth_to_Sun);
+    auto Earth_year = 365.25_days;
+    auto Earth_age = Earth_year * 4.5e12;
+    auto distance_total = distance_per_year * (Earth_age / Earth_year);
+    println(distance_total);
+
+
+    print("38. What are the details of a 10m x 1m oak timber log? ");
+    auto log_length = 10_m;
+    auto log_diameter = 1_m;
+    auto dry_oak_weight = 710_kg_per_m³; 
+    auto dry_oak_power = 4.2_kWh_per_kg;
+    auto area = formula::area_of_cylinder(log_diameter / 2, log_length);
+    auto volume = formula::volume_of_cylinder(log_diameter / 2, log_length);
+    auto weight = volume * dry_oak_weight;
+    auto power = weight * dry_oak_power;
+    println(area, volume, weight, power);
+
+
+    print("39. What's the min cable wire size for 100m copper, 230V, 30A max? ");
+    auto conductor_resistivity = 1.7241e-8_Ohm_m; // for copper
+    auto cable_length = 100_m;
+    auto max_current = 30_A;
+    auto allowable_voltage_drop = 10_V; 
+    auto A = (2.0 * conductor_resistivity * cable_length * max_current) / allowable_voltage_drop;
+    println(A);
+
+
+    print("40. What's the voltage of a capacitor (5V, 0.47µF, 4.7KOhm) after 10ms? ");
+    auto CC = 0.47_uF;
+    auto V0 = 5_V;
+    auto RR = 4.7_kOhm;
+    auto time = 10_ms;
+    auto V1 = V0 * exp(-time / (RR * CC));
+    println(V1);
+
+
+    print("41. What's the ballistic max height/range/flight time of a bullet fired 45° on Moon's surface? ");
+    auto muzzle_velocity = 1000_m_per_s;
+    auto altitude = 0_m;
+    auto launch_angle = 45_deg;
+    auto max_height = formula::ballistic_max_height(muzzle_velocity, altitude, launch_angle, dataset::Moon.surface_gravity);
+    auto max_range = formula::ballistic_max_range(muzzle_velocity, altitude, launch_angle, dataset::Moon.surface_gravity);
+    auto flight_time = formula::ballistic_travel_time(muzzle_velocity, altitude, launch_angle, dataset::Moon.surface_gravity);
+    println(max_height, max_range, flight_time);
+
+
+    print("42. What are the frequencies and wavelengths of all musical notes? ");
+    for (auto& note : dataset::musical_notes)
+    {
+        auto wavelength = formula::wavelength(constant::speed_of_sound, note.frequency);
+        printf("%s%d=%s/%s ", note.name, note.octave, to_string(note.frequency).c_str(), to_string(wavelength).c_str());
+    }
+    println("");
+
+ 
+    // Conversion example:      (does not work for celsius and fahrenheit due to the offset!)
+    double x = 42;        // <- x contains a dimensionless number without unit
+    SI::time t = x * 1_s; // <- t is now 42 seconds
+    double y = t / 1_s;   // <- y again contains a dimensionless number (no unit)
+
+
+    print("\nHINT: In case of gibberish characters use a modern terminal with Unicode support!");
+    return 0;
 }

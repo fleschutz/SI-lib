@@ -40,11 +40,25 @@ namespace SI
 		std::cout << to_string(v1) << ", " << to_string(v2) << ", " << to_string(v3);
 	}
 
+	// print 3 SI datatypes + newline
+	template <typename T1, typename T2, typename T3>
+	void println(T1 v1, T2 v2, T3 v3)
+	{
+		std::cout << to_string(v1) << ", " << to_string(v2) << ", " << to_string(v3) << std::endl;
+	}
+
 	// print 4 SI datatypes
 	template <typename T1, typename T2, typename T3, typename T4>
 	void print(T1 v1, T2 v2, T3 v3, T4 v4)
 	{
 		std::cout << to_string(v1) << ", " << to_string(v2) << ", " << to_string(v3) << ", " << to_string(v4);
+	}
+
+	// print 4 SI datatypes + newline
+	template <typename T1, typename T2, typename T3, typename T4>
+	void println(T1 v1, T2 v2, T3 v3, T4 v4)
+	{
+		std::cout << to_string(v1) << ", " << to_string(v2) << ", " << to_string(v3) << ", " << to_string(v4) << std::endl;
 	}
 
 	// print 5 SI datatypes
