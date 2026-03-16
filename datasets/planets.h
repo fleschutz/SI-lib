@@ -1,4 +1,8 @@
-// DO NOT EDIT! Data source is planets.csv (converted by github.com/fleschutz/csv2hpp 0.4 on 2026-02-06)
+// NOTE: This C/C++ header file has been converted from 'planets.csv'
+//       on March 16, 2026 by using csv2hpp 0.7 with command-line:
+//       /usr/local/bin/csv2hpp planets.csv planet
+//       (more information at: https://github.com/fleschutz/csv2hpp)
+// USAGE: #include "planets.hpp" ... for (auto& planet : dataset::planets) { ...
 #pragma once
 #include <SI/literals.h>
 using namespace SI;
@@ -6,30 +10,30 @@ using namespace SI;
 namespace dataset { 
 
 struct planet_data {
-	const char* name;                        // column  1 (string) in CSV file
-	SI::mass mass;                           // column  2 (_kg) in CSV file
-	SI::length diameter;                     // column  3 (_km) in CSV file
-	SI::density density;                     // column  4 (_kg_per_m³) in CSV file
-	SI::acceleration gravity;                // column  5 (_m_per_s²) in CSV file
-	SI::velocity escape_velocity;            // column  6 (_m_per_s) in CSV file
-	SI::time rotation_period;                // column  7 (_h) in CSV file
-	SI::time length_of_day;                  // column  8 (_h) in CSV file
-	SI::length distance_from_sun;            // column  9 (_km) in CSV file
-	float perihelion;                        // column 10 (float) in CSV file
-	float aphelion;                          // column 11 (float) in CSV file
-	SI::time orbital_period;                 // column 12 (_h) in CSV file
-	SI::velocity orbital_velocity;           // column 13 (_m_per_s) in CSV file
-	float orbital_inclination;               // column 14 (float) in CSV file
-	float orbital_eccentricity;              // column 15 (float) in CSV file
-	double obliquity_to_orbit;               // column 16 (double) in CSV file
-	SI::temperature mean_temperature;        // column 17 (_degC) in CSV file
-	SI::pressure surface_pressure;           // column 18 (_bar) in CSV file
-	unsigned char number_of_moons;           // column 19 (byte) in CSV file
-	bool has_ring_system;                    // column 20 (bool) in CSV file
-	bool has_global_magnetic_field;          // column 21 (bool) in CSV file
+	const char* name;                  // from column  1 (string)
+	SI::mass mass;                     // from column  2 (kg)
+	SI::length diameter;               // from column  3 (km)
+	SI::density density;               // from column  4 (kg/m³)
+	SI::acceleration gravity;          // from column  5 (m/s²)
+	SI::velocity escape_velocity;      // from column  6 (m/s)
+	SI::time rotation_period;          // from column  7 (h)
+	SI::time length_of_day;            // from column  8 (h)
+	SI::length distance_from_sun;      // from column  9 (km)
+	float perihelion;                  // from column 10 (float)
+	float aphelion;                    // from column 11 (float)
+	SI::time orbital_period;           // from column 12 (h)
+	SI::velocity orbital_velocity;     // from column 13 (m/s)
+	float orbital_inclination;         // from column 14 (float)
+	float orbital_eccentricity;        // from column 15 (float)
+	double obliquity_to_orbit;         // from column 16 (double)
+	SI::temperature mean_temperature;  // from column 17 (°C)
+	SI::pressure surface_pressure;     // from column 18 (bar)
+	unsigned char number_of_moons;     // from column 19 (byte)
+	bool has_ring_system;              // from column 20 (bool)
+	bool has_global_magnetic_field;    // from column 21 (bool)
 };
 
-const planet_data planets[] { // NOTE: 00=empty or unknown field
+const planet_data planets[] { // HINT: 00=empty or unknown field
 {"Mercury",0.33_kg,4879_km,5427_kg_per_m³,3.7_m_per_s²,4.3_m_per_s,1407.6_h,4222.6_h,57.9_km,46.f,69.8f,88._h,47.4_m_per_s,7.f,0.205f,0.034,167_degC,0_bar,0,false,true},
 {"Venus",4.87_kg,12104_km,5243_kg_per_m³,8.9_m_per_s²,10.4_m_per_s,-5832.5_h,2802._h,108.2_km,107.5f,108.9f,224.7_h,35._m_per_s,3.4f,0.007f,177.4,464_degC,92_bar,0,false,false},
 {"Earth",5.97_kg,12756_km,5514_kg_per_m³,9.8_m_per_s²,11.2_m_per_s,23.9_h,24._h,149.6_km,147.1f,152.1f,365.2_h,29.8_m_per_s,0.f,0.017f,23.4,15_degC,1_bar,1,false,true},
