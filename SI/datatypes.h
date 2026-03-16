@@ -6,14 +6,14 @@ namespace SI
 {
 #define DATATYPE(_name, _lengthExp, _massExp, _timeExp, _temperatureExp, _currentExp, _substanceExp, _intensityExp) \
     namespace detail { using _name ## _dimension = dimension<_lengthExp, _massExp, _timeExp, _temperatureExp,       \
-	                                                     _currentExp, _substanceExp, _intensityExp>; }          \
+                                                             _currentExp, _substanceExp, _intensityExp>; }          \
     template <class T> using _name ## _t = detail::quantity<detail:: _name ## _dimension, T>;                       \
     using _name = _name ## _t<SIdouble>;                                                                            \
     using _name ## 2 = _name ## _t<detail::vec2<SIdouble>>;                                                         \
     using _name ## 3 = _name ## _t<detail::vec3<SIdouble>>
 
 	// +++ SI BASE DATATYPES +++ 
-	//                               l  m  t  T  c  s  i (the exponents for length,mass,...)
+	//                               l  m  t  T  c  s  i   (the exponents for length,mass,...)
 	DATATYPE(length,                 1, 0, 0, 0, 0, 0, 0); // in meters
 	DATATYPE(mass,                   0, 1, 0, 0, 0, 0, 0); // in kilograms
 	DATATYPE(time,                   0, 0, 1, 0, 0, 0, 0); // in seconds
