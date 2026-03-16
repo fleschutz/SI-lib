@@ -1,11 +1,11 @@
-// <SI/datatypes.h> - type-safe SI datatypes, e.g. SI::length or SI::time
+// <SI/datatypes.h> - type-safe SI datatypes such as SI::length or SI::time
 #pragma once
 #include <SI/internal.h>
 
 namespace SI
 {
-#define DATATYPE(_name, _lengthExp, _massExp, _timeExp, _TemperatureExp, _currentExp, _substanceExp, _intensityExp) \
-    namespace detail { using _name ## _dimension = dimension<_lengthExp, _massExp, _timeExp, _TemperatureExp,       \
+#define DATATYPE(_name, _lengthExp, _massExp, _timeExp, _temperatureExp, _currentExp, _substanceExp, _intensityExp) \
+    namespace detail { using _name ## _dimension = dimension<_lengthExp, _massExp, _timeExp, _temperatureExp,       \
 	                                                     _currentExp, _substanceExp, _intensityExp>; }          \
     template <class T> using _name ## _t = detail::quantity<detail:: _name ## _dimension, T>;                       \
     using _name = _name ## _t<SIdouble>;                                                                            \
