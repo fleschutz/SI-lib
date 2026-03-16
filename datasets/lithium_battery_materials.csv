@@ -1,4 +1,4 @@
-material_id (string),formula_pretty (string),n_elements (byte),contains_transition_metal (bool),formation_energy_per_atom (double),energy_per_atom (double),band_gap (double),is_semiconductor (bool),density (double),volume (double),elements (string)
+material_id (skip),formula_pretty (string),n_elements (byte),contains_transition_metal (bool),formation_energy_per_atom (double),energy_per_atom (double),band_gap (double),is_semiconductor (bool),density (double),volume (double),elements (string)
 mp-1232999,LiO8,2,False,1.7203586379401712,0.6547974887464866,-0.7652264839983115,False,-1.1818622813732287,-0.9119972879764253,"['Li', 'O']"
 mp-1236127,LiO8,2,False,1.7191374711502612,0.6544754323313176,-0.808018982847179,False,-1.2375279478825794,-0.8977194504305112,"['Li', 'O']"
 mp-1546006,LiS4,2,False,1.9025296874122548,0.03693780886388817,0.6264776636909677,True,-2.3521663582490717,4.289055150856411,"['Li', 'S']"
