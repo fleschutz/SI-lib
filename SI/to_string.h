@@ -42,7 +42,6 @@ namespace SI
 			return _join(d / 1_um, "μm");
 		if (d <= -1_nm || d >= 1_nm)
 			return _join(d / 1_nm, "nm");
-
 		return _join(d / 1_pm, "pm");
 	}
 
@@ -66,7 +65,6 @@ namespace SI
 			return _join(t / 1_us, "μs");
 		if (t <= -1_ns || t >= 1_ns)
 			return _join(t / 1_ns, "ns");
-
 		return _join(t / 1_ps, "ps");
 	}
 
@@ -88,7 +86,6 @@ namespace SI
 			return _join(m / 1_mg, "mg");
 		if (m <= -1_ug || m >= 1_ug)
 			return _join(m / 1_ug, "µg");
-
 		return _join(m / 1_ng, "ng");
 	}
 
@@ -106,7 +103,6 @@ namespace SI
 			return _join(T / 1_mK, "mK");
 		if (T <= -1_uK || T >= 1_uK)
 			return _join(T / 1_uK, "μK");
-
 		return _join(T / 1_nK, "nK");
 	}
 
@@ -126,7 +122,6 @@ namespace SI
 			return _join(I / 1_uA, "μA");
 		if (I <= -1_nA || I >= 1_nA)
 			return _join(I / 1_nA, "nA");
-
 		return _join(I / 1_pA, "pA");
 	}
 
@@ -143,7 +138,6 @@ namespace SI
 			return _join(a / 1_cm², "cm²");
 		if (a <= -1_mm² || a >= 1_mm²)
 			return _join(a / 1_mm², "mm²");
-
 		return _join(a / 1_um², "μm²");
 	}
 
@@ -159,7 +153,6 @@ namespace SI
 			return _join(a / 1_per_cm², "/cm²");
 		if (a <= -1_per_mm² || a >= 1_per_mm²)
 			return _join(a / 1_per_mm², "/mm²");
-
 		return _join(a / 1_per_μm², "/μm²");
 	}
 
@@ -177,7 +170,6 @@ namespace SI
 			return _join(v / 1_ul, "μl");
 		if (v <= -1_nl || v >= 1_nl)
 			return _join(v / 1_nl, "nl");
-
 		return _join(v / 1_pl, "pl");
 	}
 
@@ -187,7 +179,6 @@ namespace SI
 			return _join(v / 1_km_per_h, "km/h");
 		if (v <= -1_m_per_s || v >= 1_m_per_s || v == 0.0_m_per_s)
 			return _join(v / 1_m_per_s, "m/s");
-
 		return _join(v / 1_mm_per_h, "mm/h");
 	}
 
@@ -195,7 +186,6 @@ namespace SI
 	{
 		if (a <= -1_km_per_s² || a >= 1_km_per_s²)
 			return _join(a / 1_km_per_s², "km/s");
-
 		return _join(a / 1_m_per_s², "m/s²");
 	}
 
@@ -211,7 +201,6 @@ namespace SI
 			return _join(f / 1_kHz, "kHz");
 		if (f <= -1_Hz || f >= 1_Hz || f == 0.0_Hz)
 			return _join(f / 1_Hz, "Hz");
-
 		return _join(f / 1_mHz, "mHz");
 	}
 
@@ -237,7 +226,6 @@ namespace SI
 			return _join(F / 1_mN, "mN");
 		if (F <= -1_uN || F >= 1_uN)
 			return _join(F / 1_uN, "µN");
-
 		return _join(F / 1_pN, "pN");
 	}
 
@@ -255,12 +243,21 @@ namespace SI
 			return _join(E / 1_kJ, "kJ");
 		if (E <= -1_J || E >= 1_J || E == 0.0_J)
 			return _join(E / 1_J, "J");
-
 		return _join(E / 1_mJ, "mJ");
 	}
 
 	std::string to_string(power P)
 	{
+		if (P <= -1_TW || P >= 1_TW)
+			return _join(P / 1_TW, "TW");
+		if (P <= -1_GW || P >= 1_GW)
+			return _join(P / 1_GW, "GW");
+		if (P <= -1_MW || P >= 1_MW)
+			return _join(P / 1_MW, "MW");
+		if (P <= -1_kW || P >= 1_kW)
+			return _join(P / 1_kW, "kW");
+		return _join(P / 1_W, "W");
+#if 0
 		if (P <= -1_TWh || P >= 1_TWh)
 			return _join(P / 1_TWh, "TWh");
 		if (P <= -1_GWh || P >= 1_GWh)
@@ -269,8 +266,8 @@ namespace SI
 			return _join(P / 1_MWh, "MWh");
 		if (P <= -1_kWh || P >= 1_kWh)
 			return _join(P / 1_kWh, "kWh");
-
 		return _join(P / 1_Wh, "Wh");
+#endif
 	}
 
 	std::string to_string(power_intensity I)
@@ -281,7 +278,6 @@ namespace SI
 			return _join(I / 1_kW_per_m², "kW/m²");
 		if (I <= -1_W_per_m² || I >= 1_W_per_m²)
 			return _join(I / 1_W_per_m², "W/m²");
-
 		return _join(I / 1_mW_per_m², "mW/m²");
 	}
 
@@ -297,7 +293,6 @@ namespace SI
 			return _join(p / 1_Pa, "Pa");
 		if (p <= -1_mPa || p >= 1_mPa)
 			return _join(p / 1_mPa, "mPa");
-
 		return _join(p / 1_uPa, "µPa");
 	}
 
@@ -332,17 +327,27 @@ namespace SI
 			return _join(Q / 1_Ah, "Ah");
 		if (Q <= -1_mAh || Q >= 1_mAh)
 			return _join(Q / 1_mAh, "mAh");
-
 		return _join(Q / 1_uAh, "µAh");
 	}
 
-	std::string to_string(mass_per_area v)
+	std::string to_string(mass_per_area m)
 	{
-		return _join(v / 1_kg_per_m², "kg/m²");
+		if (m <= -1_t_per_m² || m >= 1_t_per_m²)
+			return _join(m / 1_t_per_m², "t/m²");
+		return _join(m / 1_kg_per_m², "kg/m²");
+	}
+
+	std::string to_string(mass_per_power m)
+	{
+		if (m <= -1_kg_per_kW || m >= 1_kg_per_kW)
+			return _join(m / 1_kg_per_kW, "kg/kW");
+		return _join(m / 1_kg_per_W, "kg/W");
 	}
 
 	std::string to_string(density d)
 	{
+		if (d <= -1_t_per_m³ || d >= 1_t_per_m³)
+			return _join(d / 1_t_per_m³, "t/m³");
 		return _join(d / 1_kg_per_m³, "kg/m³");
 	}
 

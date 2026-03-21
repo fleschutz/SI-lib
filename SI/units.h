@@ -120,6 +120,8 @@ namespace SI
 	UNIT(mols_per_second) = moles / seconds;
 	UNIT(per_mol)      = unit<per_amount_of_substance>();
 
+	UNIT(kilograms_per_watt) = kilograms / watts;
+
 	// +++ IMPERIAL UNITS +++
 	UNIT(pounds)       = unit<mass, 45359237, 100000000>();
 	UNIT(feet)         = unit<length, 3048, 10000>();

@@ -305,11 +305,19 @@ int main() {
     }
     println("");
 
+
+    print("43. What's the power of a 15HP motorbike with 127kg weight? ");
+    auto motor_power = 15_hp;
+    auto total_mass = 127_kg;
+    auto power_to_weight_ratio = total_mass / motor_power;
+    println(motor_power, power_to_weight_ratio);
+
  
-    // Conversion example:      (does not work for celsius and fahrenheit due to the offset!)
+    // Conversion example:
     double x = 42;        // <- x contains a dimensionless number without unit
     SI::time t = x * 1_s; // <- t is now 42 seconds
     double y = t / 1_s;   // <- y again contains a dimensionless number (no unit)
+    // NOTE: This doesn't work for celsius and fahrenheit due to the offset!
 
 
     print("\nHINT: In case of gibberish characters use a modern terminal with Unicode support!");
