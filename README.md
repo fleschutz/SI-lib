@@ -9,7 +9,7 @@ Units library to apply math with physical units correct, convenient and with hig
 - [x] **High precision:** SI base units internally, FP64-bit datatypes, and CODATA 2022 constants.
 - [x] **Blazing fast** due to no runtime overhead (just compiles to simple doubles).
 - [x] **Supports** convenient literals (e.g. 24_h) and SI units, Imperial units, Astronomical units, etc.
-- [x] **Modern C++ 17 lib**: header only, no dependencies, and own namespace 'SI::'
+- [x] **Modern C++ 17 lib**: header only, no dependencies, everything is in namespace 'SI'
 - [x] **Cross-platform** support for Linux (clang/gcc, x86/arm) and Windows (VS2017-VS2026).
 
 🧱 Building Blocks
