@@ -9,7 +9,7 @@ Units library to apply math with physical units correct, convenient and with hig
 - [x] **High precision** based on FP64 bit, CODATA 2022 constants, and **no runtime overhead** (just compiles to simple doubles).
 - [x] **Supports** SI units, Imperial units, Astronomical units, and many more.
 - [x] **Convenient** literals (e.g. 24_h) and implicit conversion to base units.
-- [x] **Modern C++ 17 lib**: header only, no dependencies, own namespace ('SI::'), includes [unit tests](SI/tests.h).
+- [x] **Modern C++ 17 lib**: header only, no dependencies, and own namespace 'SI::'
 - [x] **Cross-platform** support for Linux (clang/gcc, x86/arm) and Windows (VS2017-VS2026).
 
 🧱 Building Blocks
@@ -19,7 +19,8 @@ Units library to apply math with physical units correct, convenient and with hig
 3. **Literals** such as 100_m or 60_s in [<literals.h>](SI/literals.h)
 4. **Constants** such as SI::constant::speed_of_light in [<constants.h>](SI/constants.h)
 5. **Formulas** such as SI::formula::wavelength() in [<formulas.h>](SI/formulas.h)
-6. **Datasets** such as chemical elements or planets in 📂[datasets](datasets/)
+6. **Unit tests** at compile-time in [<tests.h>](SI/tests.h)
+7. **Datasets** such as chemical elements or planets in 📂[datasets](datasets/)
 
 🔎 Example Usage
 -----------------
