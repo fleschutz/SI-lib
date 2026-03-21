@@ -20,7 +20,7 @@ Units library to apply math with physical units correct, convenient and with hig
 4. **Constants** such as SI::constant::speed_of_light in [<constants.h>](SI/constants.h)
 5. **Formulas** such as SI::formula::wavelength() in [<formulas.h>](SI/formulas.h)
 6. **Unit tests** at compile-time in [<tests.h>](SI/tests.h)
-7. **Datasets** such as chemical elements or planets in 📂[datasets](datasets/)
+7. **Basic datasets** such as chemical elements in 📂[datasets](datasets/)
 
 🔎 Example Usage
 -----------------
