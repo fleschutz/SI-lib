@@ -6,7 +6,7 @@
 
 namespace SI { namespace tests {
 
-	// +++ DEMO CHECKS +++ (just for demonstration, the serious checks follow below)
+	// +++ DEMO CHECKS +++ (to demonstrate what's possible, the serious checks follow below)
 	static_assert(3_m == meters(3));
 	static_assert(1_km + 1_m + 1_dm + 1_cm + 1_mm == 1001.111_m);
 	static_assert(1_km / 30_min == 2_km_per_h);
