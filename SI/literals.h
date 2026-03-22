@@ -367,8 +367,9 @@ LITERAL(_hp,            745.69987158227022, watts);    // 1_hp   (horsepower)
 LITERAL(_shp,           745.69987158227022, watts);    // 1_shp  (shaft horsepower)
 LITERAL(_PS,                     735.49875, watts);    // 1_PS   ('Pferdestärke', german horsepower)
 LITERAL(_Ang,                        1e-10, meters);   // 1_Ang  (angstrom)
+LITERAL(_percent,                     0.01, dimensionless); // 1_percent (%, per hundred)
+LITERAL(_bpm,                     1.0/60.0, hertz);    // 1_bpm  (beats per minute)
 LITERAL(_smoot,                     1.7018, meters);   // 1_smoot (one Oliver R. Smoot height, fun unit)
-LITERAL(_percent,                     0.01, dimensionless); // 1_percent
 
 #undef LITERAL
 } // namespace SI
