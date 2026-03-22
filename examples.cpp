@@ -306,9 +306,10 @@ int main() {
     println("");
 
 
-    print("43. What's the power of a 15PS motorbike at 127kg weight? ");
+    print("43. What's the power of a 15PS motorcycle at 200kg weight? ");
     auto motor_power = 15_PS;
-    auto total_mass = 127_kg;
+    auto motor_power2 = 14.2_Nm;
+    auto total_mass = 200_kg;
     auto power_to_weight_ratio = total_mass / motor_power;
     println(motor_power, power_to_weight_ratio);
 

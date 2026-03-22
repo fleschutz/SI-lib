@@ -98,7 +98,7 @@ LITERAL(_m²_per_s, 1, meters2_per_second);  // 1_m²/s (square meter per second
 LITERAL(_km³,    1e9, meters3);             // 1_km³ (cubic kilometer)
 LITERAL(_m³,       1, meters3);             // 1_m³  (cubic meter)
 LITERAL(_dm³,   1e-3, meters3);             // 1_dm³ (cubic decimeter)
-LITERAL(_cm³,   1e-6, meters3);             // 1_cm³ (cubic centimeter)
+LITERAL(_cm³,   1e-6, meters3);             // 1_cm³ (cubic centimeter, aka ccm)
 LITERAL(_mm³,   1e-9, meters3);             // 1_mm³ (cubic millimeter)
 LITERAL(_um³,  1e-12, meters3);             // 1_um³ (cubic micrometer)
 // or in...
