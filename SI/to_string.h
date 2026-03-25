@@ -1,4 +1,4 @@
-// <SI/to_string.h> - convert SI value to a string, e.g. to_string(12_m)
+// <SI/to_string.h> - convert a single SI value into a string, e.g. to_string(12_m)
 #pragma once
 #include <string>
 #include <SI/literals.h>
@@ -372,6 +372,7 @@ namespace SI
 	{
 		return text;
 	}
+
 } // namespace SI
 
 // References

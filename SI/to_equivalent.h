@@ -1,4 +1,4 @@
-// <SI/to_equivalent.h> - convert SI datatypes to equivalents, e.g. to_equivalent(100_kmh); 
+// <SI/to_equivalent.h> - convert a single SI value into an equivalent string, e.g. to_equivalent(100_kmh); 
 #pragma once
 #include <string>
 #include <SI/literals.h>
