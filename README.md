@@ -20,7 +20,7 @@ Units library to apply math with physical units correct, convenient and with hig
 4. **Constants** such as SI::constant::speed_of_light in [SI/constants.h](SI/constants.h)
 5. **Formulas** such as SI::formula::wavelength() in [SI/formulas.h](SI/formulas.h)
 6. **Conversions** in [SI/from_string.h](SI/from_string.h), [SI/to_string.h](SI/to_string.h), and [SI/to_equivalent.h](SI/to_equivalent.h)
-7. **Unit tests** at compile-time in [SI/tests.h](SI/tests.h) and continuously by [GitHub Actions](https://github.com/fleschutz/libSI/actions)
+7. **Tests** at compile-time in [SI/unit_tests.h](SI/unit_tests.h) and continuously by [GitHub Actions](https://github.com/fleschutz/libSI/actions)
 8. **Basic datasets** such as chemical elements in 📂[datasets](datasets/)
 
 🔎 Example Usage

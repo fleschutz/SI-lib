@@ -10,4 +10,4 @@
 #include "to_string.h"    // <-- Convert to string functions
 #include "to_equivalent.h"// <-- Convert to equivalent functions
 #include "print.h"        // <-- Simple print to console functions 
-#include "tests.h"        // <-- Unit tests at compile-time to verify everything
+#include "unit_tests.h"   // <-- Unit tests at compile-time to verify everything

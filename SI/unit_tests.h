@@ -1,10 +1,10 @@
-// <SI/tests.h> - unit tests at compile-time to verify everything.
-//                (sorted by: demo checks, basic C++, SI base units, SI derived units, astronomical units, Imperial units, digital units, various units, function checks)
+// <SI/unit_tests.h> - unit tests at compile-time to verify everything.
+//                     (sorted by: demo checks, basic C++, SI base units, SI derived units, astronomical units, Imperial units, digital units, various units, function checks)
 #pragma once
 #include <cassert>
 #include <SI/literals.h>
 
-namespace SI { namespace tests {
+namespace SI {
 
 	// +++ DEMO CHECKS +++ (to demonstrate what's possible, the serious checks follow below)
 	static_assert(3_m == meters(3));
@@ -280,7 +280,7 @@ namespace SI { namespace tests {
 	static_assert(clamp(3_m, 1_m,2_m) == 2_m);
 	static_assert(clamp(0_m, -1_m,2_m) == 0_m);
 
-} } // namespace SI::tests
+} // namespace SI
  
 // References
 // ----------
