@@ -5,74 +5,88 @@
 
 namespace SI
 {
-	// print a single SI datatype
+	// print a single value
 	template <typename T>
 	void print(T value)
 	{
 		std::cout << to_string(value);
 	}
 
-	// print a single SI datatype + newline
+	// print a single value + newline
 	template <typename T>
 	void println(T value)
 	{
 		std::cout << to_string(value) << std::endl;
 	}
 
-	// print two SI datatypes
+	// print two values
 	template <typename T1, typename T2>
 	void print(T1 v1, T2 v2)
 	{
-		std::cout << to_string(v1) << ", " << to_string(v2);
+		std::cout << to_string(v1) << to_string(v2);
 	}
 
-	// print two SI datatypes + newline
+	// print two values + newline
 	template <typename T1, typename T2>
 	void println(T1 v1, T2 v2)
 	{
-		std::cout << to_string(v1) << ", " << to_string(v2) << std::endl;
+		std::cout << to_string(v1) << to_string(v2) << std::endl;
 	}
 
-	// print 3 SI datatypes
+	// print three values
 	template <typename T1, typename T2, typename T3>
 	void print(T1 v1, T2 v2, T3 v3)
 	{
-		std::cout << to_string(v1) << ", " << to_string(v2) << ", " << to_string(v3);
+		std::cout << to_string(v1) << to_string(v2) << to_string(v3);
 	}
 
-	// print 3 SI datatypes + newline
+	// print three values + newline
 	template <typename T1, typename T2, typename T3>
 	void println(T1 v1, T2 v2, T3 v3)
 	{
-		std::cout << to_string(v1) << ", " << to_string(v2) << ", " << to_string(v3) << std::endl;
+		std::cout << to_string(v1) << to_string(v2) << to_string(v3) << std::endl;
 	}
 
-	// print 4 SI datatypes
+	// print four values
 	template <typename T1, typename T2, typename T3, typename T4>
 	void print(T1 v1, T2 v2, T3 v3, T4 v4)
 	{
-		std::cout << to_string(v1) << ", " << to_string(v2) << ", " << to_string(v3) << ", " << to_string(v4);
+		std::cout << to_string(v1) << to_string(v2) << to_string(v3) << to_string(v4);
 	}
 
-	// print 4 SI datatypes + newline
+	// print four values + newline
 	template <typename T1, typename T2, typename T3, typename T4>
 	void println(T1 v1, T2 v2, T3 v3, T4 v4)
 	{
-		std::cout << to_string(v1) << ", " << to_string(v2) << ", " << to_string(v3) << ", " << to_string(v4) << std::endl;
+		std::cout << to_string(v1) << to_string(v2) << to_string(v3) << to_string(v4) << std::endl;
 	}
 
-	// print 5 SI datatypes
+	// print five values
 	template <typename T1, typename T2, typename T3, typename T4, typename T5>
 	void print(T1 v1, T2 v2, T3 v3, T4 v4, T5 v5)
 	{
-		std::cout << to_string(v1) << ", " << to_string(v2) << ", " << to_string(v3) << ", " << to_string(v4) << ", " << to_string(v5);
+		std::cout << to_string(v1) << to_string(v2) << to_string(v3) << to_string(v4) << to_string(v5);
 	}
 
-	// print 6 SI datatypes
+	// print five values + newline
+	template <typename T1, typename T2, typename T3, typename T4, typename T5>
+	void println(T1 v1, T2 v2, T3 v3, T4 v4, T5 v5)
+	{
+		std::cout << to_string(v1) << to_string(v2) << to_string(v3) << to_string(v4) << to_string(v5) << std::endl;
+	}
+
+	// print six values
 	template <typename T1, typename T2, typename T3, typename T4, typename T5, typename T6>
 	void print(T1 v1, T2 v2, T3 v3, T4 v4, T5 v5, T6 v6)
 	{
-		std::cout << to_string(v1) << ", " << to_string(v2) << ", " << to_string(v3) << ", " << to_string(v4) << ", " << to_string(v5) << ", " << to_string(v6);
+		std::cout << to_string(v1) << to_string(v2) << to_string(v3) << to_string(v4) << to_string(v5) << to_string(v6);
+	}
+
+	// print six values + newline
+	template <typename T1, typename T2, typename T3, typename T4, typename T5, typename T6>
+	void println(T1 v1, T2 v2, T3 v3, T4 v4, T5 v5, T6 v6)
+	{
+		std::cout << to_string(v1) << to_string(v2) << to_string(v3) << to_string(v4) << to_string(v5) << to_string(v6) << std::endl;
 	}
 
 } // namespace SI

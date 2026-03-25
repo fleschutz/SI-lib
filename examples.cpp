@@ -3,18 +3,17 @@
 using namespace SI;
 
 int main() {
-    print("What's the potential energy of just 1g mass? ");
     mass m = 1_g;
     velocity c = constant::speed_of_light;
     energy E = m * c * c;
-    println(E);
+    println("The potential energy of just 1g mass is: ", E);
 
 
     print("2. What was Kelvin Kiptum's average speed in his Marathon world record? ");
     auto Marathon_distance = 42.195_km;
     auto Kelvins_time = 2_h + 35_s;
     auto avg_speed = Marathon_distance / Kelvins_time;
-    println(avg_speed, to_equivalent(avg_speed));
+    println(avg_speed, " ", to_equivalent(avg_speed));
 
 
     print("3. What's the free fall time from Dubai's Burj Khalifa tower (828m)? ");
@@ -306,12 +305,11 @@ int main() {
     println("");
 
 
-    print("43. What's the power of a 15PS motorcycle at 200kg weight? ");
+    print("43. What's the power of a 15PS motorcycle with 200kg weight? ");
     auto motor_power = 15_PS;
-    auto motor_power2 = 14.2_Nm;
     auto total_mass = 200_kg;
     auto power_to_weight_ratio = total_mass / motor_power;
-    println(motor_power, power_to_weight_ratio);
+    println(motor_power, " ", power_to_weight_ratio);
 
  
     // Conversion example:
