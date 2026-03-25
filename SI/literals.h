@@ -5,15 +5,15 @@
 
 namespace SI {
 
-#define LITERAL(_symbol, _factor, _base_unit) \
-constexpr auto operator "" _symbol(long double x) { return _base_unit(static_cast<SIdouble>(_factor ## L * x)); } \
+#define LITERAL(_symbol, _factor, _base_unit)                                                                          \
+constexpr auto operator "" _symbol(long double x) { return _base_unit(static_cast<SIdouble>(_factor ## L * x)); }      \
 constexpr auto operator "" _symbol(unsigned long long x) { return _base_unit(static_cast<SIdouble>(_factor ## L * x)); }
 
-// +++ SI BASE UNITS +++
+// +++ SI BASE UNITS +++  (each unit sorted from big to small)
 //
 //     SYMBOL FACTOR  BASE UNIT                EXAMPLE
 // -------------------------------------------------------------
-// length in...                                     (sorted from big to small unit)
+// length in...
 LITERAL(_Gm,     1e9, meters);              // 1_Gm (gigameter)
 LITERAL(_Mm,     1e6, meters);              // 1_Mm (megameter)
 LITERAL(_km,     1e3, meters);              // 1_km (kilometer)
@@ -357,7 +357,7 @@ LITERAL(_atm,                      101'325, pascals);  // 1_atm  (atmosphere)
 LITERAL(_inHg,                    3'386.39, pascals);  // 1_inHg (inch of mercury)
 LITERAL(_mmHg,           101'325.0 / 760.0, pascals);  // 1_mmHg (millimetre of mercury)
 LITERAL(_Torr,           101'325.0 / 760.0, pascals);  // 1_Torr (same as mmHg)
-// other units in...
+// various units:
 LITERAL(_degC,                           1, celsius);  // 1_degC (°Celsius)
 LITERAL(_degR,                     5.0/9.0, kelvins);  // 1_degR (°Rankine)
 LITERAL(_Mach,                         330, meters_per_second); // 1_Mach
