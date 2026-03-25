@@ -49,7 +49,7 @@ Please find 42 more examples in: [examples.cpp](examples.cpp)
 * **What are use-cases for libSI?** Applied math such as simulations, simulators, astronomy/physics calculations, games, etc.
 * **What are numbers like 1.2e23?** It's the scientific notation in C/C++ for 1.2 x 10²³, the letter 'e' or 'E' represents the 'times 10 to the power of' part.
 * **How to import/export numbers?** Import `double x = 42;` with `length dist = x * 1_m;` and export with `double y = dist / 1_m;`.
-* **How to import/export as text?** Import with `from_string("42m", dist)` and export with `std::string str = to_string(dist);`
+* **How to import/export strings?** Import with `from_string("42m", dist)` and export with `std::string str = to_string(dist);`
 * **Where are the list of references?** References are always listed at the end of each source code file.
 
 
