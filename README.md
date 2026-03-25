@@ -29,15 +29,15 @@ Units library to apply math with physical units correct, convenient and with hig
 using namespace SI;
 
 int main() {	
-	mass m = 1_g;
+	mass m = 1_oz;
 	velocity c = constant::speed_of_light;
 	energy E = m * c * c;
-    println("The potential energy of just 1g mass is: ", E);
+    println("The potential energy of a single ounce is: ", E);
 }
 ```
 Executing: `cmake . && make && ./examples` writes the following output:
 ```
-The potential energy of just 1g is: 89.88TJ
+The potential energy of a single ounce is: 2.55PJ
 ```
 Please find 42 more examples in: [examples.cpp](examples.cpp)
 

@@ -3,10 +3,10 @@
 using namespace SI;
 
 int main() {
-    mass m = 1_g;
+    mass m = 1_oz;
     velocity c = constant::speed_of_light;
     energy E = m * c * c;
-    println("The potential energy of just 1g mass is: ", E);
+    println("The potential energy of a single ounce is: ", E);
 
 
     print("2. What was Kelvin Kiptum's average speed in his Marathon world record? ");
