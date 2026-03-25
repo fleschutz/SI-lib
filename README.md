@@ -51,29 +51,7 @@ Please find 42 more examples in: [examples.cpp](examples.cpp)
 * **How to import/export numbers?** Import `double x = 42;` with `length dist = x * 1_m;` and export with `double y = dist / 1_m;`.
 * **How to import/export as text?** Import with `from_string("42m", dist)` and export with `std::string str = to_string(dist);`
 * **Where are the list of references?** References are always listed at the end of each source code file.
-* **Where are libSI's files and folders?** Here is the project structure:
-```
-├📄CMakeLists.txt 
-├📄examples.cpp 
-├📄LICENSE 
-├📄README.md
-├📂SI
-|  ├📄all.h 
-|  ├📄constants.h
-|  ├📄datatypes.h 
-|  ├📄formulas.h
-|  ├📄internal.h 
-|  ├📄IO.h
-|  ├📄literals.h 
-|  ├📄tests.h
-|  ├📄units.h
-├📂datasets
-   ├📄all.h
-   ├📄chemical_elements.csv 
-   ├📄chemical_elements.h
-   ...
-   (59 files, 3 folders, 19MB total)
-```
+
 
 🤝 Contributing
 ---------------
