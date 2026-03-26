@@ -23,7 +23,7 @@ Units library to apply math with physical units correct, convenient and with hig
 7. **Tests** at compile-time in [SI/unit_tests.h](SI/unit_tests.h) and continuously by [GitHub Actions](https://github.com/fleschutz/libSI/actions)
 8. **Basic datasets** such as chemical elements in 📂[datasets](datasets/)
 
-🔎 Example Usage
+🔎 Hello, World!
 -----------------
 ```cpp
 #include <SI/all.h>
@@ -36,7 +36,7 @@ int main() {
     println("The potential energy of a single ounce is: ", E);
 }
 ```
-Executing: `cmake . && make && ./examples` writes the following output:
+Executing: `cmake . && make && ./examples` writes the following output to the console:
 ```
 The potential energy of a single ounce is: 2.55PJ
 ```
