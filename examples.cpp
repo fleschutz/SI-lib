@@ -24,7 +24,8 @@ int main() {
     print("4. What's the kinetic energy of a mid-size SUV at 30MPH? ");
     auto SUV_mass = 5000_lb; 
     auto SUV_speed = 50_mph;
-    println(formula::kinetic_energy(SUV_mass, SUV_speed));
+    auto SUV_energy = formula::kinetic_energy(SUV_mass, SUV_speed);
+    println(SUV_energy, " or ", to_equivalent(SUV_energy));
 
 
     print("5. What's the fuel efficiency of a car driving 400 miles and consuming 15 US gallons? ");
@@ -60,7 +61,7 @@ int main() {
     print("10. What's the frequency and wavelength of the high 'c' music note? ");
     auto high_c_frequency = 1046.5_Hz;
     auto wavelength = formula::wavelength(constant::speed_of_sound, high_c_frequency);
-    println(high_c_frequency, wavelength, " or ", to_equivalent(wavelength));
+    println(high_c_frequency, ", ", wavelength, " or ", to_equivalent(wavelength));
 
 
     print("11. What's the population density on Earth (people per km² of land area)? ");
@@ -106,20 +107,21 @@ int main() {
 
     print("17. What's the min speed required to escape from the Moon? ");
     auto escape_speed = formula::gravitational_escape_velocity(dataset::Moon.mass, dataset::Moon.mean_radius);
-    println(escape_speed, to_equivalent(escape_speed));
+    println(escape_speed, " or ", to_equivalent(escape_speed));
 
 
     print("18. What's the windchill temperature of 5°C air temperature at 55km/h wind? ");
     auto air_temperature = 5_degC;
     auto wind_speed = 55_km_per_h;
-    println(formula::windchill_temperature(air_temperature, wind_speed));
+    auto temp = formula::windchill_temperature(air_temperature, wind_speed);
+    println(temp, " or ", to_equivalent(temp));
 
 
     print("19. What's the average speed to travel around the Earth in 80 days? ");
     auto travel_distance = dataset::Earth.equatorial_circumference;
     auto travel_time = 80_days;
     auto avg_travel_speed = travel_distance / travel_time;
-    println(avg_travel_speed, to_equivalent(avg_travel_speed));
+    println(avg_travel_speed, " or ", to_equivalent(avg_travel_speed));
 
 
     print("20. What's Donald Trump's body-mass index (BMI)? ");
@@ -170,7 +172,7 @@ int main() {
     auto density_of_PLA = 1.24_g_per_cm³;
     auto filament_volume = filament_weight / density_of_PLA;
     auto filament_length = filament_volume / (constant::pi * square(filament_diameter / 2.0));
-    println(filament_length);
+    println(filament_length, " or ", to_equivalent(filament_length));
 
 
     print("26. How long takes a flight non-stop around the Earth at Mach 1? ");
@@ -183,7 +185,7 @@ int main() {
     auto ball_radius = formula::radius_of_circumference(ball_circumference);
     auto ball_area = formula::area_of_sphere(ball_radius);
     auto ball_volume = formula::volume_of_sphere(ball_radius);
-    println(ball_area, ball_volume);
+    println(ball_area, " and ", ball_volume);
 
 
     print("28. What's the travel time of sun light to Earth? ");
@@ -201,11 +203,11 @@ int main() {
     print("30. What's the impact energy of a 50m asteroid at 50,000km/h? ");
     auto asteroid_diameter = 50_m;
     auto asteroid_density = 2500_kg_per_m³; // mostly estimated only 
-    auto asteroid_speed = 50'000_km_per_h; // range is usually 50,000..100.000km/h
-    auto calculated_volume = formula::volume_of_sphere(asteroid_diameter / 2.0);
-    auto calculated_mass = calculated_volume * asteroid_density;
-    auto impact_energy = formula::kinetic_energy(calculated_mass, asteroid_speed);
-    println(impact_energy, to_equivalent(impact_energy));
+    auto asteroid_velocity = 50'000_km_per_h; // range is usually 50,000..100.000km/h
+    auto asteroid_volume = formula::volume_of_sphere(asteroid_diameter / 2.0);
+    auto asteroid_mass = asteroid_volume * asteroid_density;
+    auto impact_energy = formula::kinetic_energy(asteroid_mass, asteroid_velocity);
+    println(impact_energy, " or ", to_equivalent(impact_energy));
 
 
     print("31. What's the sound intensity of a 1W loudspeaker in 1m distance? ");
@@ -242,11 +244,11 @@ int main() {
     println(speed_sum);
 
 
-    print("36. What's a radar's geometrical horizon (the distance it can see)? ");
+    print("36. What's a radar's geometrical horizon from 30ft height? ");
     auto Earth_radius = 6371.009_km;
     auto Radar_station_height = 30_ft;
     auto distance = sqrt((Earth_radius + Radar_station_height) * (Earth_radius + Radar_station_height) - Earth_radius * Earth_radius);
-    println(distance);
+    println(distance, " or ", to_equivalent(distance));
 
 
     print("37. What's the distance the Earth has travelled so far? ");
@@ -295,7 +297,7 @@ int main() {
     auto max_height = formula::ballistic_max_height(muzzle_velocity, altitude, launch_angle, dataset::Moon.surface_gravity);
     auto max_range = formula::ballistic_max_range(muzzle_velocity, altitude, launch_angle, dataset::Moon.surface_gravity);
     auto flight_time = formula::ballistic_travel_time(muzzle_velocity, altitude, launch_angle, dataset::Moon.surface_gravity);
-    println(max_height, max_range, flight_time);
+    println(max_height, ", ", max_range, ", ", flight_time);
 
 
     print("42. What are the frequencies and wavelengths of all musical notes? ");
@@ -311,7 +313,7 @@ int main() {
     auto motor_power = 15_PS;
     auto total_mass = 200_kg;
     auto power_to_weight_ratio = total_mass / motor_power;
-    println(motor_power, " ", power_to_weight_ratio);
+    println(motor_power, " and ", power_to_weight_ratio);
 
  
     // Conversion example:

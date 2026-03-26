@@ -291,7 +291,7 @@ LITERAL(_kg_per_kW,1e-3,kilograms_per_watt);   // 1_kg_per_kW (kg/kW)
 // -------------------------------------------------------------
 // length in...
 LITERAL(_in,                        0.0254, meters); // 1_in (inch)
-LITERAL(_ft,                         .3048, meters); // 1_ft (feet, 12 in)
+LITERAL(_ft,                         .3048, meters); // 1_ft (feet, 12 inches)
 LITERAL(_yd,                         .9144, meters); // 1_yd (yard)
 LITERAL(_mi,                     1'609.344, meters); // 1_mi (statute mile, 1760 yd or 80 chains)
 LITERAL(_cable,                      185.2, meters); // 1_cable (one tenth of a nautical mile)

@@ -96,7 +96,7 @@ namespace SI
 		if (T <= -1_MK || T >= 1_MK)
 			return _join(T / 1_MK, "MK");
 		if (T >= 250_K && T <= 470_K) // human temperature range
-			return _join(celsius(T), "°C (") + _join(fahrenheit(T), "°F") + ")";
+			return _join(celsius(T), "°C");
 		if (T <= -1_K || T >= 1_K || T == 0.0_K)
 			return _join(T / 1_K, "K");
 		if (T <= -1_mK || T >= 1_mK)
