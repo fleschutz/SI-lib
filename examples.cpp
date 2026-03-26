@@ -13,7 +13,7 @@ int main() {
     auto Marathon_distance = 42.195_km;
     auto Kelvins_time = 2_h + 35_s;
     auto avg_speed = Marathon_distance / Kelvins_time;
-    println(avg_speed, " ", to_equivalent(avg_speed));
+    println(avg_speed, " or ", to_equivalent(avg_speed));
 
 
     print("3. What's the free fall time from Dubai's Burj Khalifa tower (828m)? ");
@@ -41,24 +41,26 @@ int main() {
 
     print("7. What's a car's braking distance on dry asphalt from 100km/h? ");
     auto braking_on_dry_asphalt = 8_m_per_s²;
-    println(formula::braking_distance(100_km_per_h, 0_km_per_h, braking_on_dry_asphalt));
+    auto dry_distance = formula::braking_distance(100_km_per_h, 0_km_per_h, braking_on_dry_asphalt);
+    println(dry_distance, " or ", to_equivalent(dry_distance));
 
 
     print("8. What's a car's braking distance on wet asphalt from 100km/h? ");
     auto braking_on_wet_asphalt = 6_m_per_s²;
-    println(formula::braking_distance(100_km_per_h, 0_km_per_h, braking_on_wet_asphalt));
+    auto wet_distance = formula::braking_distance(100_km_per_h, 0_km_per_h, braking_on_wet_asphalt);
+    println(wet_distance, " or ", to_equivalent(wet_distance));
 
 
     print("9. What's the wavelength of hydrogen (H2) in vacuum? ");
     auto H2_frequency = 1420.4057517682_MHz;
     auto H2_wavelength = formula::wavelength(constant::speed_of_light, H2_frequency);
-    println(H2_wavelength);
+    println(H2_wavelength, " or ", to_equivalent(H2_wavelength));
 
 
     print("10. What's the frequency and wavelength of the high 'c' music note? ");
     auto high_c_frequency = 1046.5_Hz;
     auto wavelength = formula::wavelength(constant::speed_of_sound, high_c_frequency);
-    println(high_c_frequency, wavelength);
+    println(high_c_frequency, wavelength, " or ", to_equivalent(wavelength));
 
 
     print("11. What's the population density on Earth (people per km² of land area)? ");
