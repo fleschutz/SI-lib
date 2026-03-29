@@ -61,7 +61,7 @@ int main() {
     print("10. What's the frequency and wavelength of the high 'c' music note? ");
     auto high_c_frequency = 1046.5_Hz;
     auto wavelength = formula::wavelength(constant::speed_of_sound, high_c_frequency);
-    println(high_c_frequency, ", ", wavelength, " or ", to_equivalent(wavelength));
+    println(high_c_frequency, " and ", wavelength, " (", to_equivalent(wavelength), ")");
 
 
     print("11. What's the population density on Earth (people per km² of land area)? ");
@@ -211,10 +211,10 @@ int main() {
 
 
     print("31. What's the sound intensity of a 1W loudspeaker in 1m distance? ");
-    auto speaker_power = 1_W;
-    auto distance_to_speaker = 1_m;
-    auto intensity = formula::sound_intensity(speaker_power, distance_to_speaker);
-    println(intensity, to_equivalent(intensity));
+    auto loudspeaker_power = 1_W;
+    auto loudspeaker_distance = 1_m;
+    auto intensity = formula::sound_intensity(loudspeaker_power, loudspeaker_distance);
+    println(intensity, " or ", to_equivalent(intensity));
 
 
     print("32. What's the max diving time in salt water in 10m depth using a 10l bottle? ");
@@ -269,7 +269,7 @@ int main() {
     auto volume = formula::volume_of_cylinder(log_diameter / 2, log_length);
     auto weight = volume * dry_oak_weight;
     auto power = weight * dry_oak_power;
-    println(area, volume, weight, power);
+    println(area, ", ", volume, ", ", weight, ", ", power);
 
 
     print("39. What's the min cable wire size for 100m copper, 230V, 30A max? ");

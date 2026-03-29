@@ -40,9 +40,9 @@ namespace SI
 	{
 		const auto Hiroshima_bomb = 62_TJ; // (explosion energy of the Hiroshima bomb)
 		if (E >= Hiroshima_bomb)
-			return _join(E / Hiroshima_bomb, "Hiroshima bombs");
+			return _join(E / Hiroshima_bomb, " Hiroshima bombs");
 
-		const auto one_kg_TNT = 4.184_MJ; // (explosion energy of 1kg Trinitrotoluol))
+		const auto one_kg_TNT = 4.184_MJ; // (explosion energy of 1kg Trinitrotoluol)
 		mass kgTNT = kilograms(E / one_kg_TNT);
 		return to_string(kgTNT) + " TNT";
 	}
