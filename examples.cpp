@@ -135,7 +135,7 @@ int main() {
     auto pizza_height = 1_cm;
     auto pizza_area = formula::area_of_circle(pizza_radius);
     auto pizza_volume = formula::volume_of_cylinder(pizza_radius, pizza_height);
-    println(pizza_area, pizza_volume);
+    println(pizza_area, " and ", pizza_volume);
 
 
     print("22. Which exoplanets are life-friendly and quite near? ");
@@ -304,7 +304,7 @@ int main() {
     for (auto& note : dataset::musical_notes)
     {
         auto wavelength = formula::wavelength(constant::speed_of_sound, note.frequency);
-        printf("%s%d=%s/%s ", note.name, note.octave, to_string(note.frequency).c_str(), to_string(wavelength).c_str());
+        print(note.name, note.octave, "=", note.frequency, ",", wavelength, " ");
     }
     println("");
 

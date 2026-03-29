@@ -89,6 +89,20 @@ namespace SI
 		std::cout << to_string(v1) << to_string(v2) << to_string(v3) << to_string(v4) << to_string(v5) << to_string(v6) << std::endl;
 	}
 
+	// print seven values
+	template <typename T1, typename T2, typename T3, typename T4, typename T5, typename T6, typename T7>
+	void print(T1 v1, T2 v2, T3 v3, T4 v4, T5 v5, T6 v6, T7 v7)
+	{
+		std::cout << to_string(v1) << to_string(v2) << to_string(v3) << to_string(v4) << to_string(v5) << to_string(v6) << to_string(v7);
+	}
+
+	// print seven values + newline
+	template <typename T1, typename T2, typename T3, typename T4, typename T5, typename T6, typename T7>
+	void println(T1 v1, T2 v2, T3 v3, T4 v4, T5 v5, T6 v6, T7 v7)
+	{
+		std::cout << to_string(v1) << to_string(v2) << to_string(v3) << to_string(v4) << to_string(v5) << to_string(v6) << to_string(v7) << std::endl;
+	}
+
 } // namespace SI
 
 // References
