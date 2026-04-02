@@ -42,8 +42,8 @@ The potential energy of a single ounce is: 2.55PJ
 ```
 Please find 42 more examples in: [examples.cpp](examples.cpp)
 
-💡 FAQ
--------
+💡 FAQs
+--------
 * **What is SI?** It's the [International System of Units](https://en.wikipedia.org/wiki/International_System_of_Units) which is made up of 7 base units that define the 22 derived units.
 * **What is CODATA?** It's the [Committee On Data](https://codata.org) of the International Science Council (ISC).
 * **What are use-cases for libSI?** Applied math such as simulations, simulators, astronomy/physics calculations, games, etc.
