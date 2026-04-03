@@ -42,15 +42,38 @@ The potential energy of a single ounce is: 2.55PJ
 ```
 Please find 42 more examples in: [examples.cpp](examples.cpp)
 
-💡 FAQs
---------
-* **What is SI?** It's the [International System of Units](https://en.wikipedia.org/wiki/International_System_of_Units) which is made up of 7 base units that define the 22 derived units.
-* **What is CODATA?** It's the [Committee On Data](https://codata.org) of the International Science Council (ISC).
-* **What are use-cases for libSI?** Applied math such as simulations, simulators, astronomy/physics calculations, games, etc.
-* **What are numbers like 1.2e23?** It's the scientific notation in C/C++ for 1.2 x 10²³, the letter 'e' or 'E' represents the 'times 10 to the power of' part.
-* **How to import/export numbers?** Import `double x = 42;` with `length dist = x * 1_m;` and export with `double y = dist / 1_m;`.
-* **How to import/export strings?** Import with `from_string("42m", dist)` and export with `std::string str = to_string(dist);`
-* **Where are the list of references?** References are always listed at the end of each source code file.
+💡 Q & A
+---------
+<sub>(click to expand)</sub>
+
+<details><summary>What is SI?</summary>
+	
+It's the [International System of Units](https://en.wikipedia.org/wiki/International_System_of_Units) which is made up of 7 base units that define the 22 derived units.
+</details>
+
+<details><summary>What is CODATA?</summary>
+It's the [Committee On Data](https://codata.org) of the International Science Council (ISC).
+</details>
+
+<details><summary>What are use-cases for libSI?</summary>
+Applied math such as simulations, simulators, astronomy/physics calculations, games, etc.
+</details>
+
+<details><summary>What are numbers like 1.2e23?</summary>
+It's the scientific notation in C/C++ for 1.2 x 10²³, the letter 'e' or 'E' represents the 'times 10 to the power of' part.
+</details>
+
+<details><summary>How to import/export numbers?</summary>
+Import `double x = 42;` with `length dist = x * 1_m;` and export with `double y = dist / 1_m;`.
+</details>
+
+<details><summary>How to import/export strings?</summary>
+Import with `from_string("42m", dist)` and export with `std::string str = to_string(dist);`
+</details>
+
+<details><summary>Where are the list of references?</summary>
+References are always listed at the end of each source code file.
+</details>
 
 
 🤝 Contributing
