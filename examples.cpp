@@ -3,22 +3,22 @@
 using namespace SI;
 
 int main() {
+
     mass m = 1_oz;
     velocity c = constant::speed_of_light;
     energy E = m * c * c;
     println("The potential energy of a single ounce is: ", E);
 
 
-    print("2. What was Kelvin Kiptum's average speed in his Marathon world record? ");
     auto Marathon_distance = 42.195_km;
     auto Kelvins_time = 2_h + 35_s;
     auto avg_speed = Marathon_distance / Kelvins_time;
-    println(avg_speed, " or ", to_equivalent(avg_speed));
+    println("2. Kelvin Kiptum's average speed in his Marathon world record was: ", avg_speed, " or ", to_equivalent(avg_speed));
 
 
-    print("3. What's the free fall time from Dubai's Burj Khalifa tower (828m)? ");
-    length tower_height = 828_m;
-    println(formula::time_of_free_fall(tower_height, constant::Earth_gravity));
+    auto tower_height = 828_m;
+    auto free_fall_time = formula::time_of_free_fall(tower_height, constant::Earth_gravity);
+    println("3. The free fall time from Dubai's Burj Khalifa tower (828m) is: ", free_fall_time);
 
 
     print("4. What's the kinetic energy of a mid-size SUV at 30MPH? ");
