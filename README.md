@@ -52,22 +52,27 @@ It's the [International System of Units](https://en.wikipedia.org/wiki/Internati
 </details>
 
 <details><summary>What is CODATA?</summary>
-It's the [Committee On Data](https://codata.org) of the International Science Council (ISC).
+
+It's the Committee On Data of the International Science Council (ISC).
 </details>
 
 <details><summary>What are use-cases for libSI?</summary>
+
 Applied math such as simulations, simulators, astronomy/physics calculations, games, etc.
 </details>
 
 <details><summary>What are numbers like 1.2e23?</summary>
+
 It's the scientific notation in C/C++ for 1.2 x 10²³, the letter 'e' or 'E' represents the 'times 10 to the power of' part.
 </details>
 
 <details><summary>How to import/export numbers?</summary>
+
 Import `double x = 42;` with `length dist = x * 1_m;` and export with `double y = dist / 1_m;`.
 </details>
 
 <details><summary>How to import/export strings?</summary>
+
 Import with `from_string("42m", dist)` and export with `std::string str = to_string(dist);`
 </details>
 
