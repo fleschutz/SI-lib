@@ -36,7 +36,7 @@ int main() {
     println("The potential energy of a single ounce is: ", E);
 }
 ```
-Executing: `cmake . && make && ./examples` writes the following output to the console:
+Executing: `cmake . && make && ./examples` writes to the console:
 ```
 The potential energy of a single ounce is: 2.55PJ
 ```
@@ -53,7 +53,7 @@ It's the [International System of Units](https://en.wikipedia.org/wiki/Internati
 
 <details><summary>What is CODATA?</summary>
 
-It's the Committee On Data of the International Science Council (ISC).
+It's the [Committee On Data](https://codata.org/) of the International Science Council (ISC).
 </details>
 
 <details><summary>What are use-cases for libSI?</summary>
