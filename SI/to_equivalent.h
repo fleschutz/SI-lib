@@ -20,7 +20,7 @@ namespace SI
 	/// Returns the velocity in Imperial units.
 	std::string to_equivalent(velocity V)
 	{
-		return _join(V / 1_mph, "MPH");
+		return _join(V / 1_mph, "mph");
 	}
 
 	/// Returns the temperature in Fahrenheit.
