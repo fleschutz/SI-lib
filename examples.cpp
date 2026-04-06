@@ -145,7 +145,7 @@ int main() {
             continue; // orbit too elliptic or even parabolic 
         if (exoplanet.distance > 3_pc || exoplanet.distance == 0_m)
             continue; // too far away or distance unknown yet
-        printf("'%s' in %s (%s), ", exoplanet.name, exoplanet.hostname, to_string(exoplanet.distance).c_str());
+        print("'", exoplanet.name, "' @ ", exoplanet.hostname, " in ", exoplanet.distance, ", ");
     }
     println("");
 
