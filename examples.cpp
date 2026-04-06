@@ -7,76 +7,80 @@ int main() {
     mass m = 1_oz;
     velocity c = constant::speed_of_light;
     energy E = m * c * c;
-    println("1. The potential energy of a single ounce is: ", E);
+    println(" 1. The potential energy of a single ounce is: ", E);
+
+
+    auto file_size = 1_TB;
+    auto download_speed = 100_Mbps;
+    println(" 2. The download of 1TB at 100MBit speed takes: ", file_size / download_speed);
 
 
     auto Marathon_distance = 42.195_km;
     auto Kelvins_time = 2_h + 35_s;
     auto avg_speed = Marathon_distance / Kelvins_time;
-    println("2. The average speed of Kelvin Kiptum's Marathon world record was: ", avg_speed, " or ", to_equivalent(avg_speed));
+    println(" 3. The average speed of Kelvin Kiptum's Marathon world record was: ", avg_speed, " or ", to_equivalent(avg_speed));
 
 
     auto tower_height = 828_m;
     auto free_fall_time = formula::time_of_free_fall(tower_height, constant::Earth_gravity);
-    println("3. The free fall time from the Burj Khalifa tower (828m) is: ", free_fall_time);
+    println(" 4. The free fall time from the Burj Khalifa tower (828m) is: ", free_fall_time);
 
 
     auto SUV_mass = 5000_lb; 
     auto SUV_speed = 30_mph;
     auto SUV_energy = formula::kinetic_energy(SUV_mass, SUV_speed);
-    println("4. The kinetic energy of a mid-size SUV at 30MPH is: ", SUV_energy, " or ", to_equivalent(SUV_energy));
+    println(" 5. The kinetic energy of a mid-size SUV at 30MPH is: ", SUV_energy, " or ", to_equivalent(SUV_energy));
 
 
     auto Everest_latitude = 27.986065_deg;
     auto Everest_height   = 8848_m;
     auto local_gravity    = formula::local_gravity(Everest_latitude, Everest_height);
-    println("5. The local gravity at Mount Everest's peak is: ", local_gravity);
+    println(" 6. The local gravity at Mount Everest's peak is: ", local_gravity);
 
 
-    print("6. What's the fuel efficiency of a car driving 400 miles and consuming 15 US gallons? ");
+    print(" 7. What's the fuel efficiency of a car driving 400 miles and consuming 15 US gallons? ");
     length distance_driven = 400_mi;
     volume fuel_consumed = 15_gal;
     println((fuel_consumed * 100_km) / distance_driven, "(per 100km)");
 
 
-
-    print("7. What's a car's braking distance on dry asphalt from 100km/h? ");
+    print(" 8. What's a car's braking distance from 100km/h on dry asphalt? ");
     auto braking_on_dry_asphalt = 8_m_per_s²;
     auto dry_distance = formula::braking_distance(100_km_per_h, 0_km_per_h, braking_on_dry_asphalt);
     println(dry_distance, " or ", to_equivalent(dry_distance));
 
 
-    print("8. What's a car's braking distance on wet asphalt from 100km/h? ");
+    print(" 9. What's a car's braking distance from 100km/h on wet asphalt? ");
     auto braking_on_wet_asphalt = 6_m_per_s²;
     auto wet_distance = formula::braking_distance(100_km_per_h, 0_km_per_h, braking_on_wet_asphalt);
     println(wet_distance, " or ", to_equivalent(wet_distance));
 
 
-    print("9. What's the wavelength of hydrogen (H2) in vacuum? ");
+    print("10. What's the wavelength of hydrogen (H2) in vacuum? ");
     auto H2_frequency = 1420.4057517682_MHz;
     auto H2_wavelength = formula::wavelength(constant::speed_of_light, H2_frequency);
     println(H2_wavelength, " or ", to_equivalent(H2_wavelength));
 
 
-    print("10. What's the frequency and wavelength of the high 'c' music note? ");
+    print("11. What's the frequency and wavelength of the high 'c' music note? ");
     auto high_c_frequency = 1046.5_Hz;
     auto wavelength = formula::wavelength(constant::speed_of_sound, high_c_frequency);
     println(high_c_frequency, " and ", wavelength, " (", to_equivalent(wavelength), ")");
 
 
-    print("11. What's the population density on Earth (people per km² of land area)? ");
+    print("12. What's the population density on Earth (people per km² of land area)? ");
     dimensionless Earth_population = 8.2e9;
     auto Earth_land_area = 148'940'000_km²;
     auto density = Earth_population / Earth_land_area;
     println(density);
 
 
-    print("12. How much land area would be available for each person on Earth? ");
+    print("13. How much land area would be available for each person on Earth? ");
     auto per_person = Earth_land_area / Earth_population;
     println(per_person);
 
 
-    print("13. Which chemical elements melt above 2500K and are radioactive? ");
+    print("14. Which chemical elements melt above 2500K and are radioactive? ");
     for (auto& element : dataset::chemical_elements) {
         if (element.melting_point > 2500_K && element.radioactive)
             printf("%s at %s, ", element.name, to_string(element.melting_point).c_str());
@@ -84,19 +88,12 @@ int main() {
     println("");
 
 
-    print("14. Which moons are greater than Earth's moon? ");
+    print("15. Which moons are greater than Earth's moon? ");
     for (auto& moon : dataset::moons) {
         if (moon.mean_radius > 1737.5_km)
             printf("%s's %s (ø=%s), ", moon.planet, moon.name, to_string(2. * moon.mean_radius).c_str());
     }
     println("");
-
-
-    print("15. How long takes a 1TB download at 100MBit speed? ");
-    auto file_size = 1_TB;
-    auto download_speed = 100_Mbps;
-    auto download_time = file_size / download_speed;
-    println(download_time);
 
 
     print("16. What's an aircraft's glide path on final at 10NM distance in 3000ft height? ");

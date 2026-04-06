@@ -1,18 +1,18 @@
-1. The potential energy of a single ounce is: 2.55PJ
-2. The average speed of Kelvin Kiptum's Marathon world record was: 21.00km/h or 13.05mph
-3. The free fall time from the Burj Khalifa tower (828m) is: 12.99s
-4. The kinetic energy of a mid-size SUV at 30MPH is: 203.96kJ or 48.75g TNT
-5. The local gravity at Mount Everest's peak is: 9.76m/s²
-6. What's the fuel efficiency of a car driving 400 miles and consuming 15 US gallons? 10.59l(per 100km)
-7. What's a car's braking distance on dry asphalt from 100km/h? 48.23m or 52.74yd
-8. What's a car's braking distance on wet asphalt from 100km/h? 64.30m or 70.32yd
-9. What's the wavelength of hydrogen (H2) in vacuum? 21.11cm or 8.31in
-10. What's the frequency and wavelength of the high 'c' music note? 1.05kHz and 32.78cm (1.08ft)
-11. What's the population density on Earth (people per km² of land area)? 55.06/km²
-12. How much land area would be available for each person on Earth? 1.82hm²
-13. Which chemical elements melt above 2500K and are radioactive? Technetium at 2703.15K, Rutherfordium at 2673.15K, 
-14. Which moons are greater than Earth's moon? Jupiter's Io (ø=3643.20km), Jupiter's Ganymede (ø=5262.40km), Jupiter's Callisto (ø=4820.60km), Saturn's Titan (ø=5149.46km), 
-15. How long takes a 1TB download at 100MBit speed? 22.22h
+ 1. The potential energy of a single ounce is: 2.55PJ
+ 2. The download of 1TB at 100MBit speed takes: 22.22h
+ 3. The average speed of Kelvin Kiptum's Marathon world record was: 21.00km/h or 13.05mph
+ 4. The free fall time from the Burj Khalifa tower (828m) is: 12.99s
+ 5. The kinetic energy of a mid-size SUV at 30MPH is: 203.96kJ or 48.75g TNT
+ 6. The local gravity at Mount Everest's peak is: 9.76m/s²
+ 7. What's the fuel efficiency of a car driving 400 miles and consuming 15 US gallons? 10.59l(per 100km)
+ 8. What's a car's braking distance from 100km/h on dry asphalt? 48.23m or 52.74yd
+ 9. What's a car's braking distance from 100km/h on wet asphalt? 64.30m or 70.32yd
+10. What's the wavelength of hydrogen (H2) in vacuum? 21.11cm or 8.31in
+11. What's the frequency and wavelength of the high 'c' music note? 1.05kHz and 32.78cm (1.08ft)
+12. What's the population density on Earth (people per km² of land area)? 55.06/km²
+13. How much land area would be available for each person on Earth? 1.82hm²
+14. Which chemical elements melt above 2500K and are radioactive? Technetium at 2703.15K, Rutherfordium at 2673.15K, 
+15. Which moons are greater than Earth's moon? Jupiter's Io (ø=3643.20km), Jupiter's Ganymede (ø=5262.40km), Jupiter's Callisto (ø=4820.60km), Saturn's Titan (ø=5149.46km), 
 16. What's an aircraft's glide path on final at 10NM distance in 3000ft height? 2.83°
 17. What's the min speed required to escape from the Moon? 8552.56km/h or 5314.31mph
 18. What's the windchill temperature of 5°C air temperature at 55km/h wind? -1.60°C or 29.13°F
