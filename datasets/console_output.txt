@@ -1,5 +1,5 @@
  1. The potential energy of a single ounce is: 2.55PJ
- 2. The download of 1TB at 100MBit speed takes: 22.22h
+ 2. The download of 1TB at 100MBit/s takes: 22.22h
  3. The average speed of Kelvin Kiptum's Marathon world record was: 21.00km/h or 13.05mph
  4. The free fall time from the Burj Khalifa tower (828m) is: 12.99s
  5. The kinetic energy of a mid-size SUV at 30MPH is: 203.96kJ or 48.75g TNT

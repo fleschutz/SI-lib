@@ -12,7 +12,7 @@ int main() {
 
     auto file_size = 1_TB;
     auto download_speed = 100_Mbps;
-    println(" 2. The download of 1TB at 100MBit speed takes: ", file_size / download_speed);
+    println(" 2. The download of 1TB at 100MBit/s takes: ", file_size / download_speed);
 
 
     auto Marathon_distance = 42.195_km;
