@@ -7,37 +7,37 @@ int main() {
     mass m = 1_oz;
     velocity c = constant::speed_of_light;
     energy E = m * c * c;
-    println("The potential energy of a single ounce is: ", E);
+    println("1. The potential energy of a single ounce is: ", E);
 
 
     auto Marathon_distance = 42.195_km;
     auto Kelvins_time = 2_h + 35_s;
     auto avg_speed = Marathon_distance / Kelvins_time;
-    println("2. Kelvin Kiptum's average speed in his Marathon world record was: ", avg_speed, " or ", to_equivalent(avg_speed));
+    println("2. The average speed of Kelvin Kiptum's Marathon world record was: ", avg_speed, " or ", to_equivalent(avg_speed));
 
 
     auto tower_height = 828_m;
     auto free_fall_time = formula::time_of_free_fall(tower_height, constant::Earth_gravity);
-    println("3. The free fall time from Dubai's Burj Khalifa tower (828m) is: ", free_fall_time);
+    println("3. The free fall time from the Burj Khalifa tower (828m) is: ", free_fall_time);
 
 
-    print("4. What's the kinetic energy of a mid-size SUV at 30MPH? ");
     auto SUV_mass = 5000_lb; 
-    auto SUV_speed = 50_mph;
+    auto SUV_speed = 30_mph;
     auto SUV_energy = formula::kinetic_energy(SUV_mass, SUV_speed);
-    println(SUV_energy, " or ", to_equivalent(SUV_energy));
+    println("4. The kinetic energy of a mid-size SUV at 30MPH is: ", SUV_energy, " or ", to_equivalent(SUV_energy));
 
 
-    print("5. What's the fuel efficiency of a car driving 400 miles and consuming 15 US gallons? ");
+    auto Everest_latitude = 27.986065_deg;
+    auto Everest_height   = 8848_m;
+    auto local_gravity    = formula::local_gravity(Everest_latitude, Everest_height);
+    print("5. The local gravity at Mount Everest's peak is: ", local_gravity);
+
+
+    print("6. What's the fuel efficiency of a car driving 400 miles and consuming 15 US gallons? ");
     length distance_driven = 400_mi;
     volume fuel_consumed = 15_gal;
     println((fuel_consumed * 100_km) / distance_driven, "(per 100km)");
 
-
-    print("6. What's the local gravity at Mount Everest's peak? ");
-    auto Everest_latitude = 27.986065_deg;
-    auto Everest_height   = 8848_m;
-    println(formula::local_gravity(Everest_latitude, Everest_height));
 
 
     print("7. What's a car's braking distance on dry asphalt from 100km/h? ");
