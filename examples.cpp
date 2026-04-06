@@ -30,7 +30,7 @@ int main() {
     auto Everest_latitude = 27.986065_deg;
     auto Everest_height   = 8848_m;
     auto local_gravity    = formula::local_gravity(Everest_latitude, Everest_height);
-    print("5. The local gravity at Mount Everest's peak is: ", local_gravity);
+    println("5. The local gravity at Mount Everest's peak is: ", local_gravity);
 
 
     print("6. What's the fuel efficiency of a car driving 400 miles and consuming 15 US gallons? ");

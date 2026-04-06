@@ -2,7 +2,8 @@
 2. The average speed of Kelvin Kiptum's Marathon world record was: 21.00km/h or 13.05mph
 3. The free fall time from the Burj Khalifa tower (828m) is: 12.99s
 4. The kinetic energy of a mid-size SUV at 30MPH is: 203.96kJ or 48.75g TNT
-5. The local gravity at Mount Everest's peak is: 9.76m/s²6. What's the fuel efficiency of a car driving 400 miles and consuming 15 US gallons? 10.59l(per 100km)
+5. The local gravity at Mount Everest's peak is: 9.76m/s²
+6. What's the fuel efficiency of a car driving 400 miles and consuming 15 US gallons? 10.59l(per 100km)
 7. What's a car's braking distance on dry asphalt from 100km/h? 48.23m or 52.74yd
 8. What's a car's braking distance on wet asphalt from 100km/h? 64.30m or 70.32yd
 9. What's the wavelength of hydrogen (H2) in vacuum? 21.11cm or 8.31in
