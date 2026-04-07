@@ -23,7 +23,7 @@ Units library to apply math with physical units correct, convenient and with hig
 7. **Tests** at compile-time in [SI/unit_tests.h](SI/unit_tests.h) and continuously by [GitHub Actions](https://github.com/fleschutz/libSI/actions)
 8. **Datasets** such as chemical elements in 📂[datasets](datasets/)
 
-🔎 Quick Example
+🔎 Example Code
 ----------------
 ```cpp
 #include <SI/all.h>
