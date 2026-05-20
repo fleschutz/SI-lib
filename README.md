@@ -53,7 +53,7 @@ It's the [International System of Units](https://en.wikipedia.org/wiki/Internati
 
 <details><summary>What is CODATA?</summary>
 
-It's the [Committee On Data](https://codata.org/) of the International Science Council (ISC). It publishes fundamental physical constants on a four-year cycle.
+It's the [Committee On Data](https://codata.org/) of the International Science Council (ISC). It publishes fundamental physical constants on a four-year cycle. Latest update was CODATA 2022 which is equal to: NIST SP 961 (May 2024).
 </details>
 
 <details><summary>What are use-cases for libSI?</summary>
