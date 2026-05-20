@@ -53,7 +53,7 @@ It's the [International System of Units](https://en.wikipedia.org/wiki/Internati
 
 <details><summary>What is CODATA?</summary>
 
-It's the [Committee On Data](https://codata.org/) of the International Science Council (ISC).
+It's the [Committee On Data](https://codata.org/) of the International Science Council (ISC). It publishes fundamental physical constants on a four-year cycle.
 </details>
 
 <details><summary>What are use-cases for libSI?</summary>
