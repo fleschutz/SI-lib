@@ -2,14 +2,15 @@ C++ Library of Type-safe Units
 ==============================
 A units library to apply math with physical units correct, convenient and with high precision. 
 
-[![CMake on multiple platforms](https://github.com/fleschutz/Math/actions/workflows/cmake-multi-platform.yml/badge.svg)](https://github.com/fleschutz/Math/actions/workflows/cmake-multi-platform.yml)
-
 - **Strong type-safety** for datatypes, constants, formulas, and literals (can't add a mass to a length).
 - **High precision:** fully based on SI base units, 64-bit floating points, and CODATA 2022 constants.
 - **Blazing fast** due to no runtime overhead, it just compiles to simple doubles.
 - **Supports** convenient literals (e.g. 24_h) and SI units, Imperial units, Astronomical units, and more.
 - **Modern C++ 17 lib**: header only, own namespace 'SI', no external dependencies.
 - **Cross-platform** support for Linux (clang/gcc, x86/arm) and Windows (VS2017-VS2026).
+
+[![CMake on multiple platforms](https://github.com/fleschutz/Math/actions/workflows/cmake-multi-platform.yml/badge.svg)](https://github.com/fleschutz/Math/actions/workflows/cmake-multi-platform.yml)
+
 
 🧱 Building Blocks
 ------------------
