@@ -30,9 +30,9 @@ A units library to apply math with physical units correct, convenient and with h
 using namespace SI;
 
 int main() {	
-	mass m = 1_oz;
-	velocity c = constant::speed_of_light;
-	energy E = m * c * c;
+    mass m = 1_oz;
+    velocity c = constant::speed_of_light;
+    energy E = m * c * c;
     println("The potential energy of a single ounce is: ", E);
 }
 ```
