@@ -40,7 +40,7 @@ Executing: `cmake . && make && ./examples` writes to the console:
 ```
 The potential energy of a single ounce is: 2.55PJ
 ```
-**More examples can be found in [examples.cpp](examples.cpp) with the corresponding [console output](datasets/console_output.txt).**
+**Please find 42 further examples in [examples.cpp](examples.cpp), which produces this: [console output](datasets/console_output.txt).**
 
 💡 Q & A
 ---------
