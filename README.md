@@ -63,7 +63,7 @@ The potential energy of a single ounce is: 2.55PJ
 🤝 Contributing
 ---------------
 * Contributions, suggestions, and improvements are welcome!
-* Open an Issue if you encounter bugs or have feature ideas.
+* Open an [Issue](https://github.com/fleschutz/libSI/issues) if you encounter bugs or have feature ideas.
 * Create a Pull Request if you'd like to improve something.
 
 
