@@ -10,14 +10,15 @@ int main() {
     println(" 1. The potential energy of a single ounce is: ", E);
 
 
-    auto file_size = 1_TB;
+    auto file_size      = 1_TB;
     auto download_speed = 100_Mbps;
-    println(" 2. The download of 1TB at 100MBit/s takes: ", file_size / download_speed);
+    auto download_time  = file_size / download_speed;
+    println(" 2. The download of 1TB at 100MBit/s takes: ", download_time);
 
 
     auto Marathon_distance = 42.195_km;
-    auto Kelvins_time = 2_h + 35_s;
-    auto avg_speed = Marathon_distance / Kelvins_time;
+    auto Kelvins_time      = 2_h + 35_s;
+    auto avg_speed         = Marathon_distance / Kelvins_time;
     println(" 3. The average speed of Kelvin Kiptum's Marathon world record was: ", avg_speed, " or ", to_equivalent(avg_speed));
 
 
@@ -26,8 +27,8 @@ int main() {
     println(" 4. The free fall time from the Burj Khalifa tower (828m) is: ", free_fall_time);
 
 
-    auto SUV_mass = 5000_lb; 
-    auto SUV_speed = 30_mph;
+    auto SUV_mass    = 5000_lb; 
+    auto SUV_speed  = 30_mph;
     auto SUV_energy = formula::kinetic_energy(SUV_mass, SUV_speed);
     println(" 5. The kinetic energy of a mid-size SUV at 30MPH is: ", SUV_energy, " or ", to_equivalent(SUV_energy));
 
@@ -40,7 +41,7 @@ int main() {
 
     print(" 7. What's the fuel efficiency of a car driving 400 miles and consuming 15 US gallons? ");
     length distance_driven = 400_mi;
-    volume fuel_consumed = 15_gal;
+    volume fuel_consumed   = 15_gal;
     println((fuel_consumed * 100_km) / distance_driven, "(per 100km)");
 
 
@@ -57,7 +58,7 @@ int main() {
 
 
     print("10. What's the wavelength of hydrogen (H2) in vacuum? ");
-    auto H2_frequency = 1420.4057517682_MHz;
+    auto H2_frequency  = 1420.4057517682_MHz;
     auto H2_wavelength = formula::wavelength(constant::speed_of_light, H2_frequency);
     println(H2_wavelength, " or ", to_equivalent(H2_wavelength));
 
@@ -98,7 +99,7 @@ int main() {
 
     print("16. What's an aircraft's glide path on final at 10NM distance in 3000ft height? ");
     auto distance_on_final = 10_nmi;
-    auto height_on_final = 3000_ft;
+    auto height_on_final   = 3000_ft;
     println(formula::glide_path(distance_on_final, height_on_final));
 
 
@@ -115,22 +116,23 @@ int main() {
 
 
     print("19. What's the average speed to travel around the Earth in 80 days? ");
-    auto travel_distance = dataset::Earth.equatorial_circumference;
-    auto travel_time = 80_days;
+    auto travel_distance  = dataset::Earth.equatorial_circumference;
+    auto travel_time      = 80_days;
     auto avg_travel_speed = travel_distance / travel_time;
     println(avg_travel_speed, " or ", to_equivalent(avg_travel_speed));
 
 
     print("20. What's Donald Trump's body-mass index (BMI)? ");
-    mass Donalds_weight = 102_kg;
-    length Donalds_height = 190_cm;
-    println(formula::BMI(Donalds_weight, Donalds_height));
+    auto Donalds_weight = 102_kg;
+    auto Donalds_height = 190_cm;
+    auto Donalds_BMI    = formula::BMI(Donalds_weight, Donalds_height);
+    println(Donalds_BMI);
 
 
     print("21. What's the surface area and volume of a 30cm x 1cm pizza? ");
     auto pizza_radius = 30_cm / 2;
     auto pizza_height = 1_cm;
-    auto pizza_area = formula::area_of_circle(pizza_radius);
+    auto pizza_area   = formula::area_of_circle(pizza_radius);
     auto pizza_volume = formula::volume_of_cylinder(pizza_radius, pizza_height);
     println(pizza_area, " and ", pizza_volume);
 
@@ -179,9 +181,9 @@ int main() {
 
     print("27. What's the surface area and volume of a soccer ball? ");
     auto ball_circumference = 70_cm; // (69-71cm for FIFA ball size 5)
-    auto ball_radius = formula::radius_of_circumference(ball_circumference);
-    auto ball_area = formula::area_of_sphere(ball_radius);
-    auto ball_volume = formula::volume_of_sphere(ball_radius);
+    auto ball_radius        = formula::radius_of_circumference(ball_circumference);
+    auto ball_area          = formula::area_of_sphere(ball_radius);
+    auto ball_volume        = formula::volume_of_sphere(ball_radius);
     println(ball_area, " and ", ball_volume);
 
 
@@ -199,30 +201,30 @@ int main() {
 
     print("30. What's the impact energy of a 50m asteroid at 50,000km/h? ");
     auto asteroid_diameter = 50_m;
-    auto asteroid_density = 2500_kg_per_m³; // mostly estimated only 
+    auto asteroid_density  = 2500_kg_per_m³; // mostly estimated only 
     auto asteroid_velocity = 50'000_km_per_h; // range is usually 50,000..100.000km/h
-    auto asteroid_volume = formula::volume_of_sphere(asteroid_diameter / 2.0);
-    auto asteroid_mass = asteroid_volume * asteroid_density;
-    auto impact_energy = formula::kinetic_energy(asteroid_mass, asteroid_velocity);
+    auto asteroid_volume   = formula::volume_of_sphere(asteroid_diameter / 2.0);
+    auto asteroid_mass     = asteroid_volume * asteroid_density;
+    auto impact_energy     = formula::kinetic_energy(asteroid_mass, asteroid_velocity);
     println(impact_energy, " or ", to_equivalent(impact_energy));
 
 
     print("31. What's the sound intensity of a 1W loudspeaker in 1m distance? ");
-    auto loudspeaker_power = 1_W;
+    auto loudspeaker_power    = 1_W;
     auto loudspeaker_distance = 1_m;
-    auto intensity = formula::sound_intensity(loudspeaker_power, loudspeaker_distance);
+    auto intensity            = formula::sound_intensity(loudspeaker_power, loudspeaker_distance);
     println(intensity, " or ", to_equivalent(intensity));
 
 
     print("32. What's the max diving time in salt water in 10m depth using a 10l bottle? ");
-    auto average_breathing = 20_l_per_min;
-    auto bottle_volume = 10_l;
-    auto bottle_pressure = 150_bar;
-    auto dive_depth = 10_m;
+    auto average_breathing  = 20_l_per_min;
+    auto bottle_volume      = 10_l;
+    auto bottle_pressure    = 150_bar;
+    auto dive_depth         = 10_m;
     auto salt_water_density = 1033.23_kg_per_m³;
-    auto air_pressure = 1013.25_hPa;
-    auto water_pressure = salt_water_density * constant::g_n * dive_depth + air_pressure;
-    auto max_time = (bottle_volume * bottle_pressure) / (average_breathing * water_pressure);
+    auto air_pressure       = 1013.25_hPa;
+    auto water_pressure     = salt_water_density * constant::g_n * dive_depth + air_pressure;
+    auto max_time           = (bottle_volume * bottle_pressure) / (average_breathing * water_pressure);
     println(max_time);
 
 
@@ -242,9 +244,9 @@ int main() {
 
 
     print("36. What's a radar's geometrical horizon from 30ft height? ");
-    auto Earth_radius = 6371.009_km;
+    auto Earth_radius         = 6371.009_km;
     auto Radar_station_height = 30_ft;
-    auto distance = sqrt((Earth_radius + Radar_station_height) * (Earth_radius + Radar_station_height) - Earth_radius * Earth_radius);
+    auto distance             = sqrt((Earth_radius + Radar_station_height) * (Earth_radius + Radar_station_height) - Earth_radius * Earth_radius);
     println(distance, " or ", to_equivalent(distance));
 
 
@@ -258,14 +260,14 @@ int main() {
 
 
     print("38. What are the details of a 10m x 1m oak timber log? ");
-    auto log_length = 10_m;
-    auto log_diameter = 1_m;
+    auto log_length     = 10_m;
+    auto log_diameter   = 1_m;
     auto dry_oak_weight = 710_kg_per_m³; 
-    auto dry_oak_power = 4.2_kWh_per_kg;
-    auto area = formula::area_of_cylinder(log_diameter / 2, log_length);
-    auto volume = formula::volume_of_cylinder(log_diameter / 2, log_length);
-    auto weight = volume * dry_oak_weight;
-    auto power = weight * dry_oak_power;
+    auto dry_oak_power  = 4.2_kWh_per_kg;
+    auto area           = formula::area_of_cylinder(log_diameter / 2, log_length);
+    auto volume         = formula::volume_of_cylinder(log_diameter / 2, log_length);
+    auto weight         = volume * dry_oak_weight;
+    auto power          = weight * dry_oak_power;
     println(area, ", ", volume, ", ", weight, ", ", power);
 
 
@@ -289,11 +291,11 @@ int main() {
 
     print("41. What's the ballistic max height/range/flight time of a bullet fired 45° on Moon's surface? ");
     auto muzzle_velocity = 1000_m_per_s;
-    auto altitude = 0_m;
-    auto launch_angle = 45_deg;
-    auto max_height = formula::ballistic_max_height(muzzle_velocity, altitude, launch_angle, dataset::Moon.surface_gravity);
-    auto max_range = formula::ballistic_max_range(muzzle_velocity, altitude, launch_angle, dataset::Moon.surface_gravity);
-    auto flight_time = formula::ballistic_travel_time(muzzle_velocity, altitude, launch_angle, dataset::Moon.surface_gravity);
+    auto altitude        = 0_m;
+    auto launch_angle    = 45_deg;
+    auto max_height      = formula::ballistic_max_height(muzzle_velocity, altitude, launch_angle, dataset::Moon.surface_gravity);
+    auto max_range       = formula::ballistic_max_range(muzzle_velocity, altitude, launch_angle, dataset::Moon.surface_gravity);
+    auto flight_time     = formula::ballistic_travel_time(muzzle_velocity, altitude, launch_angle, dataset::Moon.surface_gravity);
     println(max_height, ", ", max_range, ", ", flight_time);
 
 
@@ -308,7 +310,7 @@ int main() {
 
     print("43. What's the power of a 15PS motorcycle with 200kg weight? ");
     auto motor_power = 15_PS;
-    auto total_mass = 200_kg;
+    auto total_mass  = 200_kg;
     auto power_to_weight_ratio = total_mass / motor_power;
     println(motor_power, " and ", power_to_weight_ratio);
 
