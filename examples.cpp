@@ -22,12 +22,12 @@ int main() {
     println(" 3. The average speed of Kelvin Kiptum's Marathon world record was: ", avg_speed, " or ", to_equivalent(avg_speed));
 
 
-    auto tower_height = 828_m;
+    auto tower_height   = 828_m;
     auto free_fall_time = formula::time_of_free_fall(tower_height, constant::Earth_gravity);
-    println(" 4. The free fall time from the Burj Khalifa tower (828m) is: ", free_fall_time);
+    println(" 4. The free fall time from Burj Khalifa tower (828m) is: ", free_fall_time);
 
 
-    auto SUV_mass    = 5000_lb; 
+    auto SUV_mass   = 5000_lb; 
     auto SUV_speed  = 30_mph;
     auto SUV_energy = formula::kinetic_energy(SUV_mass, SUV_speed);
     println(" 5. The kinetic energy of a mid-size SUV at 30MPH is: ", SUV_energy, " or ", to_equivalent(SUV_energy));
