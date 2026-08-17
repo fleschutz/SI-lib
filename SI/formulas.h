@@ -1,5 +1,5 @@
-// <SI/formulas.h> - 61 common formulas based on type-safe SI datatypes.
-//                   (sorted by: 2D, 3D, moving objects, vehicles, aircrafts, gravitation, various)
+// This header file contains 61 common formulas (sorted by category: 2D, 3D, moving objects, vehicles, aircrafts, gravitation, various).
+// USAGE: #include <SI/formulas.h>
 #pragma once
 #include <SI/constants.h>
 
