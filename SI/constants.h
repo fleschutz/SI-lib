@@ -1,5 +1,4 @@
-// <SI/constants.h> - type-safe constants based on SI units, e.g. SI::constant::c
-//                    (sorted by: defined, universal, electromagnetic, atomic and nuclear, physico-chemical, physical, mathematical, astronomical, various)
+// <SI/constants.h> - contains type-safe constants (mostly 2022 CODATA, sorted by categories)
 #pragma once
 #include <SI/units.h>
 
