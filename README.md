@@ -1,5 +1,5 @@
-C++ Lib of Type-safe Units
-==========================
+libSI - The C++ Lib of Type-safe Units
+======================================
 A units library to apply math with physical units correct, convenient and with high precision. 
 
 - **Strong type-safety** for datatypes, constants, formulas, and literals (can't add a mass to a length).
