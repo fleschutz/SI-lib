@@ -1,4 +1,5 @@
-// <SI/constants.h> - contains type-safe constants (mostly 2022 CODATA, sorted by categories)
+// This header file contains type-safe constants based on SI units (mostly 2022 CODATA, sorted by categories).
+// USAGE: #include <SI/constants.h>
 #pragma once
 #include <SI/units.h>
 
