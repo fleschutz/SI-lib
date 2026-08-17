@@ -1,4 +1,5 @@
-// This header file contains type-safe constants based on SI units (mostly 2022 CODATA, sorted by categories).
+// This header file contains type-safe constants based on SI units (source: mostly 2022 CODATA).
+// The constants are sorted by category: defined constants, universal, electromagnetic, atomic and nuclear, physico-chemical, physical, mathematical, astronomical, and various.
 // USAGE: #include <SI/constants.h>
 #pragma once
 #include <SI/units.h>
