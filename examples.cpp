@@ -72,8 +72,8 @@ int main() {
     print("12. What's the population density on Earth (people per km² of land area)? ");
     dimensionless Earth_population = 8.2e9;
     auto Earth_land_area           = 148'940'000_km²;
-    auto density                   = Earth_population / Earth_land_area;
-    println(density);
+    auto population_density        = Earth_population / Earth_land_area;
+    println(population_density);
 
 
     print("13. How much land area would be available for each person on Earth? ");
@@ -178,7 +178,7 @@ int main() {
     print("26. How long takes a flight non-stop around the Earth at Mach 1? ");
     auto flight_distance = dataset::Earth.equatorial_circumference;
     auto flight_time     = flight_distance / 1_Mach;
-    println(flight_time;
+    println(flight_time);
 
 
     print("27. What's the surface area and volume of a soccer ball? ");
