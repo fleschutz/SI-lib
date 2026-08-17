@@ -1,4 +1,4 @@
-// This header file contains type-safe SI datatypes (the 7 SI base datatypes and 25 derived SI datatypes).
+// This header file contains the type-safe SI datatypes: the 7 SI base datatypes + 25 derived SI datatypes
 // USAGE: #include <SI/datatypes.h>
 #pragma once
 #include <SI/internal.h>
