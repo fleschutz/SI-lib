@@ -13,7 +13,7 @@ int main() {
     auto file_size      = 1_TB;
     auto download_speed = 100_Mbps;
     auto download_time  = file_size / download_speed;
-    println(" 2. The download of 1TB at 100MBit/s takes: ", download_time);
+    println(" 2. The download time of 1TB at 100MBit/s is: ", download_time);
 
 
     auto Marathon_distance = 42.195_km;
@@ -40,27 +40,27 @@ int main() {
 
 
     print(" 7. What's the fuel efficiency of a car driving 400 miles and consuming 15 US gallons? ");
-    length distance_driven = 400_mi;
-    volume fuel_consumed   = 15_gal;
-    println((fuel_consumed * 100_km) / distance_driven, "(per 100km)");
+    auto distance_driven = 400_mi;
+    auto fuel_consumed   = 15_gal;
+    auto fuel_efficiency = (fuel_consumed * 100_km) / distance_driven;
+    println(fuel_efficiency, " (per 100km)");
 
 
     print(" 8. What's a car's braking distance from 100km/h on dry asphalt? ");
     auto braking_on_dry_asphalt = 8_m_per_s²;
-    auto dry_distance = formula::braking_distance(100_km_per_h, 0_km_per_h, braking_on_dry_asphalt);
+    auto dry_distance           = formula::braking_distance(100_km_per_h, 0_km_per_h, braking_on_dry_asphalt);
     println(dry_distance, " or ", to_equivalent(dry_distance));
 
 
     print(" 9. What's a car's braking distance from 100km/h on wet asphalt? ");
     auto braking_on_wet_asphalt = 6_m_per_s²;
-    auto wet_distance = formula::braking_distance(100_km_per_h, 0_km_per_h, braking_on_wet_asphalt);
+    auto wet_distance           = formula::braking_distance(100_km_per_h, 0_km_per_h, braking_on_wet_asphalt);
     println(wet_distance, " or ", to_equivalent(wet_distance));
 
 
-    print("10. What's the wavelength of hydrogen (H2) in vacuum? ");
     auto H2_frequency  = 1420.4057517682_MHz;
     auto H2_wavelength = formula::wavelength(constant::speed_of_light, H2_frequency);
-    println(H2_wavelength, " or ", to_equivalent(H2_wavelength));
+    println("10. The wavelength of hydrogen (H2) in vacuum is: ", H2_wavelength, " or ", to_equivalent(H2_wavelength));
 
 
     print("11. What's the frequency and wavelength of the high 'c' music note? ");
@@ -198,7 +198,8 @@ int main() {
     dimensionless lift_coefficient = 1.3939;
     auto air_density               = 1.2250_kg_per_m³; // at sea level at 15°C (59°F)
     auto air_speed                 = 284_km_per_h;
-    println(formula::lift_force_of_wing(lift_coefficient, wing_surface, air_density, air_speed));
+    auto lift_force                = formula::lift_force_of_wing(lift_coefficient, wing_surface, air_density, air_speed);
+    println(lift_force);
 
 
     print("30. What's the impact energy of a 50m asteroid at 50,000km/h? ");
