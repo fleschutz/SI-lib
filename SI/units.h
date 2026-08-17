@@ -1,4 +1,5 @@
-// <SI/units.h> - contains type-safe SI units, e.g. meters or seconds
+// This header file contains type-safe SI units, e.g. SI::meters or SI::seconds.
+// USAGE: #include <SI/units.h>
 #pragma once
 #include <SI/datatypes.h>
 
