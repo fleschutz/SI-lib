@@ -1,5 +1,5 @@
-// This header file contains convenient literals such as 24_h (sorted by category: SI base units, SI derived units, Imperial units, various units).
-// REQUIRES: C++11 compiler or higher
+// This header file contains convenient literals such as 24_h. It requires a C++11 compiler or higher.
+// The literals are sorted by category: SI base units, SI derived units, Imperial units, and various units
 // USAGE: #include <SI/literals.h>
 #pragma once
 #include <SI/units.h>
