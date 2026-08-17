@@ -1,4 +1,4 @@
-// <SI/datatypes.h> - type-safe SI datatypes such as SI::length or SI::time
+// <SI/datatypes.h> - contains type-safe SI datatypes such as SI::length or SI::time
 #pragma once
 #include <SI/internal.h>
 
@@ -12,17 +12,19 @@ namespace SI
     using _name ## 2 = _name ## _t<detail::vec2<SIdouble>>;                                                         \
     using _name ## 3 = _name ## _t<detail::vec3<SIdouble>>
 
-	// +++ The 7 SI Base Datatypes +++
-	//                               l  m  t  T  c  s  i   (exponents for length,mass,time,..)
+	// The 7 SI Base Datatypes
+	// -----------------------
+	//                               l  m  t  T  c  s  i      (exponents for length,mass,time,..)
 	DATATYPE(length,                 1, 0, 0, 0, 0, 0, 0); // in meters
 	DATATYPE(mass,                   0, 1, 0, 0, 0, 0, 0); // in kilograms
 	DATATYPE(time,                   0, 0, 1, 0, 0, 0, 0); // in seconds
-	DATATYPE(temperature,            0, 0, 0, 1, 0, 0, 0); // thermodynamic temperature in kelvins
+	DATATYPE(temperature,            0, 0, 0, 1, 0, 0, 0); // in kelvins
 	DATATYPE(electric_current,       0, 0, 0, 0, 1, 0, 0); // in amperes
 	DATATYPE(amount_of_substance,    0, 0, 0, 0, 0, 1, 0); // in moles
 	DATATYPE(luminous_intensity,     0, 0, 0, 0, 0, 0, 1); // in candelas
 
-	// +++ The Derived SI Datatypes +++
+	// The Derived SI Datatypes
+	// ------------------------
 	DATATYPE(per_length,            -1, 0, 0, 0, 0, 0, 0); // per meter (reciprocal)
 	DATATYPE(area,                   2, 0, 0, 0, 0, 0, 0); // in square meters
 	DATATYPE(per_area,              -2, 0, 0, 0, 0, 0, 0); // per square meter (reciprocal)
