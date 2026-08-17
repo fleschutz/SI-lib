@@ -1,4 +1,5 @@
-// <SI/datatypes.h> - contains type-safe SI datatypes such as SI::length or SI::time
+// This header file contains type-safe SI datatypes (the 7 SI base datatypes and 25 derived SI datatypes).
+// USAGE: #include <SI/datatypes.h>
 #pragma once
 #include <SI/internal.h>
 
