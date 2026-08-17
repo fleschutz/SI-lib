@@ -1,12 +1,12 @@
-// <SI/formulas.h> - 61 common formulas based on type-safe SI datatypes, e.g. SI::formula::wavelength()
+// <SI/formulas.h> - 61 common formulas based on type-safe SI datatypes.
 //                   (sorted by: 2D, 3D, moving objects, vehicles, aircrafts, gravitation, various)
 #pragma once
 #include <SI/constants.h>
 
 namespace SI { namespace formula {
 
-// +++ 2D +++
-
+// FORMULAS FOR 2D
+// ---------------
 // Calculates the hypotenuse in a right triangle, based on Pythagorean equation: a² + b² = c² 
 length hypotenuse_of_triangle(length a, length b)
 {
@@ -117,8 +117,8 @@ length distance(length x1, length y1, length x2, length y2)
 	return sqrt((dx * dx) + (dy * dy));
 }
 
-// +++ 3D +++
-
+// FORMULAS FOR 3D
+// ---------------
 // Calculates the area of a cube from length (a).
 area area_of_cube(length a)
 {
@@ -173,8 +173,8 @@ volume volume_of_prism(area A, length h)
 	return A * h;
 }
 
-// +++ MOVING OBJECTS +++
-
+// FORMULAS FOR MOVING OBJECTS
+// ----------------------------
 // Calculates the kinetic energy of a non-rotating object of mass (m) traveling at velocity (v).
 energy kinetic_energy(mass m, velocity v)
 {
@@ -210,14 +210,16 @@ acceleration acceleration_of(velocity delta_v, time delta_t)
 	return delta_v / delta_t;
 }
 
-// +++ VEHICLES +++
+// FORMULAS FOR VEHICLES
+// ---------------------
 // Calculates the turning radius of wheeled vehicles.
 length turning_radius_of_vehicle(length wheelbase, angle steering_angle, length tire_width)
 {
 	return wheelbase / sin(steering_angle) + tire_width / 2.0;
 }
 
-// +++ AIRCRAFTS +++
+// FORMULAS FOR AIRCRAFTS
+// ----------------------
 // Calculates the true airspeed (TAS).
 velocity true_airspeed(force lift_force, dimensionless lift_coefficient, area wing_surface, density air_density)
 {
@@ -252,8 +254,8 @@ velocity climb_rate(velocity ground_speed, angle climb_angle)
 	return sin(climb_angle) * ground_speed;
 }
 
-// +++ GRAVITATION +++
-
+// FORMULAS FOR GRAVITATION
+// ------------------------
 // Calculates the gravitational potential energy of a mass (m) at height (h) based on gravity (e.g. on Earth).
 energy gravitational_potential_energy(mass m, length h, acceleration gravity)
 {
@@ -286,8 +288,8 @@ acceleration local_gravity(angle lat, length h)
 	return IGF + FAC;
 }
 
-// +++ VARIOUS FORMULAS +++
-
+// VARIOUS FORMULAS
+// ----------------
 // Calculates the wavelength from velocity (v) and frequency (f).
 length wavelength(velocity v, frequency f)
 {
