@@ -292,13 +292,13 @@ int main() {
 
 
     print("41. What's the ballistic max height/range/flight time of a bullet fired 45° on Moon's surface? ");
-    auto muzzle_velocity = 1000_m_per_s;
-    auto altitude        = 0_m;
-    auto launch_angle    = 45_deg;
-    auto max_height      = formula::ballistic_max_height(muzzle_velocity, altitude, launch_angle, dataset::Moon.surface_gravity);
-    auto max_range       = formula::ballistic_max_range(muzzle_velocity, altitude, launch_angle, dataset::Moon.surface_gravity);
-    auto travel_time     = formula::ballistic_travel_time(muzzle_velocity, altitude, launch_angle, dataset::Moon.surface_gravity);
-    println(max_height, ", ", max_range, ", ", travel_time);
+    auto muzzle_velocity   = 1000_m_per_s;
+    auto altitude          = 0_m;
+    auto launch_angle      = 45_deg;
+    auto bullet_max_height = formula::ballistic_max_height(muzzle_velocity, altitude, launch_angle, dataset::Moon.surface_gravity);
+    auto bullet_max_range  = formula::ballistic_max_range(muzzle_velocity, altitude, launch_angle, dataset::Moon.surface_gravity);
+    auto bullet_flight_time= formula::ballistic_travel_time(muzzle_velocity, altitude, launch_angle, dataset::Moon.surface_gravity);
+    println(bullet_max_height, ", ", bullet_max_range, ", ", bullet_flight_time);
 
 
     print("42. What are the frequencies and wavelengths of all musical notes? ");
