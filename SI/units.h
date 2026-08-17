@@ -1,4 +1,4 @@
-// <SI/units.h> - type-safe SI units, e.g. meters or seconds
+// <SI/units.h> - contains type-safe SI units, e.g. meters or seconds
 #pragma once
 #include <SI/datatypes.h>
 
