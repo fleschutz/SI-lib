@@ -71,8 +71,8 @@ int main() {
 
     print("12. What's the population density on Earth (people per km² of land area)? ");
     dimensionless Earth_population = 8.2e9;
-    auto Earth_land_area = 148'940'000_km²;
-    auto density = Earth_population / Earth_land_area;
+    auto Earth_land_area           = 148'940'000_km²;
+    auto density                   = Earth_population / Earth_land_area;
     println(density);
 
 
@@ -100,7 +100,8 @@ int main() {
     print("16. What's an aircraft's glide path on final at 10NM distance in 3000ft height? ");
     auto distance_on_final = 10_nmi;
     auto height_on_final   = 3000_ft;
-    println(formula::glide_path(distance_on_final, height_on_final));
+    auto glide_path        = formula::glide_path(distance_on_final, height_on_final);
+    println(glide_path);
 
 
     print("17. What's the min speed required to escape from the Moon? ");
@@ -110,9 +111,9 @@ int main() {
 
     print("18. What's the windchill temperature of 5°C air temperature at 55km/h wind? ");
     auto air_temperature = 5_degC;
-    auto wind_speed = 55_km_per_h;
-    auto temp = formula::windchill_temperature(air_temperature, wind_speed);
-    println(temp, " or ", to_equivalent(temp));
+    auto wind_speed      = 55_km_per_h;
+    auto windchill_temp  = formula::windchill_temperature(air_temperature, wind_speed);
+    println(windchill_temp, " or ", to_equivalent(windchill_temp));
 
 
     print("19. What's the average speed to travel around the Earth in 80 days? ");
@@ -153,16 +154,16 @@ int main() {
 
 
     print("23. What's the attractive force between Sun and Earth? ");
-    auto Sun_mass = 1.988416E30_kg;
-    auto Earth_mass = 5.9722E24_kg;
-    auto distance_from_Earth_to_Sun = 149'597'870'691_m;
-    println(formula::gravitational_attractive_force(Sun_mass, Earth_mass, distance_from_Earth_to_Sun));
+    auto Sun_mass              = 1.988416E30_kg;
+    auto Earth_mass            = 5.9722E24_kg;
+    auto Earth_to_Sun_distance = 149'597'870'691_m;
+    println(formula::gravitational_attractive_force(Sun_mass, Earth_mass, Earth_to_Sun_distance));
 
 
     print("24. What's the attractive force between Earth and Moon? ");
-    auto Moon_mass = 7.346E22_kg;
-    auto distance_from_Earth_to_Moon = 384'399_km;
-    println(formula::gravitational_attractive_force(Earth_mass, Moon_mass, distance_from_Earth_to_Moon));
+    auto Moon_mass              = 7.346E22_kg;
+    auto Earth_to_Moon_distance = 384'399_km;
+    println(formula::gravitational_attractive_force(Earth_mass, Moon_mass, Earth_to_Moon_distance));
 
 
     print("25. What's the filament length of a 750g PLA roll with 2.85mm diameter? ");
@@ -176,7 +177,8 @@ int main() {
 
     print("26. How long takes a flight non-stop around the Earth at Mach 1? ");
     auto flight_distance = dataset::Earth.equatorial_circumference;
-    println(flight_distance / 1_Mach);
+    auto flight_time     = flight_distance / 1_Mach;
+    println(flight_time;
 
 
     print("27. What's the surface area and volume of a soccer ball? ");
@@ -188,14 +190,14 @@ int main() {
 
 
     print("28. What's the travel time of sun light to Earth? ");
-    println(distance_from_Earth_to_Sun / constant::speed_of_light);
+    println(Earth_to_Sun_distance / constant::speed_of_light);
 
 
     print("29. What's the lift force of an A380 wing at sea level with 284km/h rotation speed? ");
-    auto wing_surface = 845_m²;
+    auto wing_surface              = 845_m²;
     dimensionless lift_coefficient = 1.3939;
-    auto air_density = 1.2250_kg_per_m³; // at sea level at 15°C (59°F)
-    auto air_speed = 284_km_per_h;
+    auto air_density               = 1.2250_kg_per_m³; // at sea level at 15°C (59°F)
+    auto air_speed                 = 284_km_per_h;
     println(formula::lift_force_of_wing(lift_coefficient, wing_surface, air_density, air_speed));
 
 
@@ -212,8 +214,8 @@ int main() {
     print("31. What's the sound intensity of a 1W loudspeaker in 1m distance? ");
     auto loudspeaker_power    = 1_W;
     auto loudspeaker_distance = 1_m;
-    auto intensity            = formula::sound_intensity(loudspeaker_power, loudspeaker_distance);
-    println(intensity, " or ", to_equivalent(intensity));
+    auto sound_intensity      = formula::sound_intensity(loudspeaker_power, loudspeaker_distance);
+    println(sound_intensity, " or ", to_equivalent(sound_intensity));
 
 
     print("32. What's the max diving time in salt water in 10m depth using a 10l bottle? ");
@@ -281,11 +283,11 @@ int main() {
 
 
     print("40. What's the voltage of a capacitor (5V, 0.47µF, 4.7KOhm) after 10ms? ");
-    auto CC = 0.47_uF;
-    auto V0 = 5_V;
-    auto RR = 4.7_kOhm;
+    auto CC   = 0.47_uF;
+    auto V0   = 5_V;
+    auto RR   = 4.7_kOhm;
     auto time = 10_ms;
-    auto V1 = V0 * exp(-time / (RR * CC));
+    auto V1   = V0 * exp(-time / (RR * CC));
     println(V1);
 
 
@@ -295,8 +297,8 @@ int main() {
     auto launch_angle    = 45_deg;
     auto max_height      = formula::ballistic_max_height(muzzle_velocity, altitude, launch_angle, dataset::Moon.surface_gravity);
     auto max_range       = formula::ballistic_max_range(muzzle_velocity, altitude, launch_angle, dataset::Moon.surface_gravity);
-    auto flight_time     = formula::ballistic_travel_time(muzzle_velocity, altitude, launch_angle, dataset::Moon.surface_gravity);
-    println(max_height, ", ", max_range, ", ", flight_time);
+    auto travel_time     = formula::ballistic_travel_time(muzzle_velocity, altitude, launch_angle, dataset::Moon.surface_gravity);
+    println(max_height, ", ", max_range, ", ", travel_time);
 
 
     print("42. What are the frequencies and wavelengths of all musical notes? ");
