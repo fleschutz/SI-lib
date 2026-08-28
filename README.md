@@ -1,11 +1,11 @@
-libSI - The C++ Lib of Type-safe SI Units
+libSI - C++ Library of Type-safe SI Units
 =========================================
 [![CMake on multiple platforms](https://github.com/fleschutz/Math/actions/workflows/cmake-multi-platform.yml/badge.svg)](https://github.com/fleschutz/Math/actions/workflows/cmake-multi-platform.yml)
 
 A units library to apply math with physical units correct, convenient and with high precision. 
 
 - **Strong type-safety** for datatypes, constants, formulas, and literals (can't add a mass to a length).
-- **High precision:** fully based on SI base units, 64-bit floating points, and CODATA 2022 constants.
+- **High precision:** 64-bit floating points containing SI base units only and using CODATA 2022 constants.
 - **Blazing fast** due to no runtime overhead, it just compiles to simple doubles.
 - **Supports** convenient literals (e.g. 24_h) and SI units, Imperial units, astronomical units, and more.
 - **Modern C++ 17 lib**: header only, own namespace 'SI', no external dependencies.
