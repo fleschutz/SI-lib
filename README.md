@@ -1,5 +1,7 @@
 libSI - The C++ Lib of Type-safe SI Units
 =========================================
+[![CMake on multiple platforms](https://github.com/fleschutz/Math/actions/workflows/cmake-multi-platform.yml/badge.svg)](https://github.com/fleschutz/Math/actions/workflows/cmake-multi-platform.yml)
+
 A units library to apply math with physical units correct, convenient and with high precision. 
 
 - **Strong type-safety** for datatypes, constants, formulas, and literals (can't add a mass to a length).
@@ -9,11 +11,11 @@ A units library to apply math with physical units correct, convenient and with h
 - **Modern C++ 17 lib**: header only, own namespace 'SI', no external dependencies.
 - **Cross-platform** support for Linux (clang/gcc, x86/arm) and Windows (VS2017-VS2026).
 
-[![CMake on multiple platforms](https://github.com/fleschutz/Math/actions/workflows/cmake-multi-platform.yml/badge.svg)](https://github.com/fleschutz/Math/actions/workflows/cmake-multi-platform.yml)
 
 
-🧱 Building Blocks
-------------------
+
+🧱 Building Blocks of libSI
+----------------------------
 1. **Datatypes** such as SI::length or SI::time in [SI/datatypes.h](SI/datatypes.h)
 2. **Units** such as SI::meters or SI::seconds in [SI/units.h](SI/units.h)
 3. **Literals** such as 100_m or 60_s in [SI/literals.h](SI/literals.h)
@@ -23,8 +25,8 @@ A units library to apply math with physical units correct, convenient and with h
 7. **Tests** at compile-time in [SI/unit_tests.h](SI/unit_tests.h) and on each commit by [GitHub Actions](https://github.com/fleschutz/libSI/actions)
 8. **Datasets** such as chemical elements in 📂[datasets](datasets/)
 
-🔎 Quick Example
------------------
+🔎 Quick Usage Example
+-----------------------
 ```cpp
 #include <SI/all.h>
 using namespace SI;
