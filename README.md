@@ -16,11 +16,11 @@ A units library to apply math with physical units correct, convenient and with h
 
 🧱 Building Blocks of libSI
 ----------------------------
-1. **Datatypes** such as SI::length or SI::time in [SI/datatypes.h](SI/datatypes.h)
-2. **Units** such as SI::meters or SI::seconds in [SI/units.h](SI/units.h)
-3. **Literals** such as 100_m or 60_s in [SI/literals.h](SI/literals.h)
-4. **Constants** such as SI::constant::speed_of_light in [SI/constants.h](SI/constants.h)
-5. **Formulas** such as SI::formula::wavelength() in [SI/formulas.h](SI/formulas.h)
+1. **Datatypes** such as *SI::length* in [SI/datatypes.h](SI/datatypes.h)
+2. **Units** such as *SI::meters* in [SI/units.h](SI/units.h)
+3. **Literals** such as *100_m* in [SI/literals.h](SI/literals.h)
+4. **Constants** such as *SI::constant::speed_of_light* in [SI/constants.h](SI/constants.h)
+5. **Formulas** such as *SI::formula::wavelength()* in [SI/formulas.h](SI/formulas.h)
 6. **Conversions** in [SI/from_string.h](SI/from_string.h), [SI/to_string.h](SI/to_string.h), and in [SI/to_equivalent.h](SI/to_equivalent.h)
 7. **Tests** at compile-time in [SI/unit_tests.h](SI/unit_tests.h) and on each commit by [GitHub Actions](https://github.com/fleschutz/libSI/actions)
 8. **Datasets** such as chemical elements in 📂[datasets](datasets/)
