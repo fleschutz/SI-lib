@@ -22,8 +22,8 @@ A units library to apply math with physical units correct, convenient and with h
 7. **Tests** at compile-time in [SI/unit_tests.h](SI/unit_tests.h) and on each commit by [GitHub Actions](https://github.com/fleschutz/libSI/actions)
 8. **Datasets** such as *dataset::chemical_elements* in 📂[datasets](datasets/)
 
-🔎 Quick Usage Example
------------------------
+🔎 Usage Example
+-----------------
 ```cpp
 #include <SI/all.h>
 using namespace SI;
