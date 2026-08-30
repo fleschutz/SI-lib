@@ -7,7 +7,7 @@ A units library to apply math with physical units correct, convenient and with h
 - **Strong type-safety** for datatypes, constants, formulas, and literals (can't add a mass to a length).
 - **High precision** due to 64-bit floating points containing SI base units, and mostly CODATA 2022 constants.
 - **Supports** SI units, Imperial units, astronomical units, various units, and convenient literals (e.g. 24_h).
-- **No runtime overhead:** it just compiles to simple doubles for maximum performance.
+- **No runtime overhead:** just compiles to simple doubles for maximum performance.
 - **Modern C++ 17:** header only, own namespace, no external dependencies.
 - **Cross-platform** support for Linux (clang/gcc, x86/arm) and Windows (VS2017-VS2026).
 
