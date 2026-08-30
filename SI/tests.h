@@ -1,6 +1,6 @@
 // This header file provides unit tests at compile-time to verify everything.
 // The unit tests are sorted by category: demo checks, basic C++, SI base units, SI derived units, astronomical units, Imperial units, digital units, various units, function checks
-// USAGE: #include <SI/unit_tests.h>
+// USAGE: #include <SI/tests.h>
 #pragma once
 #include <cassert>
 #include <SI/literals.h>
