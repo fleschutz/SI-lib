@@ -167,11 +167,11 @@ int main() {
 
 
     print("25. What's the filament length of a 750g PLA roll with 2.85mm diameter? ");
-    auto filament_weight = 750_g;
+    auto filament_weight   = 750_g;
     auto filament_diameter = 2.85_mm;
-    auto density_of_PLA = 1.24_g_per_cm³;
-    auto filament_volume = filament_weight / density_of_PLA;
-    auto filament_length = filament_volume / (constant::pi * square(filament_diameter / 2.0));
+    auto density_of_PLA    = 1.24_g_per_cm³;
+    auto filament_volume   = filament_weight / density_of_PLA;
+    auto filament_length   = filament_volume / (constant::pi * square(filament_diameter / 2.0));
     println(filament_length, " or ", to_equivalent(filament_length));
 
 
@@ -255,10 +255,10 @@ int main() {
 
     print("37. What's the distance the Earth has travelled so far? ");
     auto distance_Earth_to_Sun = constant::AU;
-    auto distance_per_year = formula::circumference_of_circle(distance_Earth_to_Sun);
-    auto Earth_year = 365.25_days;
-    auto Earth_age = Earth_year * 4.5e12;
-    auto distance_total = distance_per_year * (Earth_age / Earth_year);
+    auto distance_per_year     = formula::circumference_of_circle(distance_Earth_to_Sun);
+    auto Earth_year            = 365.25_days;
+    auto Earth_age             = Earth_year * 4.5e12;
+    auto distance_total        = distance_per_year * (Earth_age / Earth_year);
     println(distance_total);
 
 
@@ -275,9 +275,9 @@ int main() {
 
 
     print("39. What's the min cable wire size for 100m copper, 230V, 30A max? ");
-    auto conductor_resistivity = 1.7241e-8_Ohm_m; // for copper
-    auto cable_length = 100_m;
-    auto max_current = 30_A;
+    auto conductor_resistivity  = 1.7241e-8_Ohm_m; // for copper
+    auto cable_length           = 100_m;
+    auto max_current            = 30_A;
     auto allowable_voltage_drop = 10_V; 
     auto A = (2.0 * conductor_resistivity * cable_length * max_current) / allowable_voltage_drop;
     println(A);
@@ -319,12 +319,11 @@ int main() {
 
  
     // Conversion example:
-    double x = 42;        // <- x contains a dimensionless number without unit
-    SI::time t = x * 1_s; // <- t is now 42 seconds
-    double y = t / 1_s;   // <- y again contains a dimensionless number (no unit)
+    double x = 42;          // <- x contains a dimensionless number without unit
+    SI::time t = x * 1_s;   // <- t is now 42 seconds
+    double y = t / 1_s;     // <- y again contains a dimensionless number (no unit)
     // NOTE: This doesn't work for celsius and fahrenheit due to the offset!
 
 
-    print("\nHINT: In case of gibberish characters use a modern terminal with Unicode support!");
     return 0;
 }
