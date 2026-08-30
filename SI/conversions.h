@@ -1,4 +1,4 @@
-// <SI/to_string.h> - convert a single SI value into a string, e.g. to_string(12_m)
+// <SI/conversions.h> - conversion functions, e.g. to_string(12_m)
 #pragma once
 #include <string>
 #include <SI/literals.h>
@@ -6,6 +6,99 @@
 namespace SI
 {
 	std::string format_of_to_string = "%.2Lf%s"; // <-- configurable (precision / whitespace)
+
+	bool from_string(const std::string& str, length& result)
+	{
+		double value;
+		char unit[1024];
+		if (std::sscanf(str.c_str(), "%lf%s", &value, unit) != 2)
+			return false; // not recognized
+
+		if (unit == "Gm")
+			result = 1_Gm * value;
+		else if (unit == "Mm")
+			result = 1_Mm * value;
+		else if (unit == "km")
+			result = 1_km * value;
+		else if (unit == "m")
+			result = 1_m * value;
+		else if (unit == "dm")
+			result = 1_dm * value;
+		else if (unit == "cm")
+			result = 1_cm * value;
+		else if (unit == "mm")
+			result = 1_mm * value;
+		else if (unit == "um")
+			result = 1_um * value;
+		else if (unit == "nm")
+			result = 1_nm * value;
+		else if (unit == "pm")
+			result = 1_pm * value;
+		else
+			return false; // unknown unit
+
+		return true;
+	}
+
+	bool from_string(const std::string& str, time& result)
+	{
+		double value;
+		char unit[1024];
+		if (std::sscanf(str.c_str(), "%lf%s", &value, unit) != 2)
+			return false; // not recognized
+
+		if (unit == "day" || unit == "days")
+			result = 1_day * value;
+		else if (unit == "h" || unit == "hrs")
+			result = 1_h * value;
+		else if (unit == "m" || unit == "min")
+			result = 1_min * value;
+		else if (unit == "s" || unit == "sec" || unit == "seconds")
+			result = 1_s * value;
+		else if (unit == "ms")
+			result = 1_ms * value;
+		else if (unit == "us")
+			result = 1_us * value;
+		else if (unit == "ns")
+			result = 1_ns * value;
+		else if (unit == "ps")
+			result = 1_ps * value;
+		else
+			return false; // unknown unit
+
+		return true;
+	}
+
+	bool from_string(const std::string& str, mass& result)
+	{
+		double value;
+		char unit[1024];
+		if (std::sscanf(str.c_str(), "%lf%s", &value, unit) != 2)
+			return false; // not recognized
+
+		if (unit == "Gt")
+			result = 1_Gt * value;
+		else if (unit == "Mt")
+			result = 1_Mt * value;
+		else if (unit == "kt")
+			result = 1_kt * value;
+		else if (unit == "t")
+			result = 1_t * value;
+		else if (unit == "kg")
+			result = 1_kg * value;
+		else if (unit == "g")
+			result = 1_g * value;
+		else if (unit == "mg")
+			result = 1_mg * value;
+		else if (unit == "ug")
+			result = 1_ug * value;
+		else if (unit == "ng")
+			result = 1_ng * value;
+		else
+			return false; // unknown unit
+
+		return true;
+	}
 
 	// internal function to join and convert both value and unit into a string.
 	std::string _join(long double value, const std::string& unit)
@@ -378,6 +471,48 @@ namespace SI
 	std::string to_string(const std::string& text)
 	{
 		return text;
+	}
+
+	/// Returns the length in Imperial units.
+	std::string to_equivalent(length d)
+	{
+		if (d <= -1_mi || d >= 1_mi)
+			return _join(d / 1_mi, "mi");
+		if (d <= -1_yd || d >= 1_yd)
+			return _join(d / 1_yd, "yd");
+		if (d <= -1_ft || d >= 1_ft)
+			return _join(d / 1_ft, "ft");
+		return _join(d / 1_in, "in");
+	}
+
+	/// Returns the velocity in Imperial units.
+	std::string to_equivalent(velocity V)
+	{
+		return _join(V / 1_mph, "mph");
+	}
+
+	/// Returns the temperature in Fahrenheit.
+	std::string to_equivalent(temperature T)
+	{
+		return _join(fahrenheit(T), "°F");
+	}
+
+	/// Returns the power intensity in Imperial units.
+	std::string to_equivalent(power_intensity I)
+	{
+		return _join(10.0 * std::log10((I / 1_W_per_m²) / 1e-12), "dB");
+	}
+
+	/// Returns the energy in Hiroshima bombs or kg TNT.
+	std::string to_equivalent(energy E)
+	{
+		const auto Hiroshima_bomb = 62_TJ; // (explosion energy of the Hiroshima bomb)
+		if (E >= Hiroshima_bomb)
+			return _join(E / Hiroshima_bomb, " Hiroshima bombs");
+
+		const auto one_kg_TNT = 4.184_MJ; // (explosion energy of 1kg Trinitrotoluol)
+		mass kgTNT = kilograms(E / one_kg_TNT);
+		return to_string(kgTNT) + " TNT";
 	}
 
 } // namespace SI
