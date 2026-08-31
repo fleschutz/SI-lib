@@ -1,5 +1,5 @@
 // USAGE:       #include <SI/formulas.h>
-// DESCRIPTION: This header file contains 62 common formulas.
+// DESCRIPTION: This header file contains 63 common formulas.
 // SORTED BY:   Category (2D, 3D, moving objects, vehicles, aircrafts, gravitation, various)
 #pragma once
 #include <SI/constants.h>
@@ -218,6 +218,11 @@ length turning_radius_of_vehicle(length wheelbase, angle steering_angle, length 
 {
 	return wheelbase / sin(steering_angle) + tire_width / 2.0;
 }
+
+// dimensionless g_force_of_acceleration(velocity v0, velocity v1, time t)
+// {
+// 	return (v1 - v0) / (t * constant::G);
+// }
 
 // FORMULAS FOR AIRCRAFTS
 // ----------------------

@@ -1,5 +1,5 @@
-// This header file includes all other header files (very convenient to use).
-// USAGE: #include <SI/all.h>
+// USAGE:       #include <SI/all.h>
+// DESCRIPTION: Header file to include all header files for convenience.
 #pragma once
 
 #include "datatypes.h"    // <-- datatypes such as SI::length

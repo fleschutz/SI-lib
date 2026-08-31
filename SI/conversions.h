@@ -1,5 +1,5 @@
-// <SI/conversions.h> - conversion from and to strings and equivalents, e.g. to_string(12_m)
-// USAGE: #include <SI/conversions.h>
+// USAGE:       #include <SI/conversions.h>
+// DESCRIPTION: Contains functions to convert from and to strings and equivalents, e.g. to_string(12_m).
 #pragma once
 #include <string>
 #include <SI/literals.h>
