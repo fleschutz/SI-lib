@@ -1,5 +1,6 @@
-// This header file contains 61 common formulas (sorted by category: 2D, 3D, moving objects, vehicles, aircrafts, gravitation, various).
-// USAGE: #include <SI/formulas.h>
+// USAGE:       #include <SI/formulas.h>
+// DESCRIPTION: This header file contains 62 common formulas.
+// SORTED BY:   Category (2D, 3D, moving objects, vehicles, aircrafts, gravitation, various)
 #pragma once
 #include <SI/constants.h>
 
@@ -253,6 +254,11 @@ velocity climb_rate(velocity ground_speed, angle climb_angle)
 {
 	return sin(climb_angle) * ground_speed;
 }
+
+// length turn_radius(velocity ground_speed, angle bank_angle)
+// {
+// 	return (ground_speed * ground_speed) / (constant::G * tan(bank_angle));
+// }
 
 // FORMULAS FOR GRAVITATION
 // ------------------------
