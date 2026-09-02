@@ -318,15 +318,14 @@ int main() {
     println(motor_power, " and ", power_to_weight_ratio);
 
 
-    print("44. What's the sum of the measses of all moons in the solar system? ");
-    auto moon_masses = 0_kg;
+    print("44. What's the sum of the masses of all moons in the solar system? ");
+    auto sum_of_moons = 0_kg;
     for (auto& moon : dataset::moons)
     {
         auto volume = formula::volume_of_sphere(moon.mean_radius);
-        moon_masses += volume * moon.mean_density;
+        sum_of_moons += volume * moon.mean_density;
     }
-    println(moon_masses);
-
+    println(sum_of_moons);
 
  
     // Conversion example:
