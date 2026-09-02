@@ -182,6 +182,7 @@ energy kinetic_energy(mass m, velocity v)
 	return 0.5 * m * square(v);
 }
 
+// Calculates the free fall time from the given height.
 time time_of_free_fall(length height, acceleration gravity)
 {
 	return sqrt((2. * height) / gravity);
@@ -205,7 +206,7 @@ velocity final_velocity(velocity i, acceleration a, time t)
 	return i + a * t;
 }
 
-// Calculate the acceleration from change in velocity (delta_v) and time interval (delta_t).
+// Calculates the acceleration from change in velocity (delta_v) and time interval (delta_t).
 acceleration acceleration_of(velocity delta_v, time delta_t)
 {
 	return delta_v / delta_t;
@@ -219,10 +220,11 @@ length turning_radius_of_vehicle(length wheelbase, angle steering_angle, length 
 	return wheelbase / sin(steering_angle) + tire_width / 2.0;
 }
 
-// dimensionless g_force_of_acceleration(velocity v0, velocity v1, time t)
-// {
-// 	return (v1 - v0) / (t * constant::G);
-// }
+// Calculates the G-force when accelerating from v0 to v1 within the given time.
+dimensionless g_force_of_acceleration(velocity v0, velocity v1, time t)
+{
+  	return (v1 - v0) / (t * constant::Earth_gravity);
+}
 
 // FORMULAS FOR AIRCRAFTS
 // ----------------------
@@ -238,32 +240,35 @@ force lift_force_of_wing(dimensionless lift_coefficient, area wing_surface, dens
 	return 0.5 * air_density * square(true_air_speed) * wing_surface * lift_coefficient;
 }
 
-// Calculate the Mach number from velocity (v) of moving aircraft at altitude's speed of sound.
+// Calculates the Mach number from velocity (v) of moving aircraft at altitude's speed of sound.
 dimensionless Mach_number(velocity v, velocity speed_of_sound)
 {
 	return v / speed_of_sound;
 }
 
-// Calculate the glide path from horizontal distance (h) and vertical change (v).
+// Calculates the glide path from horizontal distance (h) and vertical change (v).
 angle glide_path(length h, length v)
 {
 	return atan2(v, h);
 }
 
+// Calculates the vertical height for the given glide path and horizontal distance.
 length vertical_height(angle glide_path, length horizontal_distance)
 {
 	return horizontal_distance * tan(glide_path);
 }
 
+// Calculates the climb rate for the given speed and climb angle.
 velocity climb_rate(velocity ground_speed, angle climb_angle)
 {
 	return sin(climb_angle) * ground_speed;
 }
 
-// length turn_radius(velocity ground_speed, angle bank_angle)
-// {
-// 	return (ground_speed * ground_speed) / (constant::G * tan(bank_angle));
-// }
+// Calculates the turn radius at the given speed and bank angle.
+length turn_radius(velocity ground_speed, angle bank_angle)
+{
+ 	return (ground_speed * ground_speed) / (constant::Earth_gravity * tan(bank_angle));
+}
 
 // FORMULAS FOR GRAVITATION
 // ------------------------
@@ -321,6 +326,7 @@ force drag_in_fluid(density p, velocity u, dimensionless cd, area A)
 	return 0.5 * p * (u * u) * cd * A;
 }
 
+// Calculates the frequency of a chromatic music note.
 frequency frequency_of_chromatic_note(int note, int reference_note, frequency reference_frequency)
 {
 	return std::pow(std::pow(2., 1. / 12.), note - reference_note) * reference_frequency;
@@ -375,11 +381,13 @@ dimensionless BMI(mass weight, length height)
 	return (weight / square(height)) / 1_kg_per_m²;
 }
 
+// Calculates the consumed electrical power of a current (I) and potential (U).
 auto consumed_electrical_power(electric_current I, electric_potential U)
 {
 	return I * U;
 }
 
+// Calculates the sound intensity of a sound source from a distance.
 auto sound_intensity(power power_of_sound_source, length distance_from_sound_source)
 {
 	return power_of_sound_source / (4.0 * constant::pi * square(distance_from_sound_source));
