@@ -36,6 +36,8 @@ LITERAL(_us,    1e-6, seconds);             // 1_us  (microsecond)
 LITERAL(_ns,    1e-9, seconds);             // 1_ns  (nanosecond)
 LITERAL(_ps,   1e-12, seconds);             // 1_ps  (picosecond)
 // mass in...
+LITERAL(_Pt,    1e18, kilograms);           // 1_Pt (metric petaton)
+LITERAL(_Tt,    1e15, kilograms);           // 1_Tt (metric teraton)
 LITERAL(_Gt,    1e12, kilograms);           // 1_Gt (metric gigaton)
 LITERAL(_Mt,     1e9, kilograms);           // 1_Mt (metric megaton)
 LITERAL(_kt,     1e6, kilograms);           // 1_kt (metric kiloton)

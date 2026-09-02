@@ -317,6 +317,17 @@ int main() {
     auto power_to_weight_ratio = total_mass / motor_power;
     println(motor_power, " and ", power_to_weight_ratio);
 
+
+    print("44. What's the total weight of all moons in the solar system? ");
+    auto total_weight = 0_kg;
+    for (auto& moon : dataset::moons)
+    {
+        auto volume = formula::volume_of_sphere(moon.mean_radius);
+        total_weight += volume * moon.mean_density;
+    }
+    println(total_weight);
+
+
  
     // Conversion example:
     double x = 42;          // <- x contains a dimensionless number without unit

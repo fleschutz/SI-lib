@@ -164,6 +164,10 @@ namespace SI
 
 	std::string to_string(mass m)
 	{
+		if (m <= -1_Pt || m >= 1_Pt)
+			return _join(m / 1_Pt, "Pt");
+		if (m <= -1_Tt || m >= 1_Tt)
+			return _join(m / 1_Tt, "Tt");
 		if (m <= -1_Gt || m >= 1_Gt)
 			return _join(m / 1_Gt, "Gt");
 		if (m <= -1_Mt || m >= 1_Mt)
