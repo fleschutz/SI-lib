@@ -1,15 +1,13 @@
-// NOTE: This C/C++ header file has been converted from 'physics_particles.csv'
-//       on March 16, 2026 by using csv2hpp 0.7 with command-line:
-//       /usr/local/bin/csv2hpp physics_particles.csv particle
-//       (more information at: https://github.com/fleschutz/csv2hpp)
-// USAGE: #include "particles.hpp" ... for (auto& particle : dataset::particles) { ...
+// USAGE:  #include "physics_particles.h" ... for (auto& particle : dataset::particles) { ...
+// SOURCE: physics_particles.csv
+// NOTE:   Converted by csv2hpp 0.8 on Sep 05, 2026 (see https://github.com/fleschutz/csv2hpp)
 #pragma once
 #include <SI/literals.h>
+
+namespace dataset {
 using namespace SI;
 
-namespace dataset { 
-
-struct particle_data {
+struct particle_details {
 	int pdg_id;                        // from column  1 (int)
 	char pdg_name[8];                  // from column  2 (char[8])
 	const char* name;                  // from column  3 (string)
@@ -24,7 +22,7 @@ struct particle_data {
 	SI::length width_upper;            // from column 12 (m)
 };
 
-const particle_data particles[] { // HINT: 00=empty or unknown field
+const particle_details particles[] { // HINT: 00=empty or unknown field
 {-2212,"p","anti_proton",-1.,4,"UUD",938.27208816_Da,2.9e-07_kg,2.9e-07_kg,0._m,0._m,0._m},
 {-2112,"n","anti_neutron",0.,4,"UDD",939.5654205_Da,5e-07_kg,5e-07_kg,7.493e-25_m,4e-28_m,4e-28_m},
 {-321,"K","kaon-",-1.,0,"Us",493.677_Da,0.016_kg,0.016_kg,5.317e-14_m,9e-17_m,9e-17_m},
@@ -73,5 +71,5 @@ const particle_data particles[] { // HINT: 00=empty or unknown field
 {3334,"Omega","omega-",-1.,4,"sss",1672.45_Da,0.29_kg,0.29_kg,8.02e-12_m,1.1e-13_m,1.1e-13_m},
 }; // (12 columns x 47 rows = 564 cells)
 
-} // namespace dataset
+} // end of namespace 'dataset'
 
