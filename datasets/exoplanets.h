@@ -1,15 +1,13 @@
-// NOTE: This C/C++ header file has been converted from 'exoplanets.csv'
-//       on March 16, 2026 by using csv2hpp 0.7 with command-line:
-//       /usr/local/bin/csv2hpp exoplanets.csv exoplanet
-//       (more information at: https://github.com/fleschutz/csv2hpp)
-// USAGE: #include "exoplanets.hpp" ... for (auto& exoplanet : dataset::exoplanets) { ...
+// USAGE:  #include "exoplanets.h" ... for (auto& exoplanet : dataset::exoplanets) { ...
+// SOURCE: exoplanets.csv
+// NOTE:   Converted by csv2hpp 0.8 on Sep 05, 2026 (see https://github.com/fleschutz/csv2hpp)
 #pragma once
 #include <SI/literals.h>
+
+namespace dataset {
 using namespace SI;
 
-namespace dataset { 
-
-struct exoplanet_data {
+struct exoplanet_details {
 	const char* name;                  // from column  1 (string)
 	const char* hostname;              // from column  2 (string)
 	unsigned char number_of_stars;     // from column  3 (byte)
@@ -24,7 +22,7 @@ struct exoplanet_data {
 	SI::length distance;               // from column 12 (pc)
 };
 
-const exoplanet_data exoplanets[] { // HINT: 00=empty or unknown field
+const exoplanet_details exoplanets[] { // HINT: 00=empty or unknown field
 {"11 Com b","11 Com",2,1,323.21_days,1.178_au,00,00,0.238,00,00_K,93.1846_pc},
 {"11 Com b","11 Com",2,1,326.03_days,1.29_au,00,00,0.231,00,00_K,93.1846_pc},
 {"11 Com b","11 Com",2,1,00_days,1.21_au,00,00,00,00,00_K,93.1846_pc},
@@ -39262,5 +39260,5 @@ const exoplanet_data exoplanets[] { // HINT: 00=empty or unknown field
 {"xi Aql b","xi Aql",1,1,136.97_days,0.625_au,00,00,0.059,00,00_K,56.1858_pc},
 }; // (12 columns x 39235 rows = 470820 cells)
 
-} // namespace dataset
+} // end of namespace 'dataset'
 
