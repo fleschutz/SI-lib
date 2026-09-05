@@ -1,15 +1,13 @@
-// NOTE: This C/C++ header file has been converted from 'chemical_elements.csv'
-//       on March 16, 2026 by using csv2hpp 0.7 with command-line:
-//       /usr/local/bin/csv2hpp chemical_elements.csv chemical_element
-//       (more information at: https://github.com/fleschutz/csv2hpp)
-// USAGE: #include "chemical_elements.hpp" ... for (auto& chemical_element : dataset::chemical_elements) { ...
+// USAGE:  #include "chemical_elements.h" ... for (auto& chemical_element : dataset::chemical_elements) { ...
+// SOURCE: chemical_elements.csv
+// NOTE:   Converted by csv2hpp 0.8 on Sep 05, 2026 (see https://github.com/fleschutz/csv2hpp)
 #pragma once
 #include <SI/literals.h>
+
+namespace dataset {
 using namespace SI;
 
-namespace dataset { 
-
-struct chemical_element_data {
+struct chemical_element_details {
 	unsigned char atomic_number;       // from column  1 (byte)
 	char symbol[4];                    // from column  2 (char[4])
 	const char* name;                  // from column  3 (string)
@@ -32,7 +30,7 @@ struct chemical_element_data {
 	bool radioactive;                  // from column 29 (bool)
 };
 
-const chemical_element_data chemical_elements[] { // HINT: 00=empty or unknown field
+const chemical_element_details chemical_elements[] { // HINT: 00=empty or unknown field
 {1,"H","Hydrogen",1,1,"s",0,1.008_Da,0,0.00008988,14.01_degC,20.28_degC,14.304,0.117,0.904,53_pm,38_pm,120_pm,1312_kJ_per_mol,false},
 {2,"He","Helium",18,1,"s",7,4.002602_Da,0,0.0001785,00_degC,4.22_degC,5.193,0.0138,0.0829,31_pm,32_pm,140_pm,2372.3_kJ_per_mol,false},
 {3,"Li","Lithium",1,2,"s",1,6.94_Da,2,0.534,453.69_degC,1560_degC,3.582,3,136,167_pm,134_pm,182_pm,520.2_kJ_per_mol,false},
@@ -153,5 +151,5 @@ const chemical_element_data chemical_elements[] { // HINT: 00=empty or unknown f
 {118,"Og","Oganesson",18,7,"p",7,294_Da,0,5,00_degC,350_degC,00,00,00,00_pm,00_pm,00_pm,00_kJ_per_mol,true},
 }; // (20 columns x 118 rows = 2360 cells)
 
-} // namespace dataset
+} // end of namespace 'dataset'
 
