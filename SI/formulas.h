@@ -1,6 +1,7 @@
 // USAGE:       #include <SI/formulas.h>
 // DESCRIPTION: Defines 63 common formulas based on SI datatypes.
 // TOC:         1. 2D, 2. 3D, 3. Moving Objects, 4. Vehicles, 5. Aircraft, 6. Gravitation, 7. Various, 8. References
+
 #pragma once
 #include <SI/constants.h>
 
@@ -420,17 +421,17 @@ namespace SI { namespace formula {
 		return E / m;
 	}
 
-} } // namespace SI::formula
+	// 8. References
+	// -------------
+	// 1. https://en.wikipedia.org/wiki/Turning_radius
+	// 2. https://en.wikipedia.org/wiki/Lift_(force)
+	// 3. https://en.wikipedia.org/wiki/Wavelength
+	// 4. https://en.wikipedia.org/wiki/Lorentz_force
+	// 5. https://de.wikipedia.org/wiki/Windchill
+	// 6. https://en.wikipedia.org/wiki/Density_of_air
+	// 7. https://physics.info/equations/
+	// 8. https://www.vcalc.com/wiki/ballistic-max-height
+	// 9. https://www.vcalc.com/wiki/ballistic-range
+	// 10. https://www.vcalc.com/wiki/ballistic-travel-time
 
-// 8. References
-// -------------
-// 1. https://en.wikipedia.org/wiki/Turning_radius
-// 2. https://en.wikipedia.org/wiki/Lift_(force)
-// 3. https://en.wikipedia.org/wiki/Wavelength
-// 4. https://en.wikipedia.org/wiki/Lorentz_force
-// 5. https://de.wikipedia.org/wiki/Windchill
-// 6. https://en.wikipedia.org/wiki/Density_of_air
-// 7. https://physics.info/equations/
-// 8. https://www.vcalc.com/wiki/ballistic-max-height
-// 9. https://www.vcalc.com/wiki/ballistic-range
-// 10. https://www.vcalc.com/wiki/ballistic-travel-time
+} } // namespace SI::formula

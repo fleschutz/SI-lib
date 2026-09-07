@@ -1,6 +1,7 @@
 // USAGE:       #include <SI/literals.h>
 // DESCRIPTION: Defines convenient literals such as 24_h (requires a C++11 compiler or higher).
 // TOC:         1. SI Base Units, 2. SI Derived Units, 3. Imperial Units, 4. Various Units, 5. References
+
 #pragma once
 #include <SI/units.h>
 #define LITERAL(_symbol, _factor, _base_unit)                                                                          \
@@ -377,12 +378,12 @@ namespace SI {
 	LITERAL(_bpm,                     1.0/60.0, hertz);    // 1_bpm  (beats per minute)
 	LITERAL(_smoot,                     1.7018, meters);   // 1_smoot (one Oliver R. Smoot height, fun unit)
 
+	// 5. References
+	// -------------
+	// 1. https://en.wikipedia.org/wiki/International_System_of_Units
+	// 2. https://en.wikipedia.org/wiki/Astronomical_system_of_units
+	// 3. https://en.wikipedia.org/wiki/Imperial_units
+
 } // namespace SI
 
 #undef LITERAL
-
-// 5. References
-// -------------
-// 1. https://en.wikipedia.org/wiki/International_System_of_Units
-// 2. https://en.wikipedia.org/wiki/Astronomical_system_of_units
-// 3. https://en.wikipedia.org/wiki/Imperial_units

@@ -2,6 +2,7 @@
 // DESCRIPTION: Defines type-safe constants such as SI::constant::speed_of_light
 // SOURCE:      2022 CODATA (mostly)
 // TOC:         1. Defined Constants, 2. Universal, 3. Electromagnetic, 4. Atomic & Nuclear, 5. Physico-chemical, 6. Physical, 7. Mathematical, 8. Astronomical, 9. Various, 10. References
+
 #pragma once
 #include <SI/units.h>
 #define CONST(_name, _value, _base_unit) const auto _name = _base_unit(_value)
@@ -112,15 +113,15 @@ namespace SI { namespace constant {
 	CONST(T0,                                0, kelvins); // absolute zero (-273.15°C, the lowest possible temperature)
 	CONST(Marathon_distance,            42'195, meters);
 	CONST(quarter_mile,                 402.34, meters);
+ 
+	// 10. References
+	// --------------
+	// 1. https://en.wikipedia.org/wiki/International_System_of_Units
+	// 2. https://en.wikipedia.org/wiki/List_of_physical_constants
+	// 3. https://en.wikipedia.org/wiki/List_of_mathematical_constants
+	// 4. https://en.wikipedia.org/wiki/Astronomical_constant
+	// 5. https://codata.org - CODATA: the committee on data of the International Science Council (ISC)
 
 } } // namespace SI::constant
 
 #undef CONST
- 
-// 10. References
-// --------------
-// 1. https://en.wikipedia.org/wiki/International_System_of_Units
-// 2. https://en.wikipedia.org/wiki/List_of_physical_constants
-// 3. https://en.wikipedia.org/wiki/List_of_mathematical_constants
-// 4. https://en.wikipedia.org/wiki/Astronomical_constant
-// 5. https://codata.org - CODATA: the committee on data of the International Science Council (ISC)

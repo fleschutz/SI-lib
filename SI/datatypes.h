@@ -1,11 +1,9 @@
 // USAGE:       #include <SI/datatypes.h>
 // DESCRIPTION: Defines type-safe SI datatypes such as SI::length
-// TOC:         1. The SI base datatypes, 2. The derived SI datatypes, 3. References
+// TOC:         1. The SI Base Datatypes, 2. The Derived SI datatypes, 3. References
+
 #pragma once
 #include <SI/internal.h>
-
-namespace SI
-{
 #define DATATYPE(_name, _lengthExp, _massExp, _timeExp, _temperatureExp, _currentExp, _substanceExp, _intensityExp) \
     namespace detail { using _name ## _dimension = dimension<_lengthExp, _massExp, _timeExp, _temperatureExp,       \
                                                              _currentExp, _substanceExp, _intensityExp>; }          \
@@ -13,6 +11,8 @@ namespace SI
     using _name = _name ## _t<SIdouble>;                                                                            \
     using _name ## 2 = _name ## _t<detail::vec2<SIdouble>>;                                                         \
     using _name ## 3 = _name ## _t<detail::vec3<SIdouble>>
+
+namespace SI {
 
 	// 1. The SI Base Datatypes
 	// ------------------------
@@ -53,9 +53,10 @@ namespace SI
 	DATATYPE(energy_per_mol,         2, 1,-2, 0, 0, 1, 0); // in joules per mol
 	DATATYPE(volume_per_time_squared,3, 0,-2, 0, 0, 0, 0); // in cubic meter per square second
 
-#undef DATATYPE
+	// 3. References
+	// -------------
+	// 1. https://en.wikipedia.org/wiki/International_System_of_Units
+
 } // namespace SI
 
-// 3. References
-// -------------
-// 1. https://en.wikipedia.org/wiki/International_System_of_Units
+#undef DATATYPE
