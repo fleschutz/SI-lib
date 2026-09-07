@@ -1,13 +1,15 @@
 // USAGE:       #include <SI/tests.h>
-// DESCRIPTION: Contains unit tests at compile-time to verify everything.
-// SORTED BY:   Category (demo checks, basic C++, SI base units, SI derived units, astronomical units, Imperial units, digital units, various units, and function checks)
+// DESCRIPTION: Defines unit tests at compile-time to verify everything.
+// TOC:         1. Demo Checks, 2. Basic C/C++, 3. SI Base Units, 4. SI Derived Units, 5. Astronomical Units, 6. Imperial Units, 7. Digital Units, 8. Various Units, 9. Function Checks
+
 #pragma once
 #include <cassert>
 #include <SI/literals.h>
 
 namespace SI {
 
-	// +++ DEMO CHECKS +++ (to demonstrate what's possible, the serious checks follow below)
+	// 1. Demo Checks  (to demonstrate what's possible, the serious checks follow below)
+	// --------------
 	static_assert(3_m == meters(3));
 	static_assert(1_km + 1_m + 1_dm + 1_cm + 1_mm == 1001.111_m);
 	static_assert(1_km / 30_min == 2_km_per_h);
@@ -19,7 +21,8 @@ namespace SI {
 	static_assert(1_Mach * 10_percent == 33_m_per_s);
 	static_assert((0_degC + 32_degF + 491.67_degR + 273.15_K) / 4 == 273.15_K);
 
-	// +++ BASIC C/C++ +++
+	// 2. Basic C/C++ Checks
+	// ---------------------
 	static_assert(sizeof(char) <= sizeof(short));
 	static_assert(sizeof(short) <= sizeof(int));
 	static_assert(sizeof(int) <= sizeof(long));
@@ -32,7 +35,8 @@ namespace SI {
 	static_assert(sizeof(int) == sizeof(unsigned int));
 	static_assert(sizeof(long) == sizeof(unsigned long));
 
-	// +++ SI BASE UNITS +++
+	// 3. SI Base Unit Checks
+	// ----------------------
 	// length in...
 	static_assert(1_Gm == 1000_Mm);
 	static_assert(1_Mm == 1000_km);
@@ -94,7 +98,8 @@ namespace SI {
 	static_assert(1_kcd == 1000_cd);
 	static_assert(1_cd == 0.001_kcd);
 
-	// +++ SI DERIVED UNITS +++
+	// 4. SI Derived Units
+	// -------------------
 	// area in...
 	static_assert(1_km² == 100_hm²);
 	static_assert(1_hm² == 10000_m²);
@@ -231,18 +236,21 @@ namespace SI {
 	static_assert(1_lx  == 1000_mlx);
 	static_assert(1_mlx == 1000_ulx);
 
-	// +++ ASTRONOMICAL UNITS +++
+	// 5. Astronomical Units
+	// ---------------------
 	static_assert(1_Gpc == 1000_Mpc);
 	static_assert(1_Mpc == 1000_kpc);
 	static_assert(1_kpc == 1000_pc);
 
-	// +++ IMPERIAL UNITS +++
+	// 6. Imperial Units
+	// -----------------
 	//static_assert(1_ft == 12_in);
 	static_assert(1_nmi == 10_cable);
 	static_assert(1_nmi == 1852_m);
 	static_assert(1_ft == 0.3048_m);
 
-	// +++ DIGITAL UNITS +++
+	// 7. Digital Units
+	// ----------------
 	static_assert(1_ZB == 1000_EB);
 	static_assert(1_EB == 1000_PB);
 	static_assert(1_PB == 1000_TB);
@@ -251,13 +259,15 @@ namespace SI {
 	static_assert(1_MB == 1000_kB);
 	static_assert(1_kB == 1000_byte);
 
-	// +++ VARIOUS UNITS +++
+	// 8. Various Units
+	// ----------------
 	// pressure in...
 	static_assert(1_Mbar == 1000_kbar);
 	static_assert(1_kbar == 1000_bar);
 	static_assert(1_bar  == 1000_mbar);
 
-	// +++ FUNCTION CHECKS +++
+	// 9. Function Checks
+	// ------------------
 	static_assert(abs(-3.5_m) == 3.5_m);
 	static_assert(abs(-1_m) == 1_m);
 	static_assert(abs(0_m) == 0_m);
@@ -282,7 +292,3 @@ namespace SI {
 	static_assert(clamp(0_m, -1_m,2_m) == 0_m);
 
 } // namespace SI
- 
-// References
-// ----------
-// 1. https://en.wikipedia.org/wiki/International_System_of_Units
