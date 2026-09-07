@@ -104,9 +104,12 @@ int main() {
     println(glide_path);
 
 
-    print("17. What's the min speed required to escape from the Moon? ");
-    auto escape_speed = formula::gravitational_escape_velocity(dataset::Moon.mass, dataset::Moon.mean_radius);
-    println(escape_speed, " or ", to_equivalent(escape_speed));
+    print("17. What's the min speed required to escape from the planets? ");
+    for (auto& planet : dataset::planets) {
+        auto min_speed = formula::gravitational_escape_velocity(planet.mass, planet.diameter / 2.0);
+        print(planet.name, "=", min_speed, " or ", to_equivalent(min_speed), ", ");
+    }
+    println("");
 
 
     print("18. What's the windchill temperature of 5°C air temperature at 55km/h wind? ");
@@ -326,6 +329,13 @@ int main() {
         sum_of_moons += volume * moon.mean_density;
     }
     println(sum_of_moons);
+
+
+    print("45. How long takes a trip to Alpha Centauri at 25km/s? ");
+    auto distance_to_Alpha_Centauri = 4.3_ly;
+    auto travel_speed = 25_km_per_s;
+    auto time_needed = distance_to_Alpha_Centauri / travel_speed;
+    println(time_needed);
 
  
     // Conversion example:

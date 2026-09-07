@@ -490,9 +490,11 @@ namespace SI
 		return _join(d / 1_in, "in");
 	}
 
-	/// Returns the velocity in Imperial units.
+	/// Returns the velocity in Mach or Imperial units.
 	std::string to_equivalent(velocity V)
 	{
+		if (V <= -1_Mach || V >= 1_Mach)
+			return _join(V / 1_Mach, " Mach");
 		return _join(V / 1_mph, "mph");
 	}
 

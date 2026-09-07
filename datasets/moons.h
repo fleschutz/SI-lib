@@ -1,15 +1,13 @@
-// NOTE: This C/C++ header file has been converted from 'moons.csv'
-//       on March 16, 2026 by using csv2hpp 0.7 with command-line:
-//       /usr/local/bin/csv2hpp moons.csv moon
-//       (more information at: https://github.com/fleschutz/csv2hpp)
-// USAGE: #include "moons.hpp" ... for (auto& moon : dataset::moons) { ...
+// USAGE:  #include "moons.h" ... for (auto& moon : dataset::moons) { ...
+// SOURCE: moons.csv
+// NOTE:   Converted by csv2hpp 0.8 on Sep 05, 2026 (see https://github.com/fleschutz/csv2hpp)
 #pragma once
 #include <SI/literals.h>
+
+namespace dataset {
 using namespace SI;
 
-namespace dataset { 
-
-struct moon_data {
+struct moon_details {
 	char planet[16];                   // from column  1 (char[16])
 	char name[16];                     // from column  2 (char[16])
 	SI::volume_per_time_squared GM;    // from column  3 (km³/s²)
@@ -19,7 +17,7 @@ struct moon_data {
 	float albedo;                      // from column  7 (float)
 };
 
-const moon_data moons[] { // HINT: 00=empty or unknown field
+const moon_details moons[] { // HINT: 00=empty or unknown field
 {"Earth","Moon",4902.801_km³_per_s²,1737.5_km,3.344_kg_per_m³,-12.74f,0.12f},
 {"Mars","Phobos",0.0007112_km³_per_s²,11.1_km,1.872_kg_per_m³,11.4f,0.071f},
 {"Mars","Deimos",0.0000985_km³_per_s²,6.2_km,1.471_kg_per_m³,12.45f,0.068f},
@@ -97,7 +95,7 @@ const moon_data moons[] { // HINT: 00=empty or unknown field
 {"Saturn","Rhea",153.9426_km³_per_s²,764.3_km,1.233_kg_per_m³,9.6f,0.949f},
 {"Saturn","Titan",8978.1382_km³_per_s²,2574.73_km,1.882_kg_per_m³,8.4f,0.2f},
 {"Saturn","Hyperion",0.3727_km³_per_s²,135._km,0.544_kg_per_m³,14.4f,0.3f},
-{"Saturn","Iapetus",120.5038_km³_per_s²,735.6_km,1.083_kg_per_m³,11.0f,0.6f},
+{"Saturn","Iapetus",120.5038_km³_per_s²,735.6_km,1.083_kg_per_m³,11.f,0.6f},
 {"Saturn","Phoebe",0.5532_km³_per_s²,106.5_km,1.638_kg_per_m³,16.4f,0.081f},
 {"Saturn","Janus",0.1263_km³_per_s²,89.5_km,0.63_kg_per_m³,14.4f,0.71f},
 {"Saturn","Epimetheus",0.0351_km³_per_s²,58.1_km,0.64_kg_per_m³,15.6f,0.73f},
@@ -199,5 +197,5 @@ const moon_data moons[] { // HINT: 00=empty or unknown field
 {"Pluto","Styx",0._km³_per_s²,10._km,00_kg_per_m³,27.f,0.35f},
 }; // (7 columns x 177 rows = 1239 cells)
 
-} // namespace dataset
+} // end of namespace 'dataset'
 

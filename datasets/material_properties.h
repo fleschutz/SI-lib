@@ -1,15 +1,13 @@
-// NOTE: This C/C++ header file has been converted from 'material_properties.csv'
-//       on March 16, 2026 by using csv2hpp 0.7 with command-line:
-//       /usr/local/bin/csv2hpp material_properties.csv material_property
-//       (more information at: https://github.com/fleschutz/csv2hpp)
-// USAGE: #include "material_properties.hpp" ... for (auto& material_property : dataset::material_properties) { ...
+// USAGE:  #include "material_properties.h" ... for (auto& material_property : dataset::material_properties) { ...
+// SOURCE: material_properties.csv
+// NOTE:   Converted by csv2hpp 0.8 on Sep 05, 2026 (see https://github.com/fleschutz/csv2hpp)
 #pragma once
 #include <SI/literals.h>
+
+namespace dataset {
 using namespace SI;
 
-namespace dataset { 
-
-struct material_property_data {
+struct material_property_details {
 	const char* Name;                  // from column  1 (string)
 	const char* Type;                  // from column  2 (string)
 	float Cost;                        // from column  3 ($/kg)
@@ -24,7 +22,7 @@ struct material_property_data {
 	double Thermal_Expansion;          // from column 12 (double)
 };
 
-const material_property_data material_propertys[] { // HINT: 00=empty or unknown field
+const material_property_details material_propertys[] { // HINT: 00=empty or unknown field
 {"Alumina (Al2O3)","ceramic",1.90 ,3.9_g_per_m³,390_GPa,125_GPa,0.26,4800_MPa,35_MPa,0.,4.4,8.1},
 {"Aluminum alloy (7075-T6)","metal",1.80 ,2.7_g_per_m³,70_GPa,28_GPa,0.34,500_MPa,570_MPa,12,28,33},
 {"Beryllium alloy","metal",315.00 ,2.9_g_per_m³,245_GPa,110_GPa,0.12,360_MPa,500_MPa,6.,5.,14},
@@ -60,5 +58,5 @@ const material_property_data material_propertys[] { // HINT: 00=empty or unknown
 {"Tungsten Carbide (WC)","ceramic",50.00 ,15.5_g_per_m³,550_GPa,270_GPa,0.21,6800_MPa,35_MPa,0.,3.7,5.8},
 }; // (12 columns x 33 rows = 396 cells)
 
-} // namespace dataset
+} // end of namespace 'dataset'
 
