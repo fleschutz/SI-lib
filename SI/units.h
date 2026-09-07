@@ -3,11 +3,10 @@
 // TOC:         1. SI base units, 2. SI prefixes, 3. SI derived units, 4. Imperial units, 5. Various units, 6. References
 #pragma once
 #include <SI/datatypes.h>
+#define UNIT(_name) inline constexpr auto _name
 
 namespace SI
 {
-#define UNIT(_name) inline constexpr auto _name
-
 	// 1. SI Base Units
 	// ----------------
 	UNIT(meters)       = unit<length>();
@@ -194,10 +193,9 @@ namespace SI
 		if (x > max) x = max;
 		return x;
 	}
-
-#undef UNIT
 } // namespace SI
 
+#undef UNIT
 #undef SI_RETURN_QUANTITY
 #undef SI_INLINE_CONSTEXPR
 #undef SI_INLINE
