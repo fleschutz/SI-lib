@@ -1,7 +1,7 @@
 // USAGE:       #include <SI/constants.h>
-// DESCRIPTION: Contains type-safe constants based on SI units such as SI::constant::speed_of_light.
+// DESCRIPTION: Defines type-safe constants based on SI units such as SI::constant::speed_of_light
 // SOURCE:      2022 CODATA (mostly)
-// CONTENT:     defined constants, universal, electromagnetic, atomic and nuclear, physico-chemical, physical, mathematical, astronomical, and various.
+// TOC:         defined constants, universal, electromagnetic, atomic and nuclear, physico-chemical, physical, mathematical, astronomical, various, references.
 #pragma once
 #include <SI/units.h>
 
@@ -108,8 +108,8 @@ CONST(quarter_mile,                 402.34, meters);
 #undef CONST
 } } // namespace SI::constant
  
-// References
-// ----------
+// 10. REFERENCES
+// --------------
 // 1. https://en.wikipedia.org/wiki/International_System_of_Units
 // 2. https://en.wikipedia.org/wiki/List_of_physical_constants
 // 3. https://en.wikipedia.org/wiki/List_of_mathematical_constants

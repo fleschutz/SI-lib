@@ -1,5 +1,6 @@
 // USAGE:       #include <SI/units.h>
-// DESCRIPTION: Contains type-safe SI units, e.g. SI::meters.
+// DESCRIPTION: Defines type-safe SI units such as SI::meters.
+// TOC:         1. SI base units, 2. SI prefixes, 3. SI derived units, 4. Imperial units, 5. Various units, 6. References
 #pragma once
 #include <SI/datatypes.h>
 
@@ -7,7 +8,8 @@ namespace SI
 {
 #define UNIT(_name) inline constexpr auto _name
 
-	// ++ SI BASE UNITS +++
+	// 1. SI Base Units
+	// ----------------
 	UNIT(meters)       = unit<length>();
 	UNIT(seconds)      = unit<time>();
 	UNIT(kilograms)    = unit<mass>();
@@ -16,7 +18,8 @@ namespace SI
 	UNIT(moles)        = unit<amount_of_substance>();
 	UNIT(candelas)     = unit<luminous_intensity>();
 
-	// ++ SI PREFIXES +++
+	// 2. SI Prefixes
+	// --------------
 	UNIT(exa)          = unit<detail::dimensionless, 1000000000000000000, 1>();
 	UNIT(peta)         = unit<detail::dimensionless, 1000000000000000, 1>();
 	UNIT(tera)         = unit<detail::dimensionless, 1000000000000, 1>();
@@ -32,7 +35,8 @@ namespace SI
 	UNIT(femto)        = unit<detail::dimensionless, 1, 1000000000000000>();
 	UNIT(atto)         = unit<detail::dimensionless, 1, 1000000000000000000>();
 
-	// ++ SI DERIVED/COMBINED UNITS +++
+	// 3. SI Derived Units
+	// -------------------
 	UNIT(kilometers)   = kilo * meters; 
 	UNIT(centimeters)  = centi * meters;
 	UNIT(millimeters)  = milli * meters;
@@ -123,7 +127,8 @@ namespace SI
 
 	UNIT(kilograms_per_watt) = kilograms / watts;
 
-	// +++ IMPERIAL UNITS +++
+	// 4. Imperial Units
+	// -----------------
 	UNIT(pounds)       = unit<mass, 45359237, 100000000>();
 	UNIT(feet)         = unit<length, 3048, 10000>();
 	UNIT(nautical_miles) = unit<length, 1852, 100>();
@@ -133,12 +138,13 @@ namespace SI
 	UNIT(miles_per_hour) = statute_miles / hours;
 	UNIT(knots)        = nautical_miles / hours;
 
-	// +++ VARIOUS UNITS +++
+	// 5. Various Units
+	// ----------------
 	UNIT(celsius)      = detail::unit<detail::temperature_dimension, detail::tag_celsius>();
 	UNIT(bytes)        = unit<detail::dimensionless>();
 	UNIT(bytes_per_second) = bytes / seconds;
 
-	// +++ ANGLE +++ (DIMENSIONLESS)
+	// ANGLE (DIMENSIONLESS)
 	typedef long double angle;
 	typedef angle radians;
 
@@ -172,7 +178,7 @@ namespace SI
 		return 0.5 * (1.0 + std::cos(2.0 * x));
 	}
 
-	// +++ BASIC FUNCTIONS/TEMPLATES +++
+	// BASIC FUNCTIONS/TEMPLATES
 	// Raise any number <x> to power of 2 (x² or x*x).
 	template <typename T>
 	[[nodiscard]] SI_INLINE_CONSTEXPR auto square(T x) { return x * x; }
@@ -196,6 +202,6 @@ namespace SI
 #undef SI_INLINE_CONSTEXPR
 #undef SI_INLINE
 
-// References
-// ----------
+// 6. References
+// -------------
 // 1. https://en.wikipedia.org/wiki/International_System_of_Units

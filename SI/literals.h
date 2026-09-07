@@ -1,6 +1,6 @@
 // USAGE:       #include <SI/literals.h>
-// DESCRIPTION: Contains convenient literals such as 24_h. It requires a C++11 compiler or higher.
-// SORTED BY:   Category (SI base units, SI derived units, Imperial units, and various units)
+// DESCRIPTION: Defines literals such as 24_h (requires a C++11 compiler or higher).
+// TOC:         1. SI base units, 2. SI derived units, 3. Imperial units, 4. Various units, 5. References
 #pragma once
 #include <SI/units.h>
 
@@ -10,9 +10,10 @@ namespace SI {
 constexpr auto operator "" _symbol(long double x) { return _base_unit(static_cast<SIdouble>(_factor ## L * x)); }      \
 constexpr auto operator "" _symbol(unsigned long long x) { return _base_unit(static_cast<SIdouble>(_factor ## L * x)); }
 
-// +++ SI BASE UNITS +++  (each unit sorted from big to small)
+// 1. SI Base Units
+// ----------------
 //
-//     SYMBOL FACTOR  BASE UNIT                EXAMPLE
+//     SYMBOL FACTOR  BASE UNIT                EXAMPLE (each unit sorted from big to small)
 // -------------------------------------------------------------
 // length in...
 LITERAL(_Gm,     1e9, meters);              // 1_Gm (gigameter)
@@ -77,7 +78,8 @@ LITERAL(_fmol, 1e-15, moles);               // 1_fmol (femtomole)
 LITERAL(_kcd,    1e3, candelas);            // 1_kcd (kilocandela)
 LITERAL(_cd,       1, candelas);            // 1_cd  (candela)
 
-// +++ SI DERIVED UNITS +++
+// 2. SI Derived Units
+// -------------------
 //
 //     SYMBOL FACTOR  BASE UNIT                EXAMPLE
 // ----------------------------------------------------
@@ -288,7 +290,8 @@ LITERAL(_kg_per_mol,1,kilograms_per_mol);   // 1_kg_per_mol (kg/mol)
 LITERAL(_kg_per_W, 1,kilograms_per_watt);   // 1_kg_per_W (kg/W)
 LITERAL(_kg_per_kW,1e-3,kilograms_per_watt);   // 1_kg_per_kW (kg/kW)
 
-// +++ IMPERIAL UNITS +++
+// 3. Imperial Units
+// -----------------
 //
 //       SYMBOL               FACTOR        BASE UNIT   EXAMPLE
 // -------------------------------------------------------------
@@ -314,7 +317,8 @@ LITERAL(_mph,                       .44704, meters_per_second); // 1_mph (miles/
 // temperature in...
 LITERAL(_degF,                           1, fahrenheit); // 1_degF (°Fahrenheit)
 
-// +++ VARIOUS UNITS +++
+// 4. Various Units
+// ----------------
 //
 //       SYMBOL               FACTOR        BASE UNIT   EXAMPLE
 // -------------------------------------------------------------
@@ -377,8 +381,8 @@ LITERAL(_smoot,                     1.7018, meters);   // 1_smoot (one Oliver R.
 #undef LITERAL
 } // namespace SI
 
-// References
-// ----------
+// 5. References
+// -------------
 // 1. https://en.wikipedia.org/wiki/International_System_of_Units
 // 2. https://en.wikipedia.org/wiki/Astronomical_system_of_units
 // 3. https://en.wikipedia.org/wiki/Imperial_units
