@@ -1,6 +1,6 @@
 // USAGE:       #include <SI/datatypes.h>
 // DESCRIPTION: Defines type-safe SI datatypes such as SI::length
-// TOC:         1. The SI Base Datatypes, 2. The Derived SI datatypes, 3. References
+// TOC:         1. SI Base Datatypes, 2. Derived SI datatypes, 3. References
 
 #pragma once
 #include <SI/internal.h>
@@ -14,8 +14,8 @@
 
 namespace SI {
 
-	// 1. The SI Base Datatypes
-	// ------------------------
+	// 1. SI Base Datatypes
+	// --------------------
 	//                               l  m  t  T  c  s  i      (exponents for length,mass,time,temperature,..)
 	DATATYPE(length,                 1, 0, 0, 0, 0, 0, 0); // in meters
 	DATATYPE(mass,                   0, 1, 0, 0, 0, 0, 0); // in kilograms
@@ -25,8 +25,8 @@ namespace SI {
 	DATATYPE(amount_of_substance,    0, 0, 0, 0, 0, 1, 0); // in moles
 	DATATYPE(luminous_intensity,     0, 0, 0, 0, 0, 0, 1); // in candelas
 
-	// 2. The Derived SI Datatypes
-	// ---------------------------
+	// 2. Derived SI Datatypes
+	// -----------------------
 	DATATYPE(per_length,            -1, 0, 0, 0, 0, 0, 0); // per meter (reciprocal)
 	DATATYPE(area,                   2, 0, 0, 0, 0, 0, 0); // in square meters
 	DATATYPE(per_area,              -2, 0, 0, 0, 0, 0, 0); // per square meter (reciprocal)
