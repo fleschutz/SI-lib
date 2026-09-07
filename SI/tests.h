@@ -21,8 +21,8 @@ namespace SI {
 	static_assert(1_Mach * 10_percent == 33_m_per_s);
 	static_assert((0_degC + 32_degF + 491.67_degR + 273.15_K) / 4 == 273.15_K);
 
-	// 2. Basic C/C++ Checks
-	// ---------------------
+	// 2. Check Basic C/C++
+	// --------------------
 	static_assert(sizeof(char) <= sizeof(short));
 	static_assert(sizeof(short) <= sizeof(int));
 	static_assert(sizeof(int) <= sizeof(long));
@@ -35,7 +35,7 @@ namespace SI {
 	static_assert(sizeof(int) == sizeof(unsigned int));
 	static_assert(sizeof(long) == sizeof(unsigned long));
 
-	// 3. SI Base Unit Checks
+	// 3. Check SI Base Units
 	// ----------------------
 	// length in...
 	static_assert(1_Gm == 1000_Mm);
@@ -98,8 +98,8 @@ namespace SI {
 	static_assert(1_kcd == 1000_cd);
 	static_assert(1_cd == 0.001_kcd);
 
-	// 4. SI Derived Units
-	// -------------------
+	// 4. Check SI Derived Units
+	// -------------------------
 	// area in...
 	static_assert(1_km² == 100_hm²);
 	static_assert(1_hm² == 10000_m²);
@@ -242,15 +242,15 @@ namespace SI {
 	static_assert(1_Mpc == 1000_kpc);
 	static_assert(1_kpc == 1000_pc);
 
-	// 6. Imperial Units
-	// -----------------
+	// 6. Check Imperial Units
+	// -----------------------
 	//static_assert(1_ft == 12_in);
 	static_assert(1_nmi == 10_cable);
 	static_assert(1_nmi == 1852_m);
 	static_assert(1_ft == 0.3048_m);
 
-	// 7. Digital Units
-	// ----------------
+	// 7. Check Digital Units
+	// ----------------------
 	static_assert(1_ZB == 1000_EB);
 	static_assert(1_EB == 1000_PB);
 	static_assert(1_PB == 1000_TB);
@@ -259,14 +259,14 @@ namespace SI {
 	static_assert(1_MB == 1000_kB);
 	static_assert(1_kB == 1000_byte);
 
-	// 8. Various Units
-	// ----------------
+	// 8. Check Various Units
+	// ----------------------
 	// pressure in...
 	static_assert(1_Mbar == 1000_kbar);
 	static_assert(1_kbar == 1000_bar);
 	static_assert(1_bar  == 1000_mbar);
 
-	// 9. Function Checks
+	// 9. Check Functions
 	// ------------------
 	static_assert(abs(-3.5_m) == 3.5_m);
 	static_assert(abs(-1_m) == 1_m);
