@@ -336,6 +336,7 @@ namespace SI {
 	LITERAL(_Msun,                  1.98892e30, kilograms);// 1_Msun (solar mass, about the mass of the Sun)
 	LITERAL(_Mjup,                    1.898e27, kilograms);// 1_Mjup (Jupiter mass)
 	LITERAL(_Mearth,                 5.9742e24, kilograms);// 1_Mearth (Earth mass)
+	LITERAL(_Mmoon,              7.34767309e22, kilograms);// 1_Mmoon (Moon mass)
 	// digital units in...
 	LITERAL(_byte,                           1, bytes);   // 1_byte
 	LITERAL(_kB,                           1e3, bytes);   // 1_kB (kilobyte)

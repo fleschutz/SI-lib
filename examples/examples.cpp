@@ -314,20 +314,20 @@ int main() {
 
 
     print("43. What's the power of a 15PS motorcycle with 200kg weight? ");
-    auto motor_power = 15_PS;
-    auto total_mass  = 200_kg;
-    auto power_to_weight_ratio = total_mass / motor_power;
-    println(motor_power, " and ", power_to_weight_ratio);
+    auto engine_power          = 15_PS;
+    auto motorcycle_mass       = 200_kg;
+    auto power_to_weight_ratio = motorcycle_mass / engine_power;
+    println(engine_power, " and ", power_to_weight_ratio);
 
 
     print("44. What's the sum of the masses of all moons in the solar system? ");
-    auto sum_of_moons = 0_kg;
+    auto total_mass = 0_kg;
     for (auto& moon : dataset::moons)
     {
         auto volume = formula::volume_of_sphere(moon.mean_radius);
-        sum_of_moons += volume * moon.mean_density;
+        total_mass += volume * moon.mean_density;
     }
-    println(sum_of_moons);
+    println(total_mass, " or ", to_equivalent(total_mass));
 
 
     print("45. How long takes a trip to Alpha Centauri at 25km/s? ");
