@@ -1,6 +1,6 @@
 /// @file	SI/formulas.h
-/// @brief	Defines 63 common formulas based on SI datatypes.
-/// @details	Contains: 1. 2D, 2. 3D, 3. Moving Objects, 4. Vehicles, 5. Aircraft, 6. Gravitation, 7. Various, 8. References
+/// @brief	Defines 64 common formulas based on SI datatypes.
+/// @details	Contains formulas for: 1. 2D, 2. 3D, 3. Moving Objects, 4. Vehicles, 5. Aircraft, 6. Gravitation, 7. Various, 8. References
 
 #pragma once
 #include <SI/constants.h>
@@ -251,6 +251,12 @@ namespace SI { namespace formula {
 	angle glide_path(length h, length v)
 	{
 		return atan2(v, h);
+	}
+
+	/// @brief Calculates the glide ratio from horizontal distance (h) and altitude lost (a).
+	dimensionless glide_ratio(length h, length a)
+	{
+		return h / a;
 	}
 
 	/// @brief Calculates the vertical height for the given glide path and horizontal distance.
