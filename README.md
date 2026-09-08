@@ -23,8 +23,8 @@ A units library to apply math with physical units correct, convenient and with h
 8. **Unit Tests** performed at compile-time in [SI/tests.h](SI/tests.h) and on each commit by [GitHub Actions](https://github.com/fleschutz/libSI/actions)
 
 
-🔎 Usage Example
------------------
+🔎 Example
+----------
 ```cpp
 #include <SI/all.h>
 using namespace SI;
