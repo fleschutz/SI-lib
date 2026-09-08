@@ -13,7 +13,7 @@ int main() {
     auto file_size      = 1_TB;
     auto download_speed = 100_Mbps;
     auto download_time  = file_size / download_speed;
-    println(" 2. The download time of 1TB at 100MBit/s is: ", download_time);
+    println(" 2. The download of 1TB at 100MBit/s takes: ", download_time);
 
 
     auto Marathon_distance = 42.195_km;
@@ -336,6 +336,13 @@ int main() {
     auto travel_speed                     = 25_km_per_s;
     auto time_needed                      = distance_Earth_to_Alpha_Centauri / travel_speed;
     println(time_needed);
+
+
+    print("46. How many wine bottles are needed for 1 hectoliter? ");
+    auto total_volume      = 1_hl;
+    auto volume_per_bottle = 750_ml;
+    auto bottles           = total_volume / volume_per_bottle;
+    println(bottles);
 
  
     // Conversion example:

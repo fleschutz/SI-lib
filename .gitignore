@@ -13,4 +13,5 @@ examples/compile_commands.json
 examples/CTestTestfile.cmake
 examples/_deps
 examples/CMakeUserPresets.json
+examples/examples
 examples/examples.exe
