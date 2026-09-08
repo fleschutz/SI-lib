@@ -1,17 +1,16 @@
 # Created by https://gitignore.org
 # CMake.gitignore
 
-CMakeLists.txt.user
-CMakeCache.txt
-CMakeFiles
-CMakeScripts
-Testing
-Makefile
-cmake_install.cmake
-install_manifest.txt
-compile_commands.json
-CTestTestfile.cmake
-_deps
-CMakeUserPresets.json
-examples
-examples.exe
+examples/CMakeLists.txt.user
+examples/CMakeCache.txt
+examples/CMakeFiles
+examples/CMakeScripts
+examples/Testing
+examples/Makefile
+examples/cmake_install.cmake
+examples/install_manifest.txt
+examples/compile_commands.json
+examples/CTestTestfile.cmake
+examples/_deps
+examples/CMakeUserPresets.json
+examples/examples.exe
