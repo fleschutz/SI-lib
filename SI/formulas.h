@@ -1,6 +1,6 @@
-// USAGE:       #include <SI/formulas.h>
-// DESCRIPTION: Defines 63 common formulas based on SI datatypes.
-// TOC:         1. 2D, 2. 3D, 3. Moving Objects, 4. Vehicles, 5. Aircraft, 6. Gravitation, 7. Various, 8. References
+/// @file	SI/formulas.h
+/// @brief	Defines 63 common formulas based on SI datatypes.
+/// @details	Contains: 1. 2D, 2. 3D, 3. Moving Objects, 4. Vehicles, 5. Aircraft, 6. Gravitation, 7. Various, 8. References
 
 #pragma once
 #include <SI/constants.h>

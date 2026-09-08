@@ -1,6 +1,6 @@
-// USAGE:       #include <SI/datatypes.h>
-// DESCRIPTION: Defines type-safe SI datatypes such as SI::length
-// TOC:         1. SI Base Datatypes, 2. Derived SI datatypes, 3. References
+/// @file	SI/datatypes.h
+/// @brief	Defines type-safe SI datatypes such as SI::length.
+/// @details	Contains: 1. SI Base Datatypes, 2. Derived SI datatypes, 3. References
 
 #pragma once
 #include <SI/internal.h>

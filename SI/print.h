@@ -1,5 +1,6 @@
-// USAGE:       #include <SI/print.h>
-// DESCRIPTION: Contains simple print to console functions for SI datatypes, equivalents, and text (similar to C++23).
+/// @file	SI/print.h
+/// @brief	Contains simple print to console functions for SI datatypes and strings (similar to C++23).
+
 #pragma once
 #include <iostream>
 #include <SI/conversions.h>

@@ -1,6 +1,6 @@
-// USAGE:       #include <SI/tests.h>
-// DESCRIPTION: Defines unit tests at compile-time to verify everything.
-// TOC:         1. Demo Checks, 2. Basic C/C++, 3. SI Base Units, 4. SI Derived Units, 5. Astronomical Units, 6. Imperial Units, 7. Digital Units, 8. Various Units, 9. Function Checks
+/// @file	SI/tests.h
+/// @brief	Defines unit tests at compile-time to verify everything.
+/// @details	Contains: 1. Demo Checks, 2. Basic C/C++, 3. SI Base Units, 4. SI Derived Units, 5. Astronomical Units, 6. Imperial Units, 7. Digital Units, 8. Various Units, 9. Function Checks
 
 #pragma once
 #include <cassert>
