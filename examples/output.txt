@@ -1,23 +1,23 @@
  1. The potential energy of a single ounce is: 2.55PJ
- 2. The download time of 1TB at 100MBit/s is: 22.22h
+ 2. The download of 1TB at 100MBit/s takes: 22.22h
  3. The average speed of Kelvin Kiptum's Marathon world record was: 21.00km/h or 13.05mph
  4. The free fall time from Burj Khalifa tower (828m) is: 12.99s
  5. The kinetic energy of a mid-size SUV at 30MPH is: 203.96kJ or 48.75g TNT
  6. The local gravity at Mount Everest's peak is: 9.76m/s²
- 7. What's the fuel efficiency of a car driving 400 miles and consuming 15 US gallons? 10.59l (per 100km)
- 8. What's a car's braking distance from 100km/h on dry asphalt? 48.23m or 52.74yd
- 9. What's a car's braking distance from 100km/h on wet asphalt? 64.30m or 70.32yd
-10. The wavelength of hydrogen (H2) in vacuum is: 21.11cm or 8.31in
-11. What's the frequency and wavelength of the high 'c' music note? 1.05kHz and 32.78cm (1.08ft)
-12. What's the population density on Earth (people per km² of land area)? 55.06/km²
-13. How much land area would be available for each person on Earth? 1.82hm²
-14. Which chemical elements melt above 2500K and are radioactive? Technetium at 2703.15K, Rutherfordium at 2673.15K, 
-15. Which moons are greater than Earth's moon? Jupiter's Io (ø=3643.20km), Jupiter's Ganymede (ø=5262.40km), Jupiter's Callisto (ø=4820.60km), Saturn's Titan (ø=5149.46km), 
-16. What's an aircraft's glide path on final at 10NM distance in 3000ft height? 2.83°
-17. What's the min speed required to escape from the planets? Mercury=15297.73km/h or 12.88 Mach, Venus=37310.87km/h or 31.41 Mach, Earth=40240.68km/h or 33.87 Mach, Mars=18084.40km/h or 15.22 Mach, Jupiter=214342.54km/h or 180.42 Mach, Saturn=127688.31km/h or 107.48 Mach, Uranus=76649.32km/h or 64.52 Mach, Neptune=84413.14km/h or 71.05 Mach, Pluto=4356.45km/h or 3.67 Mach, 
-18. What's the windchill temperature of 5°C air temperature at 55km/h wind? -1.60°C or 29.13°F
-19. What's the average speed to travel around the Earth in 80 days? 20.87km/h or 12.97mph
-20. What's Donald Trump's body-mass index (BMI)? 28.25
+ 7. The body-mass index (BMI) of Donald Trump is: 28.25
+ 8. What's the fuel efficiency of a car driving 400 miles and consuming 15 US gallons? 10.59l (per 100km)
+ 9. What's a car's braking distance from 100km/h on dry asphalt? 48.23m or 52.74yd
+10. What's a car's braking distance from 100km/h on wet asphalt? 64.30m or 70.32yd
+11. The wavelength of hydrogen (H2) in vacuum is: 21.11cm or 8.31in
+12. What's the frequency and wavelength of the high 'c' music note? 1.05kHz and 32.78cm (1.08ft)
+13. What's the population density on Earth (people per km² of land area)? 55.06/km²
+14. How much land area would be available for each person on Earth? 1.82hm²
+15. Which chemical elements melt above 2500K and are radioactive? Technetium at 2703.15K, Rutherfordium at 2673.15K, 
+16. Which moons are greater than Earth's moon? Jupiter's Io (ø=3643.20km), Jupiter's Ganymede (ø=5262.40km), Jupiter's Callisto (ø=4820.60km), Saturn's Titan (ø=5149.46km), 
+17. What's an aircraft's glide path on final at 10NM distance in 3000ft height? 2.83°
+18. What's the min speed required to escape from the planets? Mercury=15297.73km/h or 12.88 Mach, Venus=37310.87km/h or 31.41 Mach, Earth=40240.68km/h or 33.87 Mach, Mars=18084.40km/h or 15.22 Mach, Jupiter=214342.54km/h or 180.42 Mach, Saturn=127688.31km/h or 107.48 Mach, Uranus=76649.32km/h or 64.52 Mach, Neptune=84413.14km/h or 71.05 Mach, Pluto=4356.45km/h or 3.67 Mach, 
+19. What's the windchill temperature of 5°C air temperature at 55km/h wind? -1.60°C or 29.13°F
+20. What's the average speed to travel around the Earth in 80 days? 20.87km/h or 12.97mph
 21. What's the surface area and volume of a 30cm x 1cm pizza? 706.86cm² and 706.86ml
 22. Which exoplanets are life-friendly and quite near? 'Proxima Cen b' @ Proxima Cen in 1.30pc, 'Proxima Cen b' @ Proxima Cen in 1.30pc, 'Proxima Cen d' @ Proxima Cen in 1.30pc, 
 23. What's the attractive force between Sun and Earth? 35.42ZN
@@ -43,3 +43,4 @@
 43. What's the power of a 15PS motorcycle with 200kg weight? 11.03kW and 18.13kg/kW
 44. What's the sum of the masses of all moons in the solar system? 639.00Pt
 45. How long takes a trip to Alpha Centauri at 25km/s? 51564.30 years
+46. How many wine bottles are needed for 1 hectoliter? 133.33

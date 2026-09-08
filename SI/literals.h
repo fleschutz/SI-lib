@@ -13,9 +13,11 @@ namespace SI {
 	// 1. SI Base Units
 	// ----------------
 	//
-	//     SYMBOL FACTOR  BASE UNIT                EXAMPLE (each unit sorted from big to small)
+	//     SYMBOL FACTOR  BASE UNIT                EXAMPLE (sorted from big units to small one)
 	// -------------------------------------------------------------
 	// length in...
+	LITERAL(_Pm,    1e15, meters);              // 1_Pm (petameter)
+	LITERAL(_Tm,    1e12, meters);              // 1_Tm (terameter)
 	LITERAL(_Gm,     1e9, meters);              // 1_Gm (gigameter)
 	LITERAL(_Mm,     1e6, meters);              // 1_Mm (megameter)
 	LITERAL(_km,     1e3, meters);              // 1_km (kilometer)
@@ -107,6 +109,7 @@ namespace SI {
 	LITERAL(_mm³,   1e-9, meters3);             // 1_mm³ (cubic millimeter)
 	LITERAL(_um³,  1e-12, meters3);             // 1_um³ (cubic micrometer)
 	// or in...
+	LITERAL(_kl,       1, meters3);             // 1_kl  (kiloliter)
 	LITERAL(_hl,     0.1, meters3);             // 1_hl  (hectoliter)
 	LITERAL(_l,     1e-3, meters3);             // 1_l   (liter)
 	LITERAL(_ml,    1e-6, meters3);             // 1_ml  (milliliter)
