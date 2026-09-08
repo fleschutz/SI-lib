@@ -332,9 +332,9 @@ int main() {
 
 
     print("45. How long takes a trip to Alpha Centauri at 25km/s? ");
-    auto distance_to_Alpha_Centauri = 4.3_ly;
-    auto travel_speed = 25_km_per_s;
-    auto time_needed = distance_to_Alpha_Centauri / travel_speed;
+    auto distance_Earth_to_Alpha_Centauri = 4.3_ly;
+    auto travel_speed                     = 25_km_per_s;
+    auto time_needed                      = distance_Earth_to_Alpha_Centauri / travel_speed;
     println(time_needed);
 
  
